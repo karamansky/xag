@@ -15,11 +15,8 @@ wp-content/backups/
 wp-content/advanced-cache.php
 wp-content/cache/
 wp-content/themes/twenty*/
-wp-content/themes/bridge
-wp-content/themes/kastell
-wp-content/themes/north-wp
 
-wp-content/themes/savoy/app/img/video1.mp4
+wp-content/themes/xag/app/img/video1.mp4
 
 
 node_modules/
