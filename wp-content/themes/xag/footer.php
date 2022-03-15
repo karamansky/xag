@@ -56,13 +56,6 @@
 	</div>
 </footer>
 
-
-
-
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/app/js/scripts.min.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/app/libs/jquery.arcticmodal-0.3/jquery.arcticmodal-0.3.min.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/app/js/common.js"></script>
-
 <?php wp_footer(); ?>
 
 </body>

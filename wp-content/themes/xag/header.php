@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html <?php language_attributes(); ?>>
 
 <head>
-	<meta charset="utf-8">
-	<title>XAG</title>
-	<meta name="description" content="">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<title><?php bloginfo('title'); ?></title>
+	<meta name="description" content="<?php bloginfo('description'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/app/img/favicon.ico" type="image/x-icon">
 
@@ -12,11 +12,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/app/libs/slick-carousel/slick/slick.css">
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/app/libs/slick-carousel/slick/slick-theme.css">
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/app/libs/jquery.form-styler/dist/jquery.formstyler.css">
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/app/libs/jquery.arcticmodal-0.3/jquery.arcticmodal-0.3.css">
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/app/css/main.min.css">
 	<?php wp_head(); ?>
 </head>
 <body>
@@ -30,12 +25,12 @@
 				<span></span>
 				<span></span>
 			</div>
-			<div class="logo"><h1 class="nav-icon"><a href="https://www.xa.com/en"></a></h1></div>
+			<div class="logo"><h1 class="nav-icon"><a href="/">&nbsp;</a></h1></div>
 			<div class="navigation">
 				<ul>
-					<li class="menu-item current-menu-item"><a href="#">Home</a></li>
+					<li class="menu-item current-menu-item"><a href="/"><?php _e('[:ru]Главная[:ro]Acasă[:]'); ?></a></li>
 					<li class="menu-item menu-item-product">
-						<a href="#">Products</a>
+						<a href="#"><?php _e('[:ru]Техника[:ro]Produse[:]'); ?></a>
 						<div class="navigation__popup">
 							<ul class="navigation__products">
 								<li class="navigation__products-item">
@@ -93,12 +88,21 @@
 			<div class="language">
 				<ul class="language__items">
 					<li class="language__item has-sub">
-						<span class="menu-item">Rom</span>
+						<span class="menu-item"><?php echo wpm_get_language(); ?></span>
 						<div class="sub-menu">
 							<ul>
-								<li class="menu-item sub-language__item"><a href="#">Rom</a></li>
-								<li class="menu-item sub-language__item"><a href="#">Eng</a></li>
-								<li class="menu-item sub-language__item"><a href="#">Рус</a></li>
+								<?php
+									wp_nav_menu(
+										array(
+											'theme_location' => 'language',
+											'items_wrap'     => '%3$s',
+											'container'      => false,
+											'depth'          => 1,
+											'fallback_cb'    => false,
+										)
+									);
+								?>
+<!--								<li class="menu-item sub-language__item"><a href="#">Rom</a></li>-->
 							</ul>
 						</div>
 					</li>

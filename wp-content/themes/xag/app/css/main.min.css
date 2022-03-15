@@ -425,7 +425,8 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%; }
+  width: 100%;
+  text-transform: capitalize; }
   .language .language__item:hover a {
     color: #C00; }
   .language .language__item.current-menu-item a {
@@ -444,6 +445,9 @@ a {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
+
+.language .active-language {
+  font-weight: 600; }
 
 .language__item > span {
   cursor: default; }
@@ -948,7 +952,8 @@ a {
   padding-right: 25px; }
 
 .tech__item-right {
-  width: 50%; }
+  width: 50%;
+  padding-left: 25px; }
 
 .tech__item-title {
   font-size: 36px;

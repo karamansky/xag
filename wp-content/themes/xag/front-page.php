@@ -1,77 +1,79 @@
-<?php get_header(); ?>
+<?php
+	/*
+	 * Template name: Home page
+	 */
+	get_header();
 
-<div class="header">
-	<div class="wrapper">
-		<div class="header__content">
-			<h2 class="header__title">Advancing Agriculture</h2>
-			<a href="#" class="header__videoplay" data-video="<?php echo get_stylesheet_directory_uri(); ?>/app/img/video1.mp4"><i class="play"></i></a>
+	$video = get_field('video');
+
+?>
+
+	<div class="header">
+		<div class="wrapper">
+			<div class="header__content">
+				<h2 class="header__title"><?php the_title(); ?></h2>
+				<?php if(!empty($video)) echo '<a href="#" class="header__videoplay" data-video="'. $video .'"><i class="play"></i></a>'; ?>
+			</div>
 		</div>
+		<?php if(!empty($video)) echo '<video src="'. $video .'" autoplay muted loop="true" id="main-video"></video>'; ?>
 	</div>
-	<video src="<?php echo get_stylesheet_directory_uri(); ?>/app/img/index-video.mp4" autoplay muted loop="true" id="main-video"></video>
-</div>
 
+
+<?php
+	$taxonomies = get_object_taxonomies(array('post_type' => 'solutions'));
+?>
 
 <section class="catItems-wrap">
 	<div class="wrapper">
 		<div class="catItems">
 			<h2 class="catItems__title section__title">Smart Agriculture Solutions</h2>
+			<?php if( !empty($taxonomies) ): ?>
 			<div class="catItems__items">
-				<a href="#" class="catItem__item">
-					<div class="catItem__img">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/app/img/prod1.jpg" alt="">
-					</div>
-					<h3 class="catItem__title">Agricultural drone</h3>
-				</a>
-				<a href="#" class="catItem__item">
-					<div class="catItem__img">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/app/img/prod2.jpg" alt="">
-					</div>
-					<h3 class="catItem__title">Remote sensing drone</h3>
-				</a>
-				<a href="#" class="catItem__item">
-					<div class="catItem__img">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/app/img/prod3.jpg" alt="">
-					</div>
-					<h3 class="catItem__title">Unnamed ground Vehicle</h3>
-				</a>
-				<a href="#" class="catItem__item">
-					<div class="catItem__img">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/app/img/prod4.jpg" alt="">
-					</div>
-					<h3 class="catItem__title">Agriculture IoT</h3>
-				</a>
+				<?php
+					foreach ($taxonomies as $taxonomy) :
+						$terms = get_terms( $taxonomy );
+							foreach ($terms as $term) :
+								$img = get_field('image', 'term_'.$term->term_id);
+				?>
+					<a href="<?php echo get_term_link($term); ?>" class="catItem__item">
+						<div class="catItem__img">
+							<?php if(!empty($img)) echo '<img src="'. $img .'" alt="">'; ?>
+						</div>
+						<h3 class="catItem__title"><?php echo $term->name; ?></h3>
+					</a>
+					<?php endforeach; ?>
+				<?php endforeach; ?>
 			</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>
 
 
+<?php
+	$infoblocks = get_field('infoblocks');
+	if( !empty($infoblocks) ):
+?>
 <section class="img-blocks-wrap">
 	<div class="fluid-wrapper">
 		<div class="img-blocks">
-			<a href="#" class="img-blocks__item" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/app/img/services.png');">
-				<h3 class="img-blocks__title">Services</h3>
-				<span>More &rarr;</span>
-			</a>
-			<a href="#" class="img-blocks__item" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/app/img/academy.png');">
-				<h3 class="img-blocks__title">Academy</h3>
-				<span>More &rarr;</span>
-			</a>
-			<a href="#" class="img-blocks__item" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/app/img/news.png');">
-				<h3 class="img-blocks__title">News Center</h3>
-				<span>More &rarr;</span>
-			</a>
+			<?php foreach ($infoblocks as $infoblock) : ?>
+				<a href="<?php echo $infoblock['link']['url']; ?>" class="img-blocks__item" style="background-image: url('<?php echo $infoblock['image'] ?>');">
+					<h3 class="img-blocks__title"><?php echo $infoblock['title'] ?></h3>
+					<span>More &rarr;</span>
+				</a>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </section>
-
+<?php endif; ?>
 
 
 <section class="text-block-wrap">
 	<div class="wrapper">
 		<div class="text-block">
 			<div class="text-block__content">
-				XAG este implicat în introducerea dronelor, roboților, pilotului automat, inteligenței artificiale și Internetului lucrurilor în lumea agriculturii. Creăm un ecosistem inteligent al agriculturii care ne conduce în era agriculturii 4.0, caracterizată prin automatizare, precizie și eficiență.
+				<?php the_content(); ?>
 			</div>
 			<div class="text-block__img">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/app/img/animation_bottom.gif" alt="drone">
