@@ -43,10 +43,19 @@
 				</div>
 			</div>
 			<div class="footer__inner-right">
-				<div class="footer__socials">
-					<a href="#">Facebook</a>
-					<a href="#">Instagram</a>
-				</div>
+				<ul class="footer__socials">
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'social',
+								'items_wrap'     => '%3$s',
+								'container'      => false,
+								'depth'          => 1,
+								'fallback_cb'    => false,
+							)
+						);
+					?>
+				</ul>
 			</div>
 		</div>
 		<div class="footer__copy">

@@ -1,11 +1,11 @@
 <?php
 	global $nm_theme_options, $post;
-    
+
     // Sidebar
     $post_class = 'nm-post-sidebar-' . $nm_theme_options['single_post_sidebar'];
 	$show_sidebar = ( $nm_theme_options['single_post_sidebar'] != 'none' ) ? true : false;
     $post_column_class = ( $show_sidebar ) ? 'col col-md-8 col-sm-12 col-xs-12' : 'nm-post-col';
-    
+
     // Featured image
     $has_featured_image = ( $nm_theme_options['single_post_display_featured_image'] && has_post_thumbnail() ) ? true : false;
     $post_class .= ( $has_featured_image ) ? ' has-featured-image' : '';
@@ -18,11 +18,11 @@
 <?php get_header(); ?>
 
 <div class="nm-post <?php echo esc_attr( $post_class ); ?>">
-    
+
 <?php if ( have_posts() ) : ?>
 
-	<?php while ( have_posts() ) : the_post(); ?>    	
-	
+	<?php while ( have_posts() ) : the_post(); ?>
+
 	<div class="nm-post-body">
         <div class="nm-row">
             <div class="nm-post-content-col <?php echo esc_attr( $post_column_class ); ?>">
@@ -43,7 +43,7 @@
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <div class="nm-post-content entry-content clear">
                         <?php the_content(); ?>
-                        
+
                         <?php
                             wp_link_pages( array(
                                 'before' 		=> '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'nm-framework' ) . '</span>',
@@ -54,7 +54,7 @@
                         ?>
                     </div>
                 </article>
-                
+
                 <?php
                     $categories_list = get_the_category_list( '<span>,</span> ' );
                     $tag_list = get_the_tag_list( '<div class="nm-single-post-tags widget_tag_cloud">', '', '</div>' );
@@ -66,7 +66,7 @@
                         if ( $tag_list ) {
                             echo $tag_list;
                         }
-                    
+
                         if ( $categories_list ) {
                             echo '<div class="nm-single-post-categories">' . esc_html__( 'Posted in ', 'nm-framework' ) . $categories_list . '.</div>';
                         }
@@ -84,7 +84,7 @@
             <?php endif; ?>
         </div>
     </div>
-	
+
     <div class="nm-post-pagination">
         <div class="nm-row">
             <div class="col-xs-12">
@@ -100,15 +100,15 @@
             </div>
         </div>
     </div>
-    
+
 	<?php endwhile; ?>
-		   
+
 <?php else : ?>
 
 	<div class="col col-xs-8 centered">
 		<?php get_template_part( 'content', 'none' ); ?>
 	</div>
-	
+
 <?php endif; ?>
 
 <?php if ( $show_comments ) : ?>
@@ -121,12 +121,12 @@
 	</div>
 <?php endif; ?>
 
-<?php 
+<?php
 if ( $nm_theme_options['single_post_related'] ) :
     $term_ids = wp_get_post_categories( $post->ID );
-    
+
     if ( $term_ids ) :
-    
+
     $args = apply_filters( 'nm_related_posts_args', array(
         'ignore_sticky_posts'   => 1,
         'no_found_rows'         => 1,
@@ -137,9 +137,9 @@ if ( $nm_theme_options['single_post_related'] ) :
     ) );
 
     $related_posts = new WP_Query( $args );
-    
+
     if ( $related_posts->have_posts() ) :
-    
+
     // Columns
     $columns_large = $nm_theme_options['single_post_related_columns'];
     $columns_medium = ( intval( $columns_large ) < 4 ) ? $columns_large : '4';
@@ -150,7 +150,7 @@ if ( $nm_theme_options['single_post_related'] ) :
         <div class="nm-row">
             <div class="col-xs-12">
                 <h2><?php _e( 'Related Posts', 'nm-framework' ); ?></h2>
-                
+
                 <ul class="<?php echo esc_attr( $columns_class ); ?>">
                 <?php while ( $related_posts->have_posts() ) : $related_posts->the_post(); ?>
                     <li>
@@ -170,15 +170,17 @@ if ( $nm_theme_options['single_post_related'] ) :
             </div>
         </div>
     </div>
-<?php 
+<?php
     endif;
-    
+
     endif;
-    
+
     wp_reset_postdata();
 endif;
 ?>
-    
+
 </div>
 
+
+<?php xag_set_post_view(); ?>
 <?php get_footer(); ?>

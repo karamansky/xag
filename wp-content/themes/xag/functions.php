@@ -17,9 +17,11 @@
 				array(
 					'primary' => esc_html__('Primary menu', 'xag'),
 					'language' => __('Language', 'xag'),
-					'footer1' => __('Footer The Company', 'xag'),
-					'footer2' => __('Footer Social Media', 'xag'),
-					'footer3' => __('Footer Terms', 'xag'),
+					'footer1' => __('About', 'xag'),
+					'footer2' => __('Service', 'xag'),
+					'footer3' => __('Events', 'xag'),
+					'footer4' => __('News', 'xag'),
+					'social' => __('Social', 'xag'),
 				)
 			);
 
@@ -184,3 +186,29 @@ if ( is_admin() ) {
 
 // Disable default CF7 CSS
 add_filter( 'wpcf7_load_css', '__return_false' );
+
+
+//подсчет количества просмотров поста
+function xag_get_post_view() {
+	$count = get_post_meta( get_the_ID(), 'post_views_count', true );
+	$views = __('[:ru]Просмотров [:ro]Vizualizări [:]');
+	return $count . ' ' . $views;
+}
+function xag_set_post_view() {
+	$key = 'post_views_count';
+	$post_id = get_the_ID();
+	$count = (int) get_post_meta( $post_id, $key, true );
+	$count++;
+	update_post_meta( $post_id, $key, $count );
+}
+function xag_posts_column_views( $columns ) {
+	$columns['post_views'] = 'Views';
+	return $columns;
+}
+function xag_posts_custom_column_views( $column ) {
+	if ( $column === 'post_views') {
+		echo xag_get_post_view();
+	}
+}
+add_filter( 'manage_posts_columns', 'xag_posts_column_views' );
+add_action( 'manage_posts_custom_column', 'xag_posts_custom_column_views' );

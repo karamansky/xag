@@ -1,38 +1,50 @@
-<?php nm_blog_get_ajax_content(); // AJAX: Get blog content only, then exit ?>
 <?php
-    global $nm_theme_options;
+	get_header();
 
-    $show_categories = ( $nm_theme_options['blog_categories'] ) ? true : false;
-    $categories_class = ( $show_categories ) ? '' : ' nm-blog-categories-disabled';
+	$category = get_queried_object();
+	$args = array(
+		'orderby' => 'date',
+		'category_name' => $category->slug
+	);
+	$query = new WP_Query( $args );
+
 ?>
-<?php get_header(); ?>
 
-<div class="nm-blog-wrap<?php echo esc_attr( $categories_class ); ?>">
-    <?php if ( $show_categories ) : ?>
-    <div class="nm-blog-categories">
-        <div class="nm-row">
-            <div class="col-xs-12">
-                <?php echo nm_blog_category_menu(); ?>
-            </div>
-        </div>
-    </div>
-    <?php endif; ?>
-    
-    <?php
-		// Category description
-		$category_description = category_description();
-		if ( ! empty( $category_description ) ) :
-	?>
-    <div class="nm-term-description nm-category-description">
-        <div class="nm-row">
-            <div class="col-xs-12">
-                <?php echo $category_description; ?>
-            </div>
-        </div>
-    </div>
-	<?php endif; ?>
-    
-    <?php get_template_part( 'template-parts/blog/content' ); ?>
+<div class="info-container">
+	<div class="category">
+		<div class="wrapper">
+			<?php if( !empty($category) ) echo '<h2 class="category__title">'. $category->name .'</h2>'; ?>
+
+			<div class="category__items">
+				<?php
+					if ( $query->have_posts() ) :
+					while ( $query->have_posts() ) :
+					$query->the_post();
+				?>
+						<a href="<?php the_permalink(); ?>" class="category__item">
+							<div class="category__item-img"><img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>"></div>
+							<div class="category__item-info">
+								<h3 class="category__item-title"><?php the_title(); ?></h3>
+								<div class="category__item-footer">
+									<div class="category__item-date"><?php echo get_the_date(); ?></div>
+									<div class="category__item-views"><?php echo xag_get_post_view(); ?></div>
+								</div>
+							</div>
+						</a>
+					<?php endwhile; ?>
+				<?php else: ?>
+					Постов не найдено
+				<?php endif; ?>
+				<?php wp_reset_postdata(); ?>
+
+			</div>
+
+			<div class="pagination">
+
+			</div>
+
+		</div>
+	</div>
 </div>
 
 <?php get_footer(); ?>

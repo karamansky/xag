@@ -33,7 +33,7 @@
 	<section class="catItems-wrap">
 		<div class="wrapper">
 			<div class="catItems">
-				<h2 class="catItems__title section__title">Smart Agriculture Solutions</h2>
+				<h2 class="catItems__title section__title"><?php _e('[:ru]Умные решения для сельского хозяйства[:ro]Soluții inteligente pentru agricultură[:]'); ?></h2>
 				<?php if( !empty($taxonomies) ): ?>
 				<div class="catItems__items">
 					<?php
