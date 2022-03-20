@@ -24,6 +24,7 @@ gulp.task('js', function() {
 		'app/libs/jquery/dist/jquery-1.10.1.min.js',
 		'app/libs/jquery.form-styler/dist/jquery.formstyler.min.js',
 		'app/libs/slick-carousel/slick/slick.min.js',
+		// 'app/libs/jquery.arcticmodal-0.3/jquery.arcticmodal-0.3.min.js',
 		])
 	.pipe(concat('scripts.min.js'))
 	.pipe(uglify()) // Минимизировать весь js (на выбор)

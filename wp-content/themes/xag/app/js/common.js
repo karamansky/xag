@@ -1,6 +1,13 @@
 $(function() {
 	$(document).ready(function(){
 
+		$('.header__videoplay').on('click', function(e){
+			e.preventDefault();
+			let video_frame = $(this).data('video');
+			let popup = $(this).attr('href');
+			$(popup).arcticmodal();
+		});
+
 		$('.nav-hamburger').on('click', function(e){
 			e.preventDefault();
 			$('.nav-mob').toggleClass('open');

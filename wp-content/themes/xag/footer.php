@@ -50,11 +50,23 @@
 			</div>
 		</div>
 		<div class="footer__copy">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/app/img/XAG-logo-web.png" alt="xag.md logo">
+			<?php if( !is_front_page() ) { echo '<a href="'. get_home_url() .'">'; } else{ echo '<span>'; }?>
+				<img src="<?php echo esc_url( get_theme_mod( 'xag_logo_footer' ) ); ?>" alt="Logo">
+			<?php if( !is_front_page() ) { echo '</a>'; } else{ echo '</span>'; }?>
 			Contactează © <?php echo date('Y'); ?> XAG Moldova All Rights Reserved + 373 79 131317
 		</div>
 	</div>
 </footer>
+
+<!--popups-->
+<div style="display: none;">
+
+<!--	<div id="main-video-popup" class="main-video-popup box-modal">-->
+<!--		<div class="box-modal_close arcticmodal-close">&times;</div>-->
+<!--		--><?php //if(!empty($main_popup_video)) echo $main_popup_video; ?>
+<!--	</div>-->
+
+</div>
 
 <?php wp_footer(); ?>
 

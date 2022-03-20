@@ -37,7 +37,7 @@
 		wp_enqueue_style('xag-slick', get_template_directory_uri() . '/app/libs/slick-carousel/slick/slick.css', array());
 		wp_enqueue_style('xag-slick-theme', get_template_directory_uri() . '/app/libs/slick-carousel/slick/slick-theme.css', array());
 		wp_enqueue_style('xag-formstyle', get_template_directory_uri() . '/app/libs/jquery.form-styler/dist/jquery.formstyler.css', array());
-		wp_enqueue_style('xag-modal', get_template_directory_uri() . '/app/libs/arcticModal/arcticmodal/jquery.arcticmodal.css', array());
+		wp_enqueue_style('xag-modal', get_template_directory_uri() . '/app/libs/jquery.arcticModal-0.3/jquery.arcticmodal-0.3.css', array());
 		wp_enqueue_style('xag-style', get_template_directory_uri() . '/app/css/main.min.css', array());
 
 		//scripts
@@ -120,6 +120,53 @@
 	}
 
 
+
+	/**
+	 * Add logos for the Theme Customizer.
+	 *
+	 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+	 */
+	function xag_customize_register( $wp_customize ) {
+		//All our sections, settings, and controls will be added here
+		$wp_customize->add_section( 'xag_logos' , array(
+			'title'      => __( 'Site Logos', 'xag' ),
+			'priority'   => 10,
+		) );
+
+		$wp_customize->add_setting('xag_logo_header', array(
+			'default'        => '',
+		));
+
+		$wp_customize->add_setting('xag_logo_footer', array(
+			'default'        => '',
+		));
+
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'logo_header',
+				array(
+					'label'      => __( 'Upload header logo', 'xag' ),
+					'section'    => 'xag_logos',
+					'settings'   => 'xag_logo_header'
+				)
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'logo_footer',
+				array(
+					'label'      => __( 'Upload footer logo', 'xag' ),
+					'section'    => 'xag_logos',
+					'settings'   => 'xag_logo_footer'
+				)
+			)
+		);
+
+	}
+	add_action( 'customize_register', 'xag_customize_register', 1 );
 
 
 	/* Admin includes

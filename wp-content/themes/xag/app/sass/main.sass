@@ -103,15 +103,12 @@
 		padding-left: 11px
 
 
-
-
-
-
-
-
-
 .logo
 	width: 50px
+	& > span,
+	& > a
+		display: flex
+		align-items: center
 	.nav-icon
 		cursor: pointer
 		width: 100%
@@ -139,9 +136,9 @@
 		color: #333
 		display: flex
 		align-items: center
-		&:hover a
+		&:hover > a
 			color: #C00
-		&.current-menu-item a
+		&.current-menu-item > a
 			color: #C00
 
 .navigation__popup
@@ -155,9 +152,9 @@
 	overflow: hidden
 	border-radius: 10px
 
-
 .menu-item-product:hover .navigation__popup
 	height: 250px
+	//overflow: auto
 
 .navigation__products
 	display: flex
@@ -176,7 +173,9 @@
 .navigation__products-link
 	display: flex
 	flex-direction: column
+	justify-content: center
 	align-items: center
+	text-align: center
 
 .nav-product-explain
 	color: #ccc
@@ -184,26 +183,27 @@
 	line-height: 16px
 	padding-top: 4px
 
-
-.has-sub
-	position: relative
-	&:hover .sub-menu
-		height: 150px
-
 .sub-menu
 	position: absolute
 	top: 60px
 	left: calc(50% - 100px)
-	height: 0
-	transition: height .4s
+	height: auto
+	max-height: 0
+	transition: all .7s
 	background: #fff
 	overflow: hidden
 	border-radius: 0 0 10px 10px
+
+	display: flex
+	flex-direction: column
+	justify-content: flex-start!important
 	ul
 		display: flex
 		flex-direction: column
+		justify-content: flex-start!important
 	.menu-item
 		border-top: 1px solid rgba(0,0,0,.08)
+		min-height: 43px
 		height: 43px
 		width: 200px
 		a
@@ -214,8 +214,13 @@
 			height: 100%
 			width: 100%
 
+.menu-item-has-children
+	position: relative
+	&:hover .sub-menu
+		max-height: 350px
+		padding-bottom: 5px
 
-.language
+.language-box
 	ul
 		display: flex
 		align-items: center
@@ -309,13 +314,34 @@
 			top: calc(50% - 10px)
 			left: calc(50% - 5px)
 
+.main-video-popup
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-left: auto
+	margin-right: auto
+	width: 1000px
+	max-width: 80%
+	background: #fff
+	border-radius: 8px
+	position: relative
+
+.popup-close
+	position: absolute
+	right: -30px
+	top: -30px
+	font-size: 40px
+	color: #fff
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+
+
 
 .catItems-wrap
 	padding: 50px 0
 	background: #fff
-
-.catItems
-
 
 .catItems__title
 	font-family: $os
