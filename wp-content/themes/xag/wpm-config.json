@@ -1,0 +1,27 @@
+{
+    "admin_pages": [
+        "toplevel_page_theme-global-options"
+    ],
+    "post_types": {
+        "lagenheter": {}
+    },
+    "post_fields": {
+        "custom_field": {
+            "wpm_each": {
+                "title": {}
+            }
+        }
+    },
+
+
+
+
+    "taxonomies": {
+        "my_custom_taxonomy": {}
+    },
+    "options": {
+        "theme_mods_my_theme": {
+            "my_theme_custom_option": {}
+        }
+    }
+}

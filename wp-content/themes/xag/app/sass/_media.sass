@@ -36,6 +36,23 @@
 	.tech__sizes img
 		max-width: 100%
 
+	.single__box
+		max-width: 100%
+		width: 70%
+
+	.single__sidebar
+		width: calc(30% - 20px)
+		margin-left: 20px
+
+	.single__content-title
+		font-size: 34px
+		line-height: 48px
+		padding-top: 20px
+		padding-bottom: 40px
+
+	.single__content
+		padding: 25px
+
 
 
 
@@ -106,6 +123,9 @@
 	.nav-hamburger
 		display: flex
 
+	.info-container
+		padding-top: 70px
+
 	.page-header
 		height: 250px
 
@@ -131,6 +151,36 @@
 
 	.category__item
 		width: calc(100% / 2 - 20px)
+
+	.page404
+		flex-direction: column
+
+	.page404__left
+		width: 100%
+		order: 2
+
+	.page404__right
+		width: 100%
+		padding-left: 0
+		text-align: center
+		margin-bottom: 35px
+
+	.page404__button
+		max-width: 90%
+		margin-right: auto
+		margin-left: auto
+
+	.contacts__header
+		padding-top: 70px
+		padding-bottom: 50px
+
+	.contacts__title
+		font-size: 80px
+		line-height: 1.2
+
+	.contacts__item
+		width: 50%
+
 
 
 
@@ -189,6 +239,25 @@
 		font-size: 16px
 		line-height: 30px
 
+	.single__inner
+		flex-direction: column
+
+	.single__box
+		width: 100%
+		margin-bottom: 40px
+
+	.single__sidebar
+		width: 100%
+		margin-left: 0
+
+	.single__content img
+		max-width: 100%
+
+	.single__content-title
+		font-size: 24px
+		line-height: 32px
+		padding-bottom: 30px
+
 
 
 
@@ -199,15 +268,19 @@
 
 
 @media only screen and (max-width : 480px)
-	.wrapper
-
 	.category__item
 		width: calc(100% - 20px)
 
+	.single__content
+		padding: 15px
 
 
 
 
 
-@media only screen and (max-width : 380px)
-	.wrapper
+
+
+@media only screen and (max-width : 370px)
+	.single__content-title
+		font-size: 20px
+		line-height: 28px

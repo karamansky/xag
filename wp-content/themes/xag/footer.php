@@ -3,43 +3,78 @@
 		<div class="footer__inner">
 			<div class="footer__inner-left">
 				<div class="footer__menus">
+					<?php if(has_nav_menu('footer1')) : ?>
 					<div class="footer__menu">
-						<h5 class="footer__menu-title">About</h5>
+						<h5 class="footer__menu-title"><?php _e('[:ru]О нас[:ro]Despre noi[:]'); ?></h5>
 						<ul>
-							<li class="footer__menu-item"><a href="#">About XAG</a></li>
-							<li class="footer__menu-item"><a href="#">About XAG</a></li>
-							<li class="footer__menu-item"><a href="#">About XAG</a></li>
-							<li class="footer__menu-item"><a href="#">About XAG</a></li>
-							<li class="footer__menu-item"><a href="#">About XAG</a></li>
+							<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'footer1',
+										'items_wrap'     => '%3$s',
+										'container'      => false,
+										'depth'          => 1,
+										'fallback_cb'    => false,
+									)
+								);
+							?>
 						</ul>
 					</div>
+					<?php endif; ?>
+					<?php if(has_nav_menu('footer2')) : ?>
 					<div class="footer__menu">
-						<h5 class="footer__menu-title">Services</h5>
+						<h5 class="footer__menu-title"><?php _e('[:ru]Услуги[:ro]Servicii[:]'); ?></h5>
 						<ul>
-							<li class="footer__menu-item"><a href="#">Agricultural UAS</a></li>
-							<li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
-							<li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
-							<li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+							<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'footer2',
+										'items_wrap'     => '%3$s',
+										'container'      => false,
+										'depth'          => 1,
+										'fallback_cb'    => false,
+									)
+								);
+							?>
 						</ul>
 					</div>
+					<?php endif; ?>
+					<?php if(has_nav_menu('footer3')) : ?>
 					<div class="footer__menu">
-						<h5 class="footer__menu-title">Events</h5>
+						<h5 class="footer__menu-title"><?php _e('[:ru]События[:ro]Evenimente[:]'); ?></h5>
 						<ul>
-							<li class="footer__menu-item"><a href="#">XAAC 2021</a></li>
-							<li class="footer__menu-item"><a href="#">XAAC 2019</a></li>
-							<li class="footer__menu-item"><a href="#">XAAC 2018</a></li>
-							<li class="footer__menu-item"><a href="#">XAAC 2017</a></li>
+							<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'footer3',
+										'items_wrap'     => '%3$s',
+										'container'      => false,
+										'depth'          => 1,
+										'fallback_cb'    => false,
+									)
+								);
+							?>
 						</ul>
 					</div>
+					<?php endif; ?>
+					<?php if(has_nav_menu('footer4')) : ?>
 					<div class="footer__menu">
-						<h5 class="footer__menu-title">News</h5>
+						<h5 class="footer__menu-title"><?php _e('[:ru]Новости[:ro]Știri[:]'); ?></h5>
 						<ul>
-							<li class="footer__menu-item"><a href="#">Agricultural UAS</a></li>
-							<li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
-							<li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
-							<li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+							<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'footer4',
+										'items_wrap'     => '%3$s',
+										'container'      => false,
+										'depth'          => 1,
+										'fallback_cb'    => false,
+									)
+								);
+							?>
 						</ul>
 					</div>
+					<?php endif; ?>
 				</div>
 			</div>
 			<div class="footer__inner-right">
@@ -62,7 +97,10 @@
 			<?php if( !is_front_page() ) { echo '<a href="'. get_home_url() .'">'; } else{ echo '<span>'; }?>
 				<img src="<?php echo esc_url( get_theme_mod( 'xag_logo_footer' ) ); ?>" alt="Logo">
 			<?php if( !is_front_page() ) { echo '</a>'; } else{ echo '</span>'; }?>
-			Contactează © <?php echo date('Y'); ?> XAG Moldova All Rights Reserved + 373 79 131317
+			<?php
+				$phone = get_field('settings_phone', 'option');
+			?>
+			<p>Contactează © <?php echo date('Y'); ?> XAG Moldova All Rights Reserved <?php if( !empty($phone) ) echo '<a href="tel:'. $phone .'">'. $phone .'</a>'; ?></p>
 		</div>
 	</div>
 </footer>

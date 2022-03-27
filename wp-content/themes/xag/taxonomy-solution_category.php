@@ -56,7 +56,7 @@
 	</div>
 <?php
 	else :
-		echo "No products yet!";
+		echo get_template_part('template-parts/notfound');
 	endif;
 ?>
 <?php

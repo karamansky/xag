@@ -32,17 +32,24 @@
 							</div>
 						</a>
 					<?php endwhile; ?>
-				<?php else: ?>
-					Постов не найдено
-				<?php endif; ?>
+				<?php else:
+						echo get_template_part('template-parts/notfound');
+					endif; ?>
 				<?php wp_reset_postdata(); ?>
 
 			</div>
 
 			<div class="pagination">
-
+				<?php
+					echo paginate_links(
+						array(
+							'prev_next' => true,
+							'prev_text' => __( '&larr;' ),
+							'next_text' => __( '&rarr;' ),
+						)
+					);
+				?>
 			</div>
-
 		</div>
 	</div>
 </div>
