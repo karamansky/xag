@@ -135,6 +135,19 @@ a {
   font-size: 36px;
   margin-bottom: 50px; }
 
+.landing .section__title {
+  color: #fff;
+  font-size: 56px;
+  line-height: 72px;
+  text-align: left;
+  font-weight: 400;
+  margin-bottom: 0; }
+
+.landing .section__subtitle {
+  color: #b3b3b3;
+  font-size: 40px;
+  line-height: 56px; }
+
 .info-container {
   padding-top: 110px;
   padding-bottom: 70px;
@@ -151,7 +164,7 @@ strong {
   position: absolute;
   top: 20px;
   width: 100%;
-  z-index: 2; }
+  z-index: 999; }
 
 .nav-pc {
   width: 1200px;
@@ -2169,18 +2182,14 @@ strong {
 
 .text-content {
   padding-top: 25px; }
+  .text-content .section__title {
+    padding-top: 30px;
+    padding-bottom: 80px; }
 
 .text-content__subtitle {
   color: #b3b3b3;
   font-size: 40px;
   line-height: 56px; }
-
-.text-content__title {
-  color: #fff;
-  font-size: 56px;
-  line-height: 72px;
-  padding-top: 30px;
-  padding-bottom: 80px; }
 
 .tech-video-play {
   width: 100%;
@@ -2190,6 +2199,315 @@ strong {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
+
+.modular {
+  padding-top: 150px;
+  padding-bottom: 150px; }
+  .modular .section__title {
+    padding-top: 30px;
+    padding-bottom: 80px; }
+  .modular img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+
+.propellers {
+  padding-bottom: 150px; }
+  .propellers .section__title {
+    padding-top: 30px; }
+
+.propellers__tabs {
+  padding-top: 80px; }
+  .propellers__tabs .tabs {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .propellers__tabs .tab {
+    display: inline-block;
+    text-align: center;
+    width: 160px;
+    color: #fff;
+    cursor: pointer;
+    padding-bottom: 24px;
+    letter-spacing: 0;
+    font-size: 22px;
+    line-height: 36px;
+    position: relative; }
+    .propellers__tabs .tab:after {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 6px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #b3b3b3;
+      cursor: pointer; }
+    .propellers__tabs .tab.active:after {
+      background: #e02020; }
+
+.ip67 .section__title {
+  padding-bottom: 80px; }
+
+.x4 {
+  background-image: url("../img/v40-star-bg.jpg");
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  text-align: center; }
+  .x4 .section__subtitle {
+    padding-top: 40px; }
+
+.x4-video .section__subtitle {
+  font-size: 22px;
+  line-height: 36px;
+  margin-top: 32px;
+  margin-bottom: 80px; }
+
+.x4-video .features__items {
+  padding-top: 80px; }
+
+.radar {
+  padding-top: 150px;
+  padding-bottom: 150px; }
+
+.radar__tabs .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 80px; }
+
+.radar__tabs .tab {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 40px;
+  line-height: 56px;
+  color: #2D2D2D;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+  .radar__tabs .tab.active {
+    color: #fff; }
+
+.camera .section__title {
+  padding-bottom: 80px; }
+
+.control {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  .control .section__subtitle {
+    font-size: 22px;
+    line-height: 36px; }
+
+.control__tabs {
+  padding-top: 80px; }
+  .control__tabs .tab_item {
+    border-radius: 28px;
+    overflow: hidden; }
+    .control__tabs .tab_item img {
+      width: 100%;
+      height: 100%;
+      max-height: 650px;
+      -o-object-fit: cover;
+         object-fit: cover; }
+  .control__tabs .tabs {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .control__tabs .tabs .tab {
+      display: inline-block;
+      text-align: center;
+      width: 33.33%;
+      color: #fff;
+      cursor: pointer;
+      padding-bottom: 24px;
+      letter-spacing: 0;
+      font-size: 22px;
+      line-height: 36px;
+      position: relative; }
+      .control__tabs .tabs .tab:after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 6px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #b3b3b3;
+        cursor: pointer; }
+      .control__tabs .tabs .tab.active:after {
+        background: #e02020; }
+
+.sowing .wrapper {
+  padding-bottom: 80px; }
+
+.sowing .section__title {
+  text-align: center; }
+
+.sowing .section__subtitle {
+  text-align: center;
+  font-size: 33px;
+  padding-top: 40px; }
+
+.block-scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0c0c0c), color-stop(84%, #1c1c1c), to(#282828));
+  background: -o-linear-gradient(top, #0c0c0c, #1c1c1c 84%, #282828);
+  background: linear-gradient(180deg, #0c0c0c, #1c1c1c 84%, #282828);
+  padding: 100px 0; }
+  .block-scroll.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    z-index: 90; }
+  .block-scroll .wrapper-fluid {
+    padding-left: 150px;
+    padding-right: 150px; }
+
+.block-scroll__inner {
+  position: relative; }
+
+.block-scroll__item-left {
+  width: 50%; }
+
+.block-scroll__item-right {
+  width: 50%; }
+
+.block-scroll__img-item {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.block-scroll__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative; }
+
+.block-scroll__item + .block-scroll__item {
+  margin-top: 0; }
+
+.block-scroll__title {
+  position: relative;
+  padding-top: 35px;
+  font-size: 56px;
+  line-height: 72px; }
+  .block-scroll__title img {
+    display: block; }
+  .block-scroll__title:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 94px;
+    height: 4px;
+    background: #e02020;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+
+.block-scroll__description {
+  margin-top: 32px;
+  color: #b3b3b3;
+  font-size: 22px;
+  line-height: 36px; }
+
+.block-scroll__item.active {
+  opacity: 1; }
+
+.block-scroll__right:hover .block-scroll:before {
+  width: 134px; }
+
+.battery {
+  padding: 150px 0;
+  background: #000; }
+
+.battery__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .battery__inner .section__title {
+    margin-top: 27px; }
+
+.battery__left {
+  width: 65%; }
+
+.battery__right {
+  width: 35%;
+  text-align: center; }
+  .battery__right img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+.battery__description {
+  margin-top: 30px;
+  color: #b3b3b3;
+  font-size: 22px;
+  line-height: 36px; }
+
+.battery__explain {
+  width: 400px;
+  font-size: 12px;
+  margin-top: 20px;
+  color: #616161;
+  line-height: 18px;
+  text-align: justify; }
 
 .cta-text {
   background-image: url("../img/v40-star-bg.jpg");

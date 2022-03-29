@@ -19,8 +19,8 @@
 				<h3 class="tech__header-title"><?php if( !empty($model) ) echo $model; ?></h3>
 				<div class="tech__navigation">
 					<ul>
-						<li><a href="#">Описание</a></li>
-						<li><a href="#">Характеристики</a></li>
+						<li><a href="/v40/">Описание</a></li>
+						<li><a href="/solutions/xag-v40-agricultural-drone/">Характеристики</a></li>
 					</ul>
 				</div>
 			</div>

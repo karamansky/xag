@@ -8,7 +8,7 @@
 	position: absolute
 	top: 20px
 	width: 100%
-	z-index: 2
+	z-index: 999
 
 .nav-pc
 	width: 1200px
@@ -1774,18 +1774,14 @@
 .text-content
 	padding-top: 25px
 
+	.section__title
+		padding-top: 30px
+		padding-bottom: 80px
+
 .text-content__subtitle
 	color: #b3b3b3
 	font-size: 40px
 	line-height: 56px
-
-.text-content__title
-	color: #fff
-	font-size: 56px
-	line-height: 72px
-	padding-top: 30px
-	padding-bottom: 80px
-
 
 .tech-video-play
 	width: 100%
@@ -1795,25 +1791,300 @@
 		height: 100%
 		object-fit: cover
 
+.modular
+	padding-top: 150px
+	padding-bottom: 150px
+	.section__title
+		padding-top: 30px
+		padding-bottom: 80px
+
+	img
+		display: block
+		max-width: 100%
+		margin-left: auto
+		margin-right: auto
+
+.propellers
+	padding-bottom: 150px
+
+	.section__title
+		padding-top: 30px
+
+.propellers__tabs
+	padding-top: 80px
+
+	.tabs
+		width: 320px
+		margin-left: auto
+		margin-right: auto
+		margin-top: 60px
+		text-align: center
+		display: flex
+		justify-content: center
+
+	.tab
+		display: inline-block
+		text-align: center
+		width: 160px
+		color: #fff
+		cursor: pointer
+		padding-bottom: 24px
+		letter-spacing: 0
+		font-size: 22px
+		line-height: 36px
+		position: relative
+		&:after
+			display: block
+			content: ''
+			width: 100%
+			height: 6px
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			background: #b3b3b3
+			cursor: pointer
+		&.active:after
+			background: #e02020
+
+.ip67
+	.section__title
+		padding-bottom: 80px
+
+.x4
+	background-image: url('../img/v40-star-bg.jpg')
+	background-size: 100% 100%
+	background-position: center center
+	background-repeat: no-repeat
+	background-attachment: fixed
+	padding-top: 150px
+	padding-bottom: 150px
+	text-align: center
+
+	.section__subtitle
+		padding-top: 40px
+
+.x4-video
+	.section__subtitle
+		font-size: 22px
+		line-height: 36px
+		margin-top: 32px
+		margin-bottom: 80px
+
+	.features__items
+		padding-top: 80px
+
+
+.radar
+	padding-top: 150px
+	padding-bottom: 150px
+
+.radar__tabs
+	.tabs
+		display: flex
+		width: 50%
+		margin-left: auto
+		margin-right: auto
+		justify-content: space-around
+		padding-top: 80px
+
+	.tab
+		padding-left: 15px
+		padding-right: 15px
+		font-size: 40px
+		line-height: 56px
+		color: #2D2D2D
+		cursor: pointer
+		transition: all .3s
+		&.active
+			color: #fff
+
+.camera
+	.section__title
+		padding-bottom: 80px
+
+
+.control
+	padding-top: 100px
+	padding-bottom: 100px
+
+	.section__subtitle
+		font-size: 22px
+		line-height: 36px
+
+.control__tabs
+	padding-top: 80px
+
+	.tab_item
+		border-radius: 28px
+		overflow: hidden
+		img
+			width: 100%
+			height: 100%
+			max-height: 650px
+			object-fit: cover
+
+	.tabs
+		margin-left: auto
+		margin-right: auto
+		margin-top: 60px
+		text-align: center
+		display: flex
+		justify-content: center
+
+		.tab
+			display: inline-block
+			text-align: center
+			width: 33.33%
+			color: #fff
+			cursor: pointer
+			padding-bottom: 24px
+			letter-spacing: 0
+			font-size: 22px
+			line-height: 36px
+			position: relative
+			&:after
+				display: block
+				content: ''
+				width: 100%
+				height: 6px
+				position: absolute
+				left: 0
+				right: 0
+				bottom: 0
+				background: #b3b3b3
+				cursor: pointer
+			&.active:after
+				background: #e02020
+
+.sowing
+	.wrapper
+		padding-bottom: 80px
+
+	.section__title
+		text-align: center
+
+	.section__subtitle
+		text-align: center
+		font-size: 33px
+		padding-top: 40px
+
+
+.block-scroll
+	display: flex
+	flex-direction: column
+	justify-content: center
+	background: linear-gradient(180deg,#0c0c0c,#1c1c1c 84%,#282828)
+	padding: 100px 0
+
+	&.fixed
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		margin: 0 auto
+		transition: all .3s
+		z-index: 90
+
+	.wrapper-fluid
+		padding-left: 150px
+		padding-right: 150px
+
+.block-scroll__inner
+	position: relative
+
+.block-scroll__item-left
+	width: 50%
+
+.block-scroll__item-right
+	width: 50%
+
+.block-scroll__img-item
+	display: block
+	margin-left: auto
+	margin-right: auto
+
+.block-scroll__item
+	display: flex
+	justify-content: space-between
+	align-items: center
+	position: relative
+
+.block-scroll__item + .block-scroll__item
+	margin-top: 0
+
+.block-scroll__title
+	position: relative
+	padding-top: 35px
+	font-size: 56px
+	line-height: 72px
+	img
+		display: block
+
+	&:before
+		content: " "
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		width: 94px
+		height: 4px
+		background: #e02020
+		transition: all .3s ease-in-out
+
+.block-scroll__description
+	margin-top: 32px
+	color: #b3b3b3
+	font-size: 22px
+	line-height: 36px
+
+.block-scroll__item.active
+	opacity: 1
 
 
 
+.block-scroll__right:hover
+	.block-scroll:before
+		width: 134px
 
 
+.battery
+	padding: 150px 0
+	background: #000
 
+.battery__inner
+	display: flex
+	align-items: center
+	justify-content: space-between
 
+	.section__title
+		margin-top: 27px
 
+.battery__left
+	width: 65%
 
+.battery__right
+	width: 35%
+	text-align: center
+	img
+		max-width: 100%
+		display: block
+		margin-left: auto
+		margin-right: auto
 
+.battery__description
+	margin-top: 30px
+	color: #b3b3b3
+	font-size: 22px
+	line-height: 36px
 
-
-
-
-
-
-
-
-
+.battery__explain
+	width: 400px
+	font-size: 12px
+	margin-top: 20px
+	color: #616161
+	line-height: 18px
+	text-align: justify
 
 .cta-text
 	background-image: url('../img/v40-star-bg.jpg')

@@ -55,6 +55,7 @@ $(function() {
 
 	});
 
+
 	if (screen.width <= 768){
 
 	}
@@ -95,7 +96,26 @@ $(function() {
 	});
 
 
+	//drone page tabs 1
+	$(".propellers__tabs .tab_item").not(":first").hide();
+	$(".propellers__tabs .tab").click(function() {
+		$(".propellers__tabs .tab").removeClass("active").eq($(this).index()).addClass("active");
+		$(".propellers__tabs .tab_item").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("active");
 
+	//tabs 2
+	$(".radar__tabs .tab_item").not(":first").hide();
+	$(".radar__tabs .tab").click(function() {
+		$(".radar__tabs .tab").removeClass("active").eq($(this).index()).addClass("active");
+		$(".radar__tabs .tab_item").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("active");
+
+	//tabs 3
+	$(".control__tabs .tab_item").not(":first").hide();
+	$(".control__tabs .tab").click(function() {
+		$(".control__tabs .tab").removeClass("active").eq($(this).index()).addClass("active");
+		$(".control__tabs .tab_item").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("active");
 
 
 
