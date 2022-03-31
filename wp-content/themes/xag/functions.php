@@ -46,6 +46,12 @@
 		wp_enqueue_script('xag-scripts', get_template_directory_uri() . '/app/js/scripts.min.js', 'jquery', 1.0, true);
 		wp_enqueue_script('xag-arctic', get_template_directory_uri() . '/app/libs/jquery.arcticmodal-0.3/jquery.arcticmodal-0.3.min.js', 'jquery', 1.0, true);
 		wp_enqueue_script('xag-common', get_template_directory_uri() . '/app/js/common.js', 'jquery', 1.0, true);
+
+
+		//localize
+		wp_localize_script( 'xag-common', 'translate', array(
+			'back' => __( '[:ru]Назад[:ro]Înapoi[:]' ),
+		));
 	}
 
 	add_action('wp_enqueue_scripts', 'xag_scripts');

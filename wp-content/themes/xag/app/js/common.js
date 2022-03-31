@@ -13,7 +13,10 @@ $(function() {
 			$('.nav-mob').toggleClass('open');
 		});
 
-		$('.nav-mob .has-sub > a').on('click', function(e){
+		//добавляем кнопку НАЗАД во второй уровень мобильного меню
+		$('.nav-mob .sub-menu').prepend('<a href="#" class="sub-menu__back">&larr;&nbsp;'+ translate.back +'</a>');
+
+		$('.nav-mob .menu-item-has-children > a').on('click', function(e){
 			e.preventDefault();
 			$(this).parent().find('.sub-menu').addClass('open');
 		});

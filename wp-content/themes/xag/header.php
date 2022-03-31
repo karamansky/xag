@@ -76,17 +76,6 @@
 							)
 						);
 					?>
-
-<!--					<li class="menu-item has-sub">-->
-<!--						<a href="#">Services</a>-->
-<!--						<div class="sub-menu">-->
-<!--							<ul>-->
-<!--								<li class="menu-item"><a href="#">Service 1</a></li>-->
-<!--								<li class="menu-item"><a href="#">Service 2</a></li>-->
-<!--							</ul>-->
-<!--						</div>-->
-<!--					</li>-->
-<!--					<li class="menu-item"><a href="#">About XAG</a></li>-->
 				</ul>
 			</div>
 			<div class="language-box">
@@ -106,7 +95,6 @@
 										)
 									);
 								?>
-								<!--<li class="menu-item sub-language__item"><a href="#">Rom</a></li>-->
 							</ul>
 						</div>
 					</div>
@@ -116,31 +104,37 @@
 		<div class="nav-mob">
 			<div class="wrapper">
 				<ul>
-					<li class="menu-item"><a href="#">Home</a></li>
-					<li class="menu-item has-sub">
-						<a href="#">Products</a>
+					<li class="menu-item current-menu-item"><a href="/"><?php _e('[:ru]Главная[:ro]Acasă[:]'); ?></a></li>
+					<li class="menu-item menu-item-has-children">
+						<a href="#"><?php _e('[:ru]Техника[:ro]Produse[:]'); ?></a>
 						<div class="sub-menu">
-							<a href="#" class="sub-menu__back">&larr;&nbsp;Back</a>
 							<ul>
-								<li class="menu-item"><a href="#">Agricultural Drone</a></li>
-								<li class="menu-item"><a href="#">Remote Sensing Drone</a></li>
-								<li class="menu-item"><a href="#">Unmanned Ground Vehicle</a></li>
-								<li class="menu-item"><a href="#">Agriculture IoT System</a></li>
+								<?php
+									$args = array(
+										'taxonomy' => 'solution_category',
+										'orderby' => 'name',
+										'hide_empty'   => 0,
+										'order'   => 'ASC',
+										'posts_per_page' => 1
+									);
+									$categories = get_categories($args);
+									foreach ($categories as $category) : ?>
+										<li class="menu-item"><a href="<?php echo get_term_link($category->term_id); ?>"><?php echo $category->cat_name; ?></a></li>
+								<?php endforeach; ?>
 							</ul>
 						</div>
 					</li>
-					<li class="menu-item has-sub">
-						<a href="#">Services</a>
-						<div class="sub-menu">
-							<a href="#" class="sub-menu__back">&larr;&nbsp;Back</a>
-							<ul>
-								<li class="menu-item"><a href="#">Service 1</a></li>
-								<li class="menu-item"><a href="#">Service 2</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="menu-item"><a href="#">Service</a></li>
-					<li class="menu-item"><a href="#">About XAG</a></li>
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'primary',
+								'items_wrap'     => '%3$s',
+								'container'      => false,
+								'depth'          => 2,
+								'fallback_cb'    => false,
+							)
+						);
+					?>
 				</ul>
 			</div>
 		</div>
