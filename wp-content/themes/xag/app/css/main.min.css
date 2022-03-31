@@ -488,7 +488,8 @@ strong {
     color: #C00; }
   .language-box .language__item .sub-menu {
     width: 100px;
-    left: calc(50% - 50px); }
+    left: calc(50% - 50px);
+    top: 52px; }
     .language-box .language__item .sub-menu .menu-item {
       width: 100%;
       display: -webkit-box;
@@ -1577,6 +1578,13 @@ strong {
     padding-bottom: 80px;
     text-align: center;
     font-size: 32px; }
+
+.download,
+.faq-wrap {
+  overflow: hidden; }
+  .download .wrapper-980,
+  .faq-wrap .wrapper-980 {
+    overflow: hidden; }
 
 .category__title {
   display: block;
@@ -2804,7 +2812,18 @@ strong {
   .cta-form {
     padding-bottom: 75px; }
   .ip67 .section__title {
-    padding-bottom: 75px; } }
+    padding-bottom: 75px; }
+  .main-video-popup {
+    max-width: 90vw;
+    width: 90vw; }
+  .download .tab img {
+    width: 200px; }
+  .download {
+    width: 100%; }
+  .faq {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px; } }
 
 @media only screen and (max-width: 992px) {
   .wrapper {
@@ -3025,7 +3044,33 @@ strong {
   .battery__right {
     width: 100%; }
   .battery__explain {
-    width: 100%; } }
+    width: 100%; }
+  .download .download__filename {
+    width: 60%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+  .download .download__filedate {
+    width: 40%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+  .download .download__item > div {
+    width: 100%; }
+  .faq .faq__item-label {
+    font-size: 16px;
+    line-height: 22px; }
+  .download .tab img {
+    width: 100%;
+    max-width: 100%; }
+  .download .tab {
+    white-space: normal; }
+  .download .download__item {
+    padding-left: 0;
+    padding-right: 0; }
+  .download .tab_item__title,
+  .faq .faq__title {
+    font-size: 22px;
+    line-height: 32px;
+    padding: 25px 0; } }
 
 @media only screen and (max-width: 750px) {
   .img-blocks {
@@ -3035,7 +3080,9 @@ strong {
     width: 100%;
     margin-bottom: 10px; }
     .img-blocks__item:last-child {
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+  .popup-close {
+    right: 0; } }
 
 @media only screen and (max-width: 576px) {
   .products__item {
