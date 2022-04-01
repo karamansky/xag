@@ -727,6 +727,9 @@
 	font-size: 20px
 	line-height: 28px
 
+.tech-content
+	padding-bottom: 80px
+
 
 .about
 	padding-bottom: 120px
@@ -1641,18 +1644,23 @@
 	justify-content: space-between
 	flex-wrap: wrap
 
-.features__left
-	width: 50%
-	padding-right: 15px
-
-.features__right
-	width: 50%
-	padding-left: 15px
+//.features__left
+//	width: 50%
+//	padding-right: 15px
+//
+//.features__right
+//	width: 50%
+//	padding-left: 15px
 
 .features__item
+	width: 50%
 	padding-top: 15px
 	position: relative
 	margin-bottom: 65px
+	padding-right: 15px
+	&:nth-child(2n)
+		padding-right: 0
+		padding-left: 15px
 
 	&:before
 		content: ''

@@ -1,16 +1,15 @@
 <?php
 	/*
-	 * Template Name: Single product
+	 * Template Name: Product tech
 	 */
 	get_header(); ?>
 
 <?php
-
 	$model = get_field('model');
 	$param_title = get_field('param_title');
 	$param_images = get_field('param_images');
 	$parameters = get_field('parameters');
-
+	$description_page = get_field('description_page');
 ?>
 <div class="tech-wrap">
 	<div class="wrapper">
@@ -19,8 +18,10 @@
 				<h3 class="tech__header-title"><?php if( !empty($model) ) echo $model; ?></h3>
 				<div class="tech__navigation">
 					<ul>
-						<li><a href="/v40/">Описание</a></li>
-						<li><a href="/solutions/xag-v40-agricultural-drone/">Характеристики</a></li>
+						<?php if(!empty($description_page)) : ?>
+							<li><a href="<?php echo get_the_permalink($description_page->ID); ?>"><?php _e('[:ru]Описание[:ro]Descriere[:]'); ?></a></li>
+						<?php endif; ?>
+						<li><a href="<?php echo get_the_permalink(get_the_ID()); ?>"><?php _e('[:ru]Характеристики[:ro]Caracteristici[:]'); ?></a></li>
 					</ul>
 				</div>
 			</div>
@@ -30,8 +31,11 @@
 
 				<?php if(!empty($param_images)): ?>
 				<div class="tech__sizes">
-					<?php foreach ($param_images as $param_image) : ?>
-						<img src="<?php echo $param_image['img']; ?>" alt="<?php echo $model; ?>">
+					<?php foreach ($param_images as $param_image) :
+							if( !empty($param_image['img']) ):
+					?>
+							<img src="<?php echo $param_image['img']; ?>" alt="<?php echo $model; ?>">
+						<?php endif; ?>
 					<?php endforeach; ?>
 				</div>
 				<?php endif; ?>
@@ -72,7 +76,11 @@
 				</div>
 				<?php endif; ?>
 			</div>
-
+			<?php if( !empty(get_the_content()) ) : ?>
+				<div class="tech-content">
+					<?php the_content(); ?>
+				</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </div>

@@ -218,3 +218,13 @@ function xag_posts_custom_column_views( $column ) {
 }
 add_filter( 'manage_posts_columns', 'xag_posts_column_views' );
 add_action( 'manage_posts_custom_column', 'xag_posts_custom_column_views' );
+
+
+
+
+
+function xag_cpt_post_types( $post_types ) {
+	$post_types[] = 'solutions';
+	return $post_types;
+}
+add_filter( 'cpt_post_types', 'xag_cpt_post_types' );

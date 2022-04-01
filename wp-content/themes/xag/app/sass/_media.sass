@@ -462,16 +462,20 @@
 	.contacts__item
 		width: 50%
 
-	.features__left
-		width: 100%
-		padding-right: 0
-
-	.features__right
-		width: 100%
-		padding-left: 0
+	//.features__left
+	//	width: 100%
+	//	padding-right: 0
+	//
+	//.features__right
+	//	width: 100%
+	//	padding-left: 0
 
 	.features__item
+		width: 100%
 		text-align: center
+		padding-right: 0
+		&:nth-child(2n)
+			padding-left: 0
 
 	.features__item:before
 		left: calc(50% - 30px)
@@ -610,11 +614,9 @@
 		line-height: 32px
 		padding: 25px 0
 
-
-
-
-
-
+	.catItem__title
+		padding-left: 0
+		padding-right: 0
 
 
 
