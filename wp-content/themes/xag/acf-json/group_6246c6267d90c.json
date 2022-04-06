@@ -97,7 +97,7 @@
         },
         {
             "key": "field_6246cc97fbe01",
-            "label": "Блок особенностей",
+            "label": "Блок \"Особенности\"",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -173,7 +173,7 @@
         },
         {
             "key": "field_6246ce54ed2eb",
-            "label": "Блок особенностей 2",
+            "label": "Блок \"Особенности\" 2",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -290,7 +290,7 @@
         },
         {
             "key": "field_6246d124f3deb",
-            "label": "Блок Структура (изб. слева)",
+            "label": "Блок \"Структура\" (изб. слева)",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -369,7 +369,7 @@
         },
         {
             "key": "field_6246d3e764964",
-            "label": "Блок структура (изб. справа)",
+            "label": "Блок \"Структура\" (изб. справа)",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -448,7 +448,7 @@
         },
         {
             "key": "field_6246d70f6e7b3",
-            "label": "Блок Опрыскивание",
+            "label": "Блок \"Опрыскивание\"",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -541,7 +541,7 @@
         },
         {
             "key": "field_62471ceb51786",
-            "label": "Блок Модульность",
+            "label": "Блок \"Модульность\"",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -620,7 +620,7 @@
         },
         {
             "key": "field_62471e4a05f83",
-            "label": "Блок Размеры",
+            "label": "Блок \"Размеры\"",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -739,7 +739,7 @@
         },
         {
             "key": "field_62472058c8eab",
-            "label": "Блок Водостойкость",
+            "label": "Блок \"Водостойкость\"",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -832,7 +832,7 @@
         },
         {
             "key": "field_624721f0487ad",
-            "label": "Блок Процессор",
+            "label": "Блок \"Процессор\"",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -911,7 +911,7 @@
         },
         {
             "key": "field_624723f49e2a7",
-            "label": "Блок Процессор (видео)",
+            "label": "Блок \"Процессор (видео)\"",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -1063,7 +1063,7 @@
         },
         {
             "key": "field_624728dcb094a",
-            "label": "Блок Радары",
+            "label": "Блок \"Радары\"",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -1160,6 +1160,564 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_62472ba7822a6",
+            "label": "Блок \"Камера\"",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_62472bb4822a7",
+            "label": "Подзаголовок",
+            "name": "camera_subtitle",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62472bc1822a8",
+            "label": "Заголовок",
+            "name": "camera_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62472bcf822a9",
+            "label": "Видео-фон (webm)",
+            "name": "camera_video_webm",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_62472bf0822aa",
+            "label": "Видео-фон (mp4)",
+            "name": "camera_video_mp4",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_62472d12de199",
+            "label": "Блок \"Управление\"",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_62472d1ede19a",
+            "label": "Заголовок",
+            "name": "control_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62472d2cde19b",
+            "label": "Подзаголовок",
+            "name": "control_subtitle",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62472d4bde19c",
+            "label": "Табы",
+            "name": "control_tabs",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_62472d4bde19d",
+                    "label": "Изображение",
+                    "name": "img",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "large",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_62472d4bde19e",
+                    "label": "Название таба",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_62472fcf036f9",
+            "label": "Блок \"Разбрасывание\"",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_6247309c036fa",
+            "label": "Заголовок",
+            "name": "sowing_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_624730a8036fb",
+            "label": "Подзаголовок",
+            "name": "sowing_subtitle",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_624730e1036fc",
+            "label": "Видео-фон (webm)",
+            "name": "sowing_video_webm",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_624730fc036fd",
+            "label": "Видео-фон (mp4)",
+            "name": "sowing_video_mp4",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6247346680c7c",
+            "label": "Блок \"Компоненты\"",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_6247348080c7d",
+            "label": "Компоненты",
+            "name": "components",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 0,
+            "layout": "block",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_6247349280c7e",
+                    "label": "Заголовок",
+                    "name": "title",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_6247349b80c7f",
+                    "label": "Описание",
+                    "name": "description",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_624734b480c80",
+                    "label": "Изображение",
+                    "name": "img",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "large",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
+            "key": "field_6247379db198b",
+            "label": "Блок \"Батарея\"",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_624737a8b198c",
+            "label": "Подзаголовок",
+            "name": "battery_subtitle",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_624737bcb198d",
+            "label": "Заголовок",
+            "name": "battery_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_624737cfb198e",
+            "label": "Описание",
+            "name": "battery_description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_62473820b198f",
+            "label": "Уточнение",
+            "name": "battery_clarification",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_62473859b1990",
+            "label": "Изображение",
+            "name": "battery_img",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_62473e00f316c",
+            "label": "Блок \"Call to Action\"",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_62473e13f316d",
+            "label": "Заголовок",
+            "name": "cta_title",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -1179,5 +1737,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1648830767
+    "modified": 1648836136
 }

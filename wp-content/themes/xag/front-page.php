@@ -68,7 +68,7 @@
 			<?php foreach ($infoblocks as $infoblock) : ?>
 				<a href="<?php echo $infoblock['link']['url']; ?>" class="img-blocks__item" style="background-image: url('<?php echo $infoblock['image'] ?>');">
 					<h3 class="img-blocks__title"><?php echo $infoblock['title'] ?></h3>
-					<span>More &rarr;</span>
+					<span><?php _e('[:ru]Подробнее[:ro]Mai mult[:]'); ?> &rarr;</span>
 				</a>
 			<?php endforeach; ?>
 		</div>

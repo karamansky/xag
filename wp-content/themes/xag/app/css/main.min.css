@@ -2561,10 +2561,12 @@ strong {
     border-radius: 4px;
     padding: 0 16px;
     outline: none; }
-  .cta-form button[type=submit] {
+  .cta-form input[type=submit] {
     display: block;
     width: 178px;
+    height: 38px;
     font-size: 16px;
+    line-height: 1.15;
     background: #2d2d2d;
     border-radius: 4px;
     color: #fff;

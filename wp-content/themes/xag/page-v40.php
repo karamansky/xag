@@ -318,165 +318,162 @@ get_header();
 			<?php endif; ?>
 
 
-			<section class="camera">
-				<div class="wrapper">
-					<h4 class="section__subtitle">PSL pilot perspective image</h4>
-					<h2 class="section__title">Clearly Display Field Condition and Allows Precision in Complex Environment</h2>
-				</div>
-				<div class="tech-video-play">
-					<video autoplay muted loop="true">
-						<source src="<?php echo get_template_directory_uri()?>/app/img/v40-psl-mini.mp4" type="video/mp4">
-						<source src="<?php echo get_template_directory_uri()?>/app/img/v40-psl-mini.webm" type="video/webm">
-					</video>
-				</div>
-			</section>
+			<?php
+				$camera_subtitle = get_field('camera_subtitle');
+				$camera_title = get_field('camera_title');
+				$camera_video_webm = get_field('camera_video_webm');
+				$camera_video_mp4 = get_field('camera_video_mp4');
+				if( !empty($camera_video_webm) || !empty($camera_video_mp4)) :
+			?>
+				<section class="camera">
+					<div class="wrapper">
+						<?php if( !empty($camera_subtitle) ) echo '<h4 class="section__subtitle">'. $camera_subtitle .'</h4>'; ?>
+						<?php if( !empty($camera_title) ) echo '<h2 class="section__title">'. $camera_title .'</h2>'; ?>
+					</div>
+					<div class="tech-video-play">
+						<video autoplay muted loop="true">
+							<source src="<?php echo $camera_video_webm; ?>" type="video/webm">
+							<source src="<?php echo $camera_video_mp4; ?>" type="video/mp4">
+						</video>
+					</div>
+				</section>
+			<?php endif; ?>
 
 
-			<section class="control">
-				<div class="wrapper">
-					<h2 class="section__title">Smart Control with Ease</h2>
-					<h4 class="section__subtitle">Quick start with one connection<br>Three operation modes for you to take</h4>
-					<div class="control__tabs">
-						<div class="tab_content">
-							<div class="tab_item"><img src="<?php echo get_template_directory_uri()?>/app/img/v40-control-1.jpg" alt="v40"></div>
-							<div class="tab_item"><img src="<?php echo get_template_directory_uri()?>/app/img/v40-control-2.jpg" alt="v40"></div>
-							<div class="tab_item"><img src="<?php echo get_template_directory_uri()?>/app/img/v40-control-3.jpg" alt="v40"></div>
-						</div>
-						<div class="tabs">
-							<div class="tab">Standart mode</div>
-							<div class="tab">Customised mode</div>
-							<div class="tab">Remote control mode</div>
+			<?php
+				$control_title = get_field('control_title');
+				$control_subtitle = get_field('control_subtitle');
+				$control_tabs = get_field('control_tabs');
+				if( !empty($control_tabs) ) :
+			?>
+				<section class="control">
+					<div class="wrapper">
+						<?php if( !empty($control_title) ) echo '<h2 class="section__title">'. $control_title .'</h2>'; ?>
+						<?php if( !empty($control_subtitle) ) echo '<h4 class="section__subtitle">'. $control_subtitle .'</h4>'; ?>
+						<div class="control__tabs">
+							<div class="tab_content">
+								<?php foreach ($control_tabs as $tab) : ?>
+									<div class="tab_item"><img src="<?php echo $tab['img']; ?>" alt="<?php echo $control_title; ?>"></div>
+								<?php endforeach; ?>
+							</div>
+							<div class="tabs">
+								<?php foreach ($control_tabs as $tab) : ?>
+									<div class="tab"><?php echo $tab['name']; ?></div>
+								<?php endforeach; ?>
+							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			<?php endif; ?>
 
 
-			<section class="sowing">
-				<div class="wrapper">
-					<h2 class="section__title">All in One, Outsmart Your Brain</h2>
-					<h4 class="section__subtitle">As the flagship model of XAG V series agricultural drone,<br>the V40 has powerful performance and amazing efficiency</h4>
-				</div>
-				<div class="tech-video-play">
-					<video autoplay muted loop="true">
-						<source src="<?php echo get_template_directory_uri()?>/app/img/v40-power.mp4" type="video/mp4">
-						<source src="<?php echo get_template_directory_uri()?>/app/img/v40-power.webm" type="video/webm">
-					</video>
-				</div>
-			</section>
+			<?php
+				$sowing_title = get_field('sowing_title');
+				$sowing_subtitle = get_field('sowing_subtitle');
+				$sowing_video_webm = get_field('sowing_video_webm');
+				$sowing_video_mp4 = get_field('sowing_video_mp4');
+				if( !empty($sowing_video_mp4) || !empty($sowing_video_webm) ) :
+			?>
+				<section class="sowing">
+					<div class="wrapper">
+						<?php if( !empty($sowing_title) ) echo '<h2 class="section__title">'. $sowing_title .'</h2>'; ?>
+						<?php if( !empty($sowing_subtitle) ) echo '<h4 class="section__subtitle">'. $sowing_subtitle .'</h4>'; ?>
+					</div>
+					<div class="tech-video-play">
+						<video autoplay muted loop="true">
+							<source src="<?php echo $sowing_video_webm; ?>" type="video/webm">
+							<source src="<?php echo $sowing_video_mp4; ?>" type="video/mp4">
+						</video>
+					</div>
+				</section>
+			<?php endif; ?>
 
 
-			<section class="block-scroll">
-				<div class="wrapper-fluid">
-					<ul class="block-scroll__items">
-						<li class="block-scroll__item">
-							<div class="block-scroll__item-left">
-								<h2 class="block-scroll__title">
-									<img src="<?php echo get_template_directory_uri()?>/app/img/icon/v40-realterra.png" alt="">
-									<span>A Smart Companion in Mapping</span>
-								</h2>
-								<div class="block-scroll__description">
-									HD resolution optical image + AI image processing chip<br>
-									Fully autonomous aerial photography<br>
-									Field boundary recognition, fruit tree identification,<br>
-									map stitching, 3D modelling
-								</div>
-							</div>
-							<div class="block-scroll__item-right">
-								<img class="block-scroll__img-item block-scroll__img-item--1" src="<?php echo get_template_directory_uri()?>/app/img/v40-revo-1.png" alt="">
-							</div>
-						</li>
-						<li class="block-scroll__item">
-							<div class="block-scroll__item-left">
-								<img class="block-scroll__img-item block-scroll__img-item--2" src="<?php echo get_template_directory_uri()?>/app/img/v40-revo-2.png" alt="">
-							</div>
-							<div class="block-scroll__item-right">
-								<h2 class="block-scroll__title">
-									<img src="<?php echo get_template_directory_uri()?>/app/img/icon/v40-revospray.png" alt="">
-									<span>A Smart Companion in Mapping</span>
-								</h2>
-								<div class="block-scroll__description">
-									HD resolution optical image + AI image processing chip<br>
-									Fully autonomous aerial photography<br>
-									Field boundary recognition, fruit tree identification,<br>
-									map stitching, 3D modelling
-								</div>
-							</div>
-						</li>
-						<li class="block-scroll__item">
-							<div class="block-scroll__item-left">
-								<h2 class="block-scroll__title">
-									<img src="<?php echo get_template_directory_uri()?>/app/img/icon/v40-revocast.png" alt="">
-									<span>A Smart Companion in Mapping</span>
-								</h2>
-								<div class="block-scroll__description">
-									HD resolution optical image + AI image processing chip<br>
-									Fully autonomous aerial photography<br>
-									Field boundary recognition, fruit tree identification,<br>
-									map stitching, 3D modelling
-								</div>
-							</div>
-							<div class="block-scroll__item-right">
-								<img class="block-scroll__img-item block-scroll__img-item--3" src="<?php echo get_template_directory_uri()?>/app/img/v40-revo-3.png" alt="">
-							</div>
-						</li>
-					</ul>
-				</div>
-			</section>
+			<?php
+				$components = get_field('components');
+				if( !empty($components) ):
+			?>
+				<section class="block-scroll">
+					<div class="wrapper-fluid">
+						<ul class="block-scroll__items">
+							<?php $i = 1; foreach ($components as $component): ?>
+								<?php if( $i % 2 != 0 ) : ?>
+									<li class="block-scroll__item">
+										<div class="block-scroll__item-left">
+											<h2 class="block-scroll__title"><?php echo $component['title']; ?></h2>
+											<div class="block-scroll__description"><?php echo $component['description']; ?></div>
+										</div>
+										<div class="block-scroll__item-right">
+											<img class="block-scroll__img-item" src="<?php echo $component['img']; ?>" alt="component">
+										</div>
+									</li>
+								<?php else: ?>
+									<li class="block-scroll__item">
+										<div class="block-scroll__item-left">
+											<img class="block-scroll__img-item" src="<?php echo $component['img']; ?>" alt="component">
+										</div>
+										<div class="block-scroll__item-right">
+											<h2 class="block-scroll__title"><?php echo $component['title']; ?></h2>
+											<div class="block-scroll__description"><?php echo $component['description']; ?></div>
+										</div>
+									</li>
+								<?php endif; ?>
+							<?php $i++; endforeach; ?>
+						</ul>
+					</div>
+				</section>
+			<?php endif; ?>
 
 
+			<?php
+				$battery_subtitle = get_field('battery_subtitle');
+				$battery_title = get_field('battery_title');
+				$battery_description = get_field('battery_description');
+				$battery_clarification = get_field('battery_clarification');
+				$battery_img = get_field('battery_img');
+				if( !empty($battery_title) ) :
+			?>
 			<section class="battery">
 				<div class="wrapper">
 					<div class="battery__inner">
 						<div class="battery__left">
-							<h4 class="section__subtitle">Battery Power</h4>
-							<h2 class="section__title">Stronger, Smarter, and Safer</h2>
-							<div class="battery__description">
-								Lithium polymer battery in 962 Wh large capacity
-								Intelligent battery management system to make proper use
-								Connection design ensures stable large current output
-								IP65 protection, 11min* SuperCharge in water cooling tank
-							</div>
-							<div class="battery__explain">
-								*Laboratory research shows that, under general operating conditions, the GC4000+ Auto SuperCharge Station can fully charge a B13960S Battery within 11 minutes from 30% to 95%. The specific performance may vary depending on the working environment, temperature, user habits, etc. Please use strictly in accordance with the official product guidelines.
-							</div>
+							<?php if( !empty($battery_subtitle) ) echo '<h4 class="section__subtitle">'. $battery_subtitle .'</h4>'; ?>
+							<h2 class="section__title"><?php echo $battery_title; ?></h2>
+							<?php if( !empty($battery_description) ) echo '<div class="battery__description">' . $battery_description . '</div>'; ?>
+							<?php if( !empty($battery_clarification) ) echo '<div class="battery__explain">' . $battery_clarification . '</div>'; ?>
 						</div>
+						<?php if( !empty($battery_img) ) : ?>
 						<div class="battery__right">
-							<img src="<?php echo get_template_directory_uri()?>/app/img/v40-battry.png" alt="v40">
+							<img src="<?php echo $battery_img; ?>" alt="<?php echo $battery_title; ?>">
 						</div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</section>
+			<?php endif; ?>
 
 
-			<section class="cta-text">
-				<div class="wrapper">
-					<h2 class="cta-text__title">Agrifuture, Here and Now<br>Are You Ready?</h2>
-				</div>
-			</section>
+			<?php
+				$cta_title = get_field('cta_title');
+				if( !empty($cta_title) ) :
+			?>
+				<section class="cta-text">
+					<div class="wrapper">
+						<h2 class="cta-text__title">
+							<?php echo $cta_title; ?>
+						</h2>
+					</div>
+				</section>
+			<?php endif; ?>
 
 
 			<section class="cta-form">
 				<div class="wrapper">
-					<h2 class="cta-form__title">Ready to buy?</h2>
+					<h2 class="cta-form__title"><?php _e('[:ru]Есть вопросы? Готовы купить?[:ro]Ai întrebări? Ești gata să cumperi?[:]'); ?></h2>
 					<div class="cta-form__body">
-						<form action="">
-							<div class="input-wrap">
-								<label>Please fill in the fields required below.</label>
-								<input type="text" placeholder="*Компания">
-							</div>
-							<div class="input-wrap">
-								<input type="text" placeholder="*ФИО">
-							</div>
-							<div class="input-wrap">
-								<input type="text" placeholder="*Phone">
-							</div>
-							<div class="input-wrap">
-								<input type="text" placeholder="*Email">
-							</div>
-							<div class="cta-form__bottom">Please also write a message to overseas@xa.com, we will reply to it in the order it was received.</div>
-							<button type="submit">Submit</button>
-						</form>
+						<?php echo do_shortcode('[contact-form-7 id="4392" title=":roФорма на лендинге:ruФорма на лендинге:"]'); ?>
+<!--						<label>--><?php //_e('[:ru]Пожалуйста, заполните необходимые поля ниже.[:ro]Vă rugăm să completați câmpurile obligatorii de mai jos.[:]'); ?><!--</label>-->
+<!--						<div class="cta-form__bottom">Please also write a message to overseas@xa.com, we will reply to it in the order it was received.</div>-->
 					</div>
 				</div>
 			</section>
