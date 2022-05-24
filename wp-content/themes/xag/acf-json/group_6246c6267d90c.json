@@ -1,6 +1,6 @@
 {
     "key": "group_6246c6267d90c",
-    "title": "V40 Landing page",
+    "title": "Landing page",
     "fields": [
         {
             "key": "field_6246c646a6340",
@@ -25,7 +25,7 @@
             "name": "title",
             "type": "text",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -213,7 +213,7 @@
             "name": "features2_title",
             "type": "text",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -311,7 +311,7 @@
             "name": "structure_title",
             "type": "text",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -390,7 +390,7 @@
             "name": "structure2_title",
             "type": "text",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -1737,5 +1737,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1648836136
+    "modified": 1649614215
 }

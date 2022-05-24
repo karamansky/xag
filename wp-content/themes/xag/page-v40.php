@@ -52,6 +52,7 @@ get_header();
 					<source src="<?php echo $header_video_bg_webm; ?>" type="video/webm">
 					<source src="<?php echo $header_video_bg_mp4; ?>" type="video/mp4">
 				</video>
+				<script> document.getElementById('main-video').play();</script>
 				<?php endif; ?>
 			</section>
 
@@ -168,10 +169,11 @@ get_header();
 						<?php endif; ?>
 					</div>
 					<div class="tech-video-play">
-						<video autoplay muted loop="true">
+						<video autoplay muted loop="true" id="video-spray">
 							<source src="<?php echo $spray_video_webm; ?>" type="video/webm">
 							<source src="<?php echo $spray_video_mp4; ?>" type="video/mp4">
 						</video>
+						<script> document.getElementById('video-spray').play();</script>
 					</div>
 				</section>
 			<?php endif; ?>
@@ -233,10 +235,11 @@ get_header();
 						<?php if( !empty($ip67_title) ) echo '<h2 class="section__title">'. $ip67_title .'</h2>'; ?>
 					</div>
 					<div class="tech-video-play">
-						<video autoplay muted loop="true">
+						<video autoplay muted loop="true" id="tech-video">
 							<source src="<?php echo $ip67_video_webm; ?>" type="video/webm">
 							<source src="<?php echo $ip67_video_mp4; ?>" type="video/mp4">
 						</video>
+						<script> document.getElementById('tech-video').play();</script>
 					</div>
 				</section>
 			<?php endif; ?>
@@ -272,10 +275,11 @@ get_header();
 					<?php if( !empty($x4_video_title) ) echo '<h4 class="section__subtitle">'. $x4_video_subtitle .'</h4>'; ?>
 					</div>
 					<div class="tech-video-play">
-						<video autoplay muted loop="true">
+						<video autoplay muted loop="true" id="x4-video">
 							<source src="<?php echo $x4_video_webm; ?>" type="video/webm">
 							<source src="<?php echo $x4_video_mp4; ?>" type="video/mp4">
 						</video>
+						<script> document.getElementById('x4-video').play();</script>
 					</div>
 					<?php if( !empty($x4_video_features) ) : ?>
 						<div class="wrapper">
@@ -331,10 +335,11 @@ get_header();
 						<?php if( !empty($camera_title) ) echo '<h2 class="section__title">'. $camera_title .'</h2>'; ?>
 					</div>
 					<div class="tech-video-play">
-						<video autoplay muted loop="true">
+						<video autoplay muted loop="true" id="camera-video">
 							<source src="<?php echo $camera_video_webm; ?>" type="video/webm">
 							<source src="<?php echo $camera_video_mp4; ?>" type="video/mp4">
 						</video>
+						<script> document.getElementById('camera-video').play();</script>
 					</div>
 				</section>
 			<?php endif; ?>
@@ -380,10 +385,11 @@ get_header();
 						<?php if( !empty($sowing_subtitle) ) echo '<h4 class="section__subtitle">'. $sowing_subtitle .'</h4>'; ?>
 					</div>
 					<div class="tech-video-play">
-						<video autoplay muted loop="true">
+						<video autoplay muted loop="true" id="sowing-video">
 							<source src="<?php echo $sowing_video_webm; ?>" type="video/webm">
 							<source src="<?php echo $sowing_video_mp4; ?>" type="video/mp4">
 						</video>
+						<script> document.getElementById('sowing-video').play();</script>
 					</div>
 				</section>
 			<?php endif; ?>
