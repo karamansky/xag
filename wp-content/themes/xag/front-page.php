@@ -37,19 +37,27 @@
 				<?php if( !empty($taxonomies) ): ?>
 				<div class="catItems__items">
 					<?php
-						foreach ($taxonomies as $taxonomy) :
-							$terms = get_terms( $taxonomy );
-								foreach ($terms as $term) :
-									$img = get_field('image', 'term_'.$term->term_id);
+						$taxonomy = $taxonomies[0];
+						$terms = get_terms( $taxonomy );
+						$term_items = array();
+						foreach ($terms as $term) {
+							$term_items[] = array(
+								'image' => get_field('image', 'term_' . $term->term_id),
+								'name' => $term->name,
+								'link' => get_term_link($term),
+								'sort' => get_field('sort', 'term_' . $term->term_id),
+							);
+						}
+						$term_items = xag_array_sort($term_items, 'sort', SORT_ASC);
+						foreach ($term_items as $item) {
 					?>
-						<a href="<?php echo get_term_link($term); ?>" class="catItem__item">
+						<a href="<?php echo $item['link']; ?>" class="catItem__item">
 							<div class="catItem__img">
-								<?php if(!empty($img)) echo '<img src="'. $img .'" alt="">'; ?>
+								<?php if(!empty( $item['image'])) echo '<img src="'.  $item['image'] .'" alt="'.  $item['name']  .'">'; ?>
 							</div>
-							<h3 class="catItem__title"><?php echo $term->name; ?></h3>
+							<h3 class="catItem__title"><?php echo $item['name']; ?></h3>
 						</a>
-						<?php endforeach; ?>
-					<?php endforeach; ?>
+					<?php }	?>
 				</div>
 				<?php endif; ?>
 			</div>

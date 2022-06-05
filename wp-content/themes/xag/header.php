@@ -39,28 +39,38 @@
 								<?php
 									$args = array(
 										'taxonomy' => 'solution_category',
-										'orderby' => 'name',
 										'hide_empty'   => 0,
-										'order'   => 'ASC',
 										'posts_per_page' => 1
 									);
 									$categories = get_categories($args);
+									$term_items = array();
 									$i = 1;
-									foreach ($categories as $category) :
+									foreach ($categories as $term) {
 										//показываем только первые 4 категории в меню
 										if($i > 4) break;
-										$img = get_field('image', 'term_' . $category->term_id);
+
+										$term_items[] = array(
+											'image' => get_field('image', 'term_' . $term->term_id),
+											'name' => $term->name,
+											'description' => $term->description,
+											'link' => get_term_link($term),
+											'sort' => get_field('sort', 'term_' . $term->term_id),
+										);
+										$i++;
+									}
+									$term_items = xag_array_sort($term_items, 'sort', SORT_ASC);
+									foreach ($term_items as $item) {
 								?>
 									<li class="navigation__products-item">
-										<a href="<?php echo get_term_link($category->term_id); ?>" class="navigation__products-link">
+										<a href="<?php echo $item['link']; ?>" class="navigation__products-link">
 											<div class="nav-product-show">
-												<?php if(!empty($img)) : ?><img src="<?php echo $img; ?>" alt=""><?php endif; ?>
+												<?php if(!empty($item['image'])) : ?><img src="<?php echo $item['image']; ?>" alt="<?php echo $item['name']; ?>"><?php endif; ?>
 											</div>
-											<div class="nav-product-name"><?php echo $category->cat_name; ?></div>
-											<div class="nav-product-explain"><?php echo $category->description ?></div>
+											<div class="nav-product-name"><?php echo $item['name']; ?></div>
+											<div class="nav-product-explain"><?php echo $item['description']; ?></div>
 										</a>
 									</li>
-								<?php $i++; endforeach; ?>
+								<?php } ?>
 							</ul>
 						</div>
 					</li>
@@ -110,16 +120,8 @@
 						<div class="sub-menu">
 							<ul>
 								<?php
-									$args = array(
-										'taxonomy' => 'solution_category',
-										'orderby' => 'name',
-										'hide_empty'   => 0,
-										'order'   => 'ASC',
-										'posts_per_page' => 1
-									);
-									$categories = get_categories($args);
-									foreach ($categories as $category) : ?>
-										<li class="menu-item"><a href="<?php echo get_term_link($category->term_id); ?>"><?php echo $category->cat_name; ?></a></li>
+									foreach ($term_items as $item) : ?>
+										<li class="menu-item"><a href="<?php echo $item['link']; ?>"><?php echo $item['name']; ?></a></li>
 								<?php endforeach; ?>
 							</ul>
 						</div>

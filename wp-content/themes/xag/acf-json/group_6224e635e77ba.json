@@ -25,6 +25,27 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_629c998c3e8f9",
+            "label": "Sort",
+            "name": "sort",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -44,5 +65,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1647970281
+    "modified": 1654430236
 }
