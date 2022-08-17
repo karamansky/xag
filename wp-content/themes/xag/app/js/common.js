@@ -99,6 +99,39 @@ $(function() {
 	});
 
 
+	$('.slider__items').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		adaptiveHeight: true,
+		dots: true,
+		autoplay: false,
+	});
+
+
+	$('.slider-full__inner').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		speed: 2000,
+		dots: true,
+		autoplay: false,
+	});
+
+
+	$('.img-left-with-icons__img-slider').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		speed: 150,
+		dots: false,
+		autoplay: true,
+		autoplaySpeed: 2000,
+	});
+
+
 	//drone page tabs 1
 	$(".propellers__tabs .tab_item").not(":first").hide();
 	$(".propellers__tabs .tab").click(function() {

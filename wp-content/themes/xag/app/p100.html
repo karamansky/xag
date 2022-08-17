@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+	<meta charset="utf-8">
+	<title>XAG</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="libs/slick-carousel/slick/slick.css">
+	<link rel="stylesheet" href="libs/slick-carousel/slick/slick-theme.css">
+	<link rel="stylesheet" href="libs/jquery.form-styler/dist/jquery.formstyler.css">
+	<link rel="stylesheet" href="libs/jquery.arcticmodal-0.3/jquery.arcticmodal-0.3.css">
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+
+<div class="nav-pc-wrap">
+	<div class="wrapper">
+		<div class="nav-pc">
+			<div class="logo"><h1 class="nav-icon"><a href="https://www.xa.com/en"></a></h1></div>
+			<div class="navigation">
+				<ul>
+					<li class="menu-item current-menu-item"><a href="#">Home</a></li>
+					<li class="menu-item menu-item-product">
+						<a href="#">Products</a>
+						<div class="navigation__popup">
+							<ul class="navigation__products">
+								<li class="navigation__products-item">
+									<a href="#" class="navigation__products-link">
+										<div class="nav-product-show">
+											<img src="img/prod1.jpg" alt="">
+										</div>
+										<div class="nav-product-name">Agricultural Drone</div>
+										<div class="nav-product-explain">Agrifuture, Here and Now</div>
+									</a>
+								</li>
+								<li class="navigation__products-item">
+									<a href="#" class="navigation__products-link">
+										<div class="nav-product-show">
+											<img src="img/prod2.jpg" alt="">
+										</div>
+										<div class="nav-product-name">Remote Sensing Drone</div>
+										<div class="nav-product-explain">The Key to “Sky City”</div>
+									</a>
+								</li>
+								<li class="navigation__products-item">
+									<a href="#" class="navigation__products-link">
+										<div class="nav-product-show">
+											<img src="img/prod3.jpg" alt="">
+										</div>
+										<div class="nav-product-name">Unmanned Ground Vehicle</div>
+										<div class="nav-product-explain">Customised for Every Mission</div>
+									</a>
+								</li>
+								<li class="navigation__products-item">
+									<a href="#" class="navigation__products-link">
+										<div class="nav-product-show">
+											<img src="img/prod4.jpg" alt="">
+										</div>
+										<div class="nav-product-name">Agriculture IoT System</div>
+										<div class="nav-product-explain">Connect Land, Crop and People</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="menu-item has-sub">
+						<a href="#">Services</a>
+						<div class="sub-menu">
+							<ul>
+								<li class="menu-item"><a href="#">Service 1</a></li>
+								<li class="menu-item"><a href="#">Service 2</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="menu-item"><a href="#">Service</a></li>
+					<li class="menu-item"><a href="#">About XAG</a></li>
+				</ul>
+			</div>
+			<div class="language">
+				<ul class="language__items">
+					<li class="language__item has-sub">
+						<span class="menu-item">Rom</span>
+						<div class="sub-menu">
+							<ul>
+								<li class="menu-item sub-language__item"><a href="#">Rom</a></li>
+								<li class="menu-item sub-language__item"><a href="#">Eng</a></li>
+								<li class="menu-item sub-language__item"><a href="#">Рус</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="tech-wrap">
+	<div class="tech">
+
+		<div class="tech__content landing">
+
+
+			<div style="display: none;">
+				<div id="v40-video-popup" class="main-video-popup box-modal">
+					<div class="box-modal_close arcticmodal-close popup-close">&times;</div>
+					<?php if(!empty($main_popup_video)) echo $main_popup_video; ?>
+				</div>
+			</div>
+
+
+			<section class="landing__header">
+				<div class="wrapper">
+					<div class="landing__header-content">
+						<h2 class="landing__header-title">XAG P100 Agriculture Drone</h2>
+						<!--            <a href="#v40-video-popup" class="header__videoplay" data-video="img/p100-part1-loop.mp4"><i class="play"></i></a>-->
+					</div>
+				</div>
+				<video src="img/p100-part1-loop.mp4" autoplay muted loop="true" id="main-video"></video>
+			</section>
+
+
+			<section class="features">
+				<div class="wrapper">
+					<div class="features__text">
+						<p>XAG P100 Agricultural Drone is crafted in structure that can separate the flying platform and task systems, integrating efficient spreading and precision spraying modules. This powerful and reliable drone is the flagship to open the new era of smart agriculture.</p>
+					</div>
+					<div class="features__items">
+						<div class="features__item features__item--3">
+							<h3 class="features__title">Efficient Spreading</h3>
+							<div class="features__description">280 kg per charge of a battery pack ¹</div>
+						</div>
+						<div class="features__item features__item--3">
+							<h3 class="features__title">Precision Spraying</h3>
+							<div class="features__description">Centifulgally atomized droplet size:
+															   60-400 μm
+															   Flow rate (single pump): 0.3-6 L/min
+															   (adjustable)
+							</div>
+						</div>
+						<div class="features__item features__item--3">
+							<h3 class="features__title">Safe and Reliable</h3>
+							<div class="features__description">Dynamic radar, intelligent
+															   obstacle avoidance
+							</div>
+						</div>
+						<div class="features__item features__item--3">
+							<h3 class="features__title">Fully Autonomous Flight</h3>
+							<div class="features__description">One tap to operate on app, RTK
+															   centimeter-level navigation
+							</div>
+						</div>
+						<div class="features__item features__item--3">
+							<h3 class="features__title">Detachable Design</h3>
+							<div class="features__description">Fast transform, easy to carry</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="features2">
+				<div class="wrapper">
+					<h2 class="features2__section-title">Separable Design, Easier Transportation</h2>
+					<h4 class="features2__section-subtitle">The drone can separate its flying platform from task systems, to reduce
+															handling weight for easier functional switch, transportation and maintenance.</h4>
+
+					<video src="img/p100-part-design.mp4" autoplay muted loop="true" id="separate-video"></video>
+				</div>
+			</section>
+
+
+			<section class="slider slider--centered">
+				<div class="wrapper">
+					<div class="slider__items">
+						<div class="slider__item">
+							<div class="slider__item-img">
+								<img src="img/slider/p100-slide-img1.png" alt="">
+							</div>
+							<h3 class="slider__item-description">
+								Integral Design, Sturdy and Durable
+							</h3>
+						</div>
+						<div class="slider__item">
+							<div class="slider__item-img">
+								<img src="img/slider/p100-slide-img2.png" alt="">
+							</div>
+							<h3 class="slider__item-description">
+								Double Safe Lock Plus Tri-proof Plug, Fast Detaching and Installation
+							</h3>
+						</div>
+						<div class="slider__item">
+							<div class="slider__item-img">
+								<img src="img/slider/p100-slide-img3.png" alt="">
+							</div>
+							<h3 class="slider__item-description">
+								IPX7 Water Resistance, Rinse Directly by Water
+							</h3>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="video video--centered linear-gradient-bg">
+				<div class="wrapper">
+					<div class="video__inner">
+						<img src="img/revo-spray-2-logo.png" alt="" class="video__logo">
+						<h2 class="video__title">Mega-Flow Spraying, Smooth and
+												 Precision to Every Droplet</h2>
+						<div class="video__description">
+							Combine new peristaltic pumps and nozzie shutoff value wath mature
+							centrfugal atomisation technology, bringing an evclution of both flow
+							rate and efficiency, Make precision spraying go a step further.
+						</div>
+						<div class="video__block">
+							<video src="img/p100-ruipen-video.mp4" autoplay muted loop="true"></video>
+						</div>
+						<div class="video__features">
+							<div class="features__items">
+								<div class="features__item features__item--3">
+									<h3 class="features__title">New Generation
+																Peristaltic Pump</h3>
+									<div class="features__description">Max. flow rate: 12 L/min</div>
+								</div>
+								<div class="features__item features__item--3">
+									<h3 class="features__title">Intelligent Centrifugal
+																Atomisation</h3>
+									<div class="features__description">Atomised droplet size: 60-400 μm</div>
+								</div>
+								<div class="features__item features__item--3">
+									<h3 class="features__title">Efficient Plant
+																Protection</h3>
+									<div class="features__description">Max. spraying width: 10 m ²</div>
+								</div>
+								<div class="features__item features__item--3">
+									<h3 class="features__title">Nozzle Shutoff Valve</h3>
+									<div class="features__description">No leakage during turning and transport</div>
+								</div>
+								<div class="features__item features__item--3">
+									<h3 class="features__title">Quick-release
+																Spraying Bar</h3>
+									<div class="features__description">Easy to detach, install, transport
+																	   and maintain</div>
+								</div>
+								<div class="features__item features__item--3">
+									<h3 class="features__title">40 L Smart Liquid
+																Tank</h3>
+									<div class="features__description">Real-time liquid level detection</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="video video--centered linear-gradient-bg">
+				<div class="wrapper">
+					<div class="video__inner">
+						<img src="img/xag-revocast2-logo.png" alt="" class="video__logo">
+						<h2 class="video__title">Spread with Precision and High Efficiency</h2>
+						<div class="video__description">
+							Adopt a brand new design for spreading disc and screw feeder.
+							Reshape the spread methodology of agricultural drones to greatly
+							enhance efficiency and accuracy.
+						</div>
+						<div class="video__block">
+							<video src="img/p100-ruibo-video.mp4" autoplay muted loop="true"></video>
+						</div>
+						<div class="video__features">
+							<div class="features__items">
+								<div class="features__item features__item--3">
+									<h3 class="features__title">
+										Vertical Centrifugal
+										Spreading Disc</h3>
+									<div class="features__description">Strong wind-resistant capacity,
+																	   precision spreading</div>
+								</div>
+								<div class="features__item features__item--3">
+									<h3 class="features__title">Smart Screw Feeder</h3>
+									<div class="features__description">Change screw feeder according to
+																	   the size of granules, providing
+																	   precision and smooth spreading</div>
+								</div>
+								<div class="features__item features__item--3">
+									<h3 class="features__title">60 L Granule Container</h3>
+									<div class="features__description">Sensor detects the remaining granules
+																	   to avoid misses and spinning with empty
+																	   granule container</div>
+								</div>
+								<div class="features__item features__item--3">
+									<h3 class="features__title">Fast Spreading
+																While Flying</h3>
+									<div class="features__description">Flight speed is up to 13.8 m/s.
+																	   A battery pack would suffice to
+																	   spread 280 kg fertilizer³</div>
+								</div>
+								<div class="features__item features__item--3">
+									<h3 class="features__title">Precisely Adjustable
+																Spreading Width</h3>
+									<div class="features__description">Easily adjust spreading width
+																	   through flight height</div>
+								</div>
+								<div class="features__item features__item--3">
+									<h3 class="features__title">Quick-release,
+																Water-washable</h3>
+									<div class="features__description">The screw feeder can be quickly
+																	   detached, and is easy to clean</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="full-width-bg full-width-bg--x4" style="background-image: url('img/super-x4-bg.png')">
+				<div class="wrapper-fluid">
+					<div class="full-width-bg__inner">
+						<div class="full-width-bg__logo"><img src="img/superx4-logo.png" alt=""></div>
+						<h2 class="full-width-bg__title">A Smart Core Powered by AI</h2>
+						<div class="full-width-bg__description">
+							SuperX 4 Pro Intelligent Control System combines the mighty AI algorithm and high-
+							performance powertrain. Integrated with flexible task systems, this upgraded control module
+							can easily realise fully autonomous precision spraying and broadcast operations. A smart
+							companion for digital agricultural production.
+						</div>
+						<div class="full-width-bg__items">
+							<div class="full-width-bg__item">
+								<h3>1 GHz Independent Processor</h3>
+								<span>Fast algorithm and quick response</span>
+							</div>
+							<div class="full-width-bg__item">
+								<h3>Dual-antenna RTK + Fixed/Portable Station Access</h3>
+								<span>Fast algorithm and quick response</span>
+							</div>
+							<div class="full-width-bg__item">
+								<h3>Dual-link Communication</h3>
+								<span>Stable operation on LAN and in poor network condition</span>
+							</div>
+							<div class="full-width-bg__item">
+								<h3>Advanced Control Algorithms</h3>
+								<span>Fully optimize flight and efficiency</span>
+							</div>
+							<div class="full-width-bg__item">
+								<h3>3 x IMU + AI Fault Prediction</h3>
+								<span>Safe flight</span>
+							</div>
+							<div class="full-width-bg__item">
+								<h3>Automatic Route Planning</h3>
+								<span>Plan the flight route based on field, battery, and volume</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="video video--centered linear-gradient-bg">
+				<div class="wrapper">
+					<div class="video__inner">
+						<h2 class="video__title">Adaptable to Most Terrains, Flexibly Avoid Obstacle</h2>
+						<div class="video__description">
+							Dynamic radar combined with terrain-adaptive module, sensing incoming obstacles
+							and the surrounding environment during flight. Detect obstacles position, distance,
+							direction and speed within 40 meters ahead and above to achieve prediction and
+							bypassing. Protect safe flight from all dimensions.
+						</div>
+						<div class="video__block">
+							<video src="img/p100-leida-video.mp4" autoplay muted loop="true"></video>
+						</div>
+						<div class="video__features">
+							<div class="features__items">
+								<div class="features__item features__item--2">
+									<h3 class="features__title">Dynamic Radar</h3>
+									<div class="features__description">Quickly detect obstacles within 40 m
+																	   ahead and above⁴</div>
+								</div>
+								<div class="features__item features__item--2">
+									<h3 class="features__title">Terrain Radar Module</h3>
+									<div class="features__description">Terrain radar and optical flow provide
+																	   precision detection of downward terrain</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="video video--centered linear-gradient-bg">
+				<div class="wrapper">
+					<div class="video__inner">
+						<h2 class="video__title">Pilot Sight Livestream Field Condition Clearly Displayed, More Protection on Flight Safety</h2>
+						<div class="video__description">
+							Report real-time operation images for users to learn flight status and crop conditions at once. Precision and safe drones operation under complicated surrounding environment.
+						</div>
+						<div class="video__block">
+							<video src="img/p100-psl-video.mp4" autoplay muted loop="true"></video>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="three-items">
+				<div class="wrapper-fluid">
+					<div class="three-items__inner">
+						<h2 class="three-items__title">Surging Power Comes for Upgraded Load and
+													   High-Intensity Operation</h2>
+						<div class="three-items__blocks">
+							<div class="three-items__block">
+								<div class="three-items__img">
+									<img src="img/p100-upgrade-img1.png" alt="Brand New Motor">
+								</div>
+								<h3 class="three-items__block-title">Brand New Motor</h3>
+								<div class="three-items__block-subtitle">
+									Greatly improve power output
+								</div>
+							</div>
+							<div class="three-items__block">
+								<div class="three-items__img">
+									<img src="img/p100-upgrade-img2.png" alt="47 inches Efficient Propellers">
+								</div>
+								<h3 class="three-items__block-title">47 inches Efficient Propellers</h3>
+								<div class="three-items__block-subtitle">
+									Durable and lightweight
+								</div>
+							</div>
+							<div class="three-items__block">
+								<div class="three-items__img">
+									<img src="img/p100-upgrade-img3.png" alt="Integral FOC ESCs">
+								</div>
+								<h3 class="three-items__block-title">Integral FOC ESCs</h3>
+								<div class="three-items__block-subtitle">
+									Accurately adjust power to
+									reduce power consumption
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="block-with-img">
+				<div class="wrapper">
+					<div class="block-with-img__inner">
+						<h2 class="block-with-img__title">
+							Battery Power<br>
+							Stronger, Smarter, and Safer
+						</h2>
+						<div class="block-with-img__subtitle">
+							The all-new B13960S Smart Battery possesses bigger electric power and super charge capability.
+						</div>
+						<div class="block-with-img__picture">
+							<img src="img/block-with-img-battary-generator-img.png" alt="Battery Power">
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="slider slider--info">
+				<div class="wrapper">
+					<div class="slider__items">
+						<div class="slider__item">
+							<div class="slider__item-info">
+								<h3 class="slider__item-info-title">CM12500P<br>Intelligent SuperCharger</h3>
+								<div class="slider__item-info-description">
+									<ul>
+										<li>Economical and highly efficient</li>
+										<li>2500 W rated power, 15 min SuperCharge</li>
+									</ul>
+								</div>
+							</div>
+							<div class="slider__item-img">
+								<img src="img/slider/super-charger-img1.png" alt="">
+							</div>
+						</div>
+						<div class="slider__item">
+							<div class="slider__item-info">
+								<h3 class="slider__item-info-title">GC4000+<br> Auto SuperCharge Station</h3>
+								<div class="slider__item-info-description">
+									<ul>
+										<li>Variable frequency generator with ultra-low fuel consumption of 0.6 L/KWh</li>
+										<li>Max. 25 batteries can be fully charged with a 15 L full tank of petrol</li>
+										<li>Small and lightweight, 31.5 kg in net weight</li>
+										<li>XBMS intelligent battery management	system, safe and reliable</li>
+										<li>LCD monitor allows quick access to operating status and maintenance reminder</li>
+									</ul>
+								</div>
+							</div>
+							<div class="slider__item-img">
+								<img src="img/slider/super-charger-img2.png" alt="">
+							</div>
+						</div>
+						<div class="slider__item">
+							<div class="slider__item-info">
+								<h3 class="slider__item-info-title">B13960S<br>Intelligent SuperCharge Battery</h3>
+								<div class="slider__item-info-description">
+									<ul>
+										<li>962 Wh large capacity</li>
+										<li>11 min fully charged in water cooling tank⁵</li>
+										<li>XBMS Intelligent Battery Management System Self-balancing of battery cell</li>
+										<li>New heat-resistant material with a built-in temperature sensor</li>
+									</ul>
+								</div>
+							</div>
+							<div class="slider__item-img">
+								<img src="img/slider/super-charger-img3.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="img-left-with-icons linear-gradient-bg">
+				<div class="wrapper">
+					<div class="img-left-with-icons__inner">
+						<h2 class="img-left-with-icons__title">Two Ways of Interactions, Take Control in Various Conditions</h2>
+						<div class="img-left-with-icons__subtitle">
+							Accessible via XAG One App for fully autonomous and precise farmwork, also available for manual control with Handheld Control Stick.
+						</div>
+						<div class="img-left-with-icons__item">
+							<h3 class="img-left-with-icons__item-title">XAG One</h3>
+							<div class="img-left-with-icons__item-inner">
+								<div class="img-left-with-icons__img">
+									<img src="img/slider/nongfu-photo-box.png" alt="">
+									<ul class="img-left-with-icons__img-slider">
+										<li><img src="img/slider/nongfu-photo1.png" alt=""></li>
+										<li><img src="img/slider/nongfu-photo2.png" alt=""></li>
+										<li><img src="img/slider/nongfu-photo3.png" alt=""></li>
+									</ul>
+								</div>
+
+
+								<div class="img-left-with-icons__icons">
+
+									<div class="img-left-with-icons__icon">
+										<div class="img-left-with-icons__icon-img">
+											<img src="img/icon/icon1.png" alt="">
+										</div>
+										<div class="img-left-with-icons__description">
+											Support continuous operations
+											of multiple fields. More efficient
+										</div>
+									</div>
+
+									<div class="img-left-with-icons__icon">
+										<div class="img-left-with-icons__icon-img">
+											<img src="img/icon/icon2.png" alt="">
+										</div>
+										<div class="img-left-with-icons__description">
+											Dual-link communication,
+											more stable operations
+										</div>
+									</div>
+
+									<div class="img-left-with-icons__icon">
+										<div class="img-left-with-icons__icon-img">
+											<img src="img/icon/icon3.png" alt="">
+										</div>
+										<div class="img-left-with-icons__description">
+											Share field data, more
+											convenient for teamwork
+										</div>
+									</div>
+
+									<div class="img-left-with-icons__icon">
+										<div class="img-left-with-icons__icon-img">
+											<img src="img/icon/icon4.png" alt="">
+										</div>
+										<div class="img-left-with-icons__description">
+											Compatible with Android and
+											iOS, more convenient to use
+										</div>
+									</div>
+
+									<div class="img-left-with-icons__icon">
+										<div class="img-left-with-icons__icon-img">
+											<img src="img/icon/icon5.png" alt="">
+										</div>
+										<div class="img-left-with-icons__description">
+											Support multiple languages
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="img-left-with-icons__item">
+							<h3 class="img-left-with-icons__item-title">Handheld Control Stick</h3>
+							<div class="img-left-with-icons__item-inner">
+								<div class="img-left-with-icons__img">
+									<img src="img/pult.png" alt="">
+								</div>
+								<div class="img-left-with-icons__icons">
+
+									<div class="img-left-with-icons__icon">
+										<div class="img-left-with-icons__icon-img">
+											<img src="img/icon/icon6.png" alt="">
+										</div>
+										<div class="img-left-with-icons__description">
+											Provide handheld RTK mapping
+										</div>
+									</div>
+
+									<div class="img-left-with-icons__icon">
+										<div class="img-left-with-icons__icon-img">
+											<img src="img/icon/icon7.png" alt="">
+										</div>
+										<div class="img-left-with-icons__description">
+											Small field operation without
+											mapping
+										</div>
+									</div>
+
+									<div class="img-left-with-icons__icon">
+										<div class="img-left-with-icons__icon-img">
+											<img src="img/icon/icon8.png" alt="">
+										</div>
+										<div class="img-left-with-icons__description">
+											Button-based manual control
+										</div>
+									</div>
+
+									<div class="img-left-with-icons__icon">
+										<div class="img-left-with-icons__icon-img">
+											<img src="img/icon/icon9.png" alt="">
+										</div>
+										<div class="img-left-with-icons__description">
+											Support flight path upload to
+											smartphone
+										</div>
+									</div>
+
+									<div class="img-left-with-icons__icon">
+										<div class="img-left-with-icons__icon-img">
+											<img src="img/icon/icon10.png" alt="">
+										</div>
+										<div class="img-left-with-icons__description">
+											Support 4G mobile network
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="slider-full left-to-right-gradient">
+				<div class="wrapper-fluid">
+					<h2 class="slider-full__title">XAG RTK Portable Base Station</h2>
+					<div class="slider-full__description">
+						The RTK base station provides real-time centimeter-level positioning to agricultural drones, robots, autopilot consoles during farm operations. Stay connected to various smart agricultural equipment, the RTK station supports every mission with reliable data, offers a comprehensive solution for precision tasks.
+					</div>
+					<div class="slider-full__inner">
+						<div class="slider-full__item">
+							<div class="slider-full__item-inner">
+								<div class="slider-full__item-img">
+									<img src="img/slider/p100-local-network.png" alt="">
+								</div>
+								<div class="slider-full__item-content">
+									<div class="features__items">
+										<div class="features__item features__item--full">
+											<h3 class="features__title">Efficient Network Access</h3>
+											<div class="features__description">800 M⁶ network coverage range, support wireless LAN hotspot access to network connection</div>
+										</div>
+										<div class="features__item features__item--full">
+											<h3 class="features__title">Portable RTK Base Station Connection</h3>
+											<div class="features__description">Connect XAG agricultural drone and RTK base station that enable fully autonomous flight at centimeter-level positioning</div>
+										</div>
+										<div class="features__item features__item--full">
+											<h3 class="features__title">Localized Cloud Algorithms</h3>
+											<div class="features__description">Reduce postback delays for smooth operation</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slider-full__item">
+							<div class="slider-full__item-inner">
+								<div class="slider-full__item-img">
+									<img src="img/slider/p100-local-network1.png" alt="">
+								</div>
+								<div class="slider-full__item-content">
+									<div class="features__items">
+										<div class="features__item features__item--full">
+											<h3 class="features__title">Provide Centimeter-Level Positioning to Devices</h3>
+											<div class="features__description">Provide differential data for mobile devices via radio in 2-3 km radius coverage, high stability and short delay in signal transmission</div>
+										</div>
+										<div class="features__item features__item--full">
+											<h3 class="features__title">Connect with Ease for Simple Operation</h3>
+											<div class="features__description">Support mutiplied XAG products including agricultural drone, remote sensing drone, unmanned ground robot and XAG AutoPilot Console</div>
+										</div>
+										<div class="features__item features__item--full">
+											<h3 class="features__title">IP65 Rating Protection</h3>
+											<div class="features__description">Waterproof & dust-resistant, ready to effectively operate under various harsh conditions</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slider-full__item">
+							<div class="slider-full__item-inner">
+								<div class="slider-full__item-img">
+									<img src="img/slider/p100-local-network2.png" alt="">
+								</div>
+								<div class="slider-full__item-content">
+									<div class="features__items">
+										<div class="features__item features__item--full">
+											<h3 class="features__title">Provide Centimeter-Level Positioning to Devices</h3>
+											<div class="features__description">Broadcast via more stable 3G/4G network in a wide coverage range of 50-60 km</div>
+										</div>
+										<div class="features__item features__item--full">
+											<h3 class="features__title">Connect with Ease for Simple Operation</h3>
+											<div class="features__description">Support mutiplied XAG products including agricultural drones, remote sensing drones, unmanned ground robot and XAG AutoPilot Console to access simultaneously</div>
+										</div>
+										<div class="features__item features__item--full">
+											<h3 class="features__title">IP65 Rating Protection</h3>
+											<div class="features__description">Waterproof & dust-resistant, ready to effectively operate under various harsh conditions</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="cta-form">
+				<div class="wrapper">
+					<h2 class="cta-form__title">Ready to buy?</h2>
+					<div class="cta-form__body">
+						<form action="">
+							<div class="input-wrap">
+								<label>Please fill in the fields required below.</label>
+								<input type="text" placeholder="*Компания">
+							</div>
+							<div class="input-wrap">
+								<input type="text" placeholder="*ФИО">
+							</div>
+							<div class="input-wrap">
+								<input type="text" placeholder="*Phone">
+							</div>
+							<div class="input-wrap">
+								<input type="text" placeholder="*Email">
+							</div>
+							<div class="cta-form__bottom">Please also write a message to overseas@xa.com, we will reply to it in the order it was received.</div>
+							<button type="submit">Submit</button>
+						</form>
+					</div>
+				</div>
+			</section>
+
+
+		</div>
+	</div>
+</div>
+
+
+<footer class="footer">
+	<div class="wrapper">
+		<div class="footer__inner">
+			<div class="footer__inner-left">
+				<div class="footer__menus">
+					<div class="footer__menu">
+						<h5 class="footer__menu-title">About</h5>
+						<ul>
+							<li class="footer__menu-item"><a href="#">About XAG</a></li>
+							<li class="footer__menu-item"><a href="#">About XAG</a></li>
+							<li class="footer__menu-item"><a href="#">About XAG</a></li>
+							<li class="footer__menu-item"><a href="#">About XAG</a></li>
+							<li class="footer__menu-item"><a href="#">About XAG</a></li>
+						</ul>
+					</div>
+					<div class="footer__menu">
+						<h5 class="footer__menu-title">Services</h5>
+						<ul>
+							<li class="footer__menu-item"><a href="#">Agricultural UAS</a></li>
+							<li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+							<li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+							<li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+						</ul>
+					</div>
+					<div class="footer__menu">
+						<h5 class="footer__menu-title">Events</h5>
+						<ul>
+							<li class="footer__menu-item"><a href="#">XAAC 2021</a></li>
+							<li class="footer__menu-item"><a href="#">XAAC 2019</a></li>
+							<li class="footer__menu-item"><a href="#">XAAC 2018</a></li>
+							<li class="footer__menu-item"><a href="#">XAAC 2017</a></li>
+						</ul>
+					</div>
+					<div class="footer__menu">
+						<h5 class="footer__menu-title">News</h5>
+						<ul>
+							<li class="footer__menu-item"><a href="#">Agricultural UAS</a></li>
+							<li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+							<li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+							<li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer__inner-right">
+				<div class="footer__socials">
+					<a href="#">Facebook</a>
+					<a href="#">Instagram</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer__copy">
+			<img src="img/XAG-logo-web.png" alt="xag.md logo">
+			Contactează © 2022 XAG Moldova All Rights Reserved + 373 79 131317
+		</div>
+	</div>
+</footer>
+
+
+<script src="js/scripts.min.js"></script>
+<script src="libs/jquery.arcticmodal-0.3/jquery.arcticmodal-0.3.min.js"></script>
+<script src="js/common.js"></script>
+
+
+</body>
+</html>
