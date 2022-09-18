@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="utf-8">
+  <title>XAG</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="libs/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="libs/slick-carousel/slick/slick-theme.css">
+  <link rel="stylesheet" href="libs/jquery.form-styler/dist/jquery.formstyler.css">
+  <link rel="stylesheet" href="libs/jquery.arcticmodal-0.3/jquery.arcticmodal-0.3.css">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+<div class="nav-pc-wrap">
+  <div class="wrapper">
+    <div class="nav-pc">
+      <div class="logo"><h1 class="nav-icon"><a href="https://www.xa.com/en"></a></h1></div>
+      <div class="navigation">
+        <ul>
+          <li class="menu-item current-menu-item"><a href="#">Home</a></li>
+          <li class="menu-item menu-item-product">
+            <a href="#">Products</a>
+            <div class="navigation__popup">
+              <ul class="navigation__products">
+                <li class="navigation__products-item">
+                  <a href="#" class="navigation__products-link">
+                    <div class="nav-product-show">
+                      <img src="img/prod1.jpg" alt="">
+                    </div>
+                    <div class="nav-product-name">Agricultural Drone</div>
+                    <div class="nav-product-explain">Agrifuture, Here and Now</div>
+                  </a>
+                </li>
+                <li class="navigation__products-item">
+                  <a href="#" class="navigation__products-link">
+                    <div class="nav-product-show">
+                      <img src="img/prod2.jpg" alt="">
+                    </div>
+                    <div class="nav-product-name">Remote Sensing Drone</div>
+                    <div class="nav-product-explain">The Key to “Sky City”</div>
+                  </a>
+                </li>
+                <li class="navigation__products-item">
+                  <a href="#" class="navigation__products-link">
+                    <div class="nav-product-show">
+                      <img src="img/prod3.jpg" alt="">
+                    </div>
+                    <div class="nav-product-name">Unmanned Ground Vehicle</div>
+                    <div class="nav-product-explain">Customised for Every Mission</div>
+                  </a>
+                </li>
+                <li class="navigation__products-item">
+                  <a href="#" class="navigation__products-link">
+                    <div class="nav-product-show">
+                      <img src="img/prod4.jpg" alt="">
+                    </div>
+                    <div class="nav-product-name">Agriculture IoT System</div>
+                    <div class="nav-product-explain">Connect Land, Crop and People</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu-item has-sub">
+            <a href="#">Services</a>
+            <div class="sub-menu">
+              <ul>
+                <li class="menu-item"><a href="#">Service 1</a></li>
+                <li class="menu-item"><a href="#">Service 2</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu-item"><a href="#">Service</a></li>
+          <li class="menu-item"><a href="#">About XAG</a></li>
+        </ul>
+      </div>
+      <div class="language">
+        <ul class="language__items">
+          <li class="language__item has-sub">
+            <span class="menu-item">Rom</span>
+            <div class="sub-menu">
+              <ul>
+                <li class="menu-item sub-language__item"><a href="#">Rom</a></li>
+                <li class="menu-item sub-language__item"><a href="#">Eng</a></li>
+                <li class="menu-item sub-language__item"><a href="#">Рус</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="tech-wrap">
+  <div class="tech">
+
+    <div class="tech__content landing">
+
+
+      <div style="display: none;">
+        <div id="m500-video-popup" class="main-video-popup box-modal">
+          <div class="box-modal_close arcticmodal-close popup-close">&times;</div>
+          <?php if(!empty($main_popup_video)) echo $main_popup_video; ?>
+        </div>
+      </div>
+
+
+      <section class="landing__header">
+        <div class="wrapper">
+          <div class="landing__header-content">
+            <h2 class="landing__header-subtitle">XAG M500 Remote Sensing Drone</h2>
+            <h2 class="landing__header-title">Seeing The Big Picture<br>In Every Detail</h2>
+            <a href="#m500-video-popup" class="header__videoplay" data-video="youtube video link here"><i class="play"></i></a>
+          </div>
+        </div>
+        <video src="img/m500/m500-header.mp4" autoplay muted loop="true" id="main-video"></video>
+      </section>
+
+
+      <section class="three-items">
+        <div class="wrapper-fluid">
+          <div class="three-items__inner">
+            <div class="wrapper">
+              <div class="three-items__description">
+                XAG M500 Remote Sensing Drone is designed for precision
+                agriculture, with the capability to fly autonomously and capture high
+                definition images with high-performance data processing. Partnering
+                with XAG M500, you can better understand your farm to enable timely
+                and effective actions.
+              </div>
+            </div>
+            <h2 class="three-items__title">Vision to Digital Farmland</h2>
+            <div class="three-items__blocks">
+              <div class="three-items__block">
+                <div class="three-items__img">
+                  <img src="img/m500/first-picture-img1.png" alt="Map precise">
+                </div>
+                <h3 class="three-items__block-title">Map precise</h3>
+                <div class="three-items__block-subtitle">
+                  The XAG M500 can help build a
+                  digital map of your farmlands, in
+                  which each plot and each crop has
+                  its own coordinate that allows
+                  precise operation of autonomous
+                  drones and robots.
+                </div>
+              </div>
+              <div class="three-items__block">
+                <div class="three-items__img">
+                  <img src="img/m500/first-picture-img2.png" alt="Scout effortless">
+                </div>
+                <h3 class="three-items__block-title">Scout effortless</h3>
+                <div class="three-items__block-subtitle">
+                  The XAG M500 can fly
+                  autonomously at high-frequency to
+                  capture overall farmland images.
+                  Without getting their feet on the
+                  ground, farmers can master every
+                  change of their fields with ease
+                  and take timely measures.
+                </div>
+              </div>
+              <div class="three-items__block">
+                <div class="three-items__img">
+                  <img src="img/m500/first-picture-img3.png" alt="Integral FOC ESCs">
+                </div>
+                <h3 class="three-items__block-title">Grow smart</h3>
+                <div class="three-items__block-subtitle">
+                  By taking advantage of third-party
+                  AI software, the XAG M500 can
+                  help you gain insight into plant
+                  growth and identify crop
+                  abnormity. Decisions are made
+                  with science to enable variable-
+                  rate spraying and fertilization.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="block-with-img" style="background: #2d2d2d;">
+        <div class="wrapper">
+          <div class="block-with-img__inner">
+            <div class="block-with-img__logo"><img src="img/m500/m500-header-superX.png" alt=""></div>
+            <h2 class="block-with-img__title">
+              The Smart Core to Agrifuture
+            </h2>
+            <div class="block-with-img__subtitle">
+              SuperX 4 Pro, XAG's self-developed Intelligent Control System, are
+              equipped with multi-tasking ability to endow XAG M500 the power of
+              fully autonomous flight at cm-level accuracy. Real-time image stitching
+              allows map creation immediately after landing.
+            </div>
+            <div class="block-with-img__picture">
+              <img src="img/m500/x4-img.png" alt="super x4">
+            </div>
+          </div>
+          <div class="block-with-img__features">
+            <div class="features__items">
+              <div class="features__item features__item--2">
+                <h3 class="features__title">CM-level Positioning</h3>
+                <div class="features__description">Dual-antenna RTK + portable base station</div>
+              </div>
+              <div class="features__item features__item--2">
+                <h3 class="features__title">Enhanced Flight Safety</h3>
+                <div class="features__description">AI fault prediction + emergency protection mechanism</div>
+              </div>
+              <div class="features__item features__item--2">
+                <h3 class="features__title">30-hectare Real-time Image Stitching</h3>
+                <div class="features__description">6-core CPUs + NPU</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="block-with-2x2">
+        <div class="wrapper">
+          <div class="block-with-2x2__inner">
+            <h2 class="block-with-2x2__title">
+              Seeing the Unseen
+            </h2>
+            <div class="block-with-2x2__description">
+              Four switchable cameras can capture multi-dimensional data from field
+              overview to crops growth status. Reveal hidden but valuable information
+              to help manage your farm with lower operation cost.
+            </div>
+            <div class="block-with-2x2__items linear-gradient-bg">
+              <div class="block-with-2x2__item">
+                <div class="block-with-2x2__img"><img src="img/m500/cam1.png" alt="camera"></div>
+                <h3 class="block-with-2x2__item-title">
+                  XCam 20MP Pro Gimbal Camera¹
+                </h3>
+                <div class="block-with-2x2__item-description">
+                  <ul>
+                    <li>20 MP 1" CMOS Sensor</li>
+                    <li>Robust ISP</li>
+                    <li>Ground Control Point-Free</li>
+                  </ul>
+                  <p>Used for Orthophoto & Oblique Photography</p>
+                </div>
+              </div>
+              <div class="block-with-2x2__item">
+                <div class="block-with-2x2__img"><img src="img/m500/cam2.png" alt="camera"></div>
+                <h3 class="block-with-2x2__item-title">
+                  XCam 26MP APS-C Gimbal Camera²
+                </h3>
+                <div class="block-with-2x2__item-description">
+                  <ul>
+                    <li>26 MP APS-C CMOS Sensor</li>
+                    <li>0.4s Shooting Interval</li>
+                    <li>Photos in Five Directions</li>
+                  </ul>
+                  <p>Used for Orthophoto & Oblique Photography</p>
+                </div>
+              </div>
+              <div class="block-with-2x2__item">
+                <div class="block-with-2x2__img"><img src="img/m500/cam3.png" alt="camera"></div>
+                <h3 class="block-with-2x2__item-title">
+                  XCam 20H Hybrid Gimbal Camera³
+                </h3>
+                <div class="block-with-2x2__item-description">
+                  <ul>
+                    <li>Infrared & 20 MP 1" CMOS Sensor</li>
+                    <li>Temperature Measurement at ±3℃ accuracy</li>
+                  </ul>
+                  <p>Used for HD Map & Thermal Map</p>
+                </div>
+              </div>
+              <div class="block-with-2x2__item">
+                <div class="block-with-2x2__img"><img src="img/m500/cam4.png" alt="camera"></div>
+                <h3 class="block-with-2x2__item-title">
+                  XCam 20M Multispectral Gimbal Camera⁴
+                </h3>
+                <div class="block-with-2x2__item-description">
+                  <ul>
+                    <li>20 MP 1" CMOS Sensor & 4-Channel
+                        Multispectral Sensor</li>
+                    <li>Automatic Sunlight Compensation</li>
+                  </ul>
+                  <p>Real-time NDVI Video</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="features">
+        <div class="wrapper">
+
+          <h2 class="features__main-title">Easy Control With One Screen</h2>
+
+          <div class="features__text">
+            XAG SRC1 Smart Remote Controller, with its built-in touchscreen and
+            XPilot APP, allows freely switch between autonomous flight and manual
+            control. Multiple flight planning modes are available to meet your needs
+            of various application scenarios. The 4G and Wi-Fi dual communication
+            system support stable and long-range internet connection.
+          </div>
+
+          <div class="features__items">
+            <div class="features__item features__item--2">
+              <h3 class="features__title">XPilot APP⁵</h3>
+              <div class="features__description">Easy flight planning</div>
+            </div>
+            <div class="features__item features__item--2">
+              <h3 class="features__title">4G + Wi-Fi Dual Link</h3>
+              <div class="features__description">Stable signal & image transmission</div>
+            </div>
+            <div class="features__item features__item--2">
+              <h3 class="features__title">5.5" 800 Lumens HD Touchscreen</h3>
+              <div class="features__description">Clear visual under strong light</div>
+            </div>
+            <div class="features__item features__item--2">
+              <h3 class="features__title">4.5h Duration⁶</h3>
+              <div class="features__description">Suitable for longer task</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="video video1 video--centered">
+        <div class="wrapper">
+          <div class="video__inner">
+            <div class="video__block">
+              <video src="img/m500/m500-field-mapping.mp4" autoplay muted loop="true"></video>
+            </div>
+            <div class="video__icons">
+              <div class="video__icon-block">
+                <div class="video__icon"><img src="img/m500/icon1.png" alt=""></div>
+                <h4 class="video__icon-title">Field Mapping</h4>
+                <div class="video__icon-description">HD map</div>
+              </div>
+              <div class="video__icon-block">
+                <div class="video__icon"><img src="img/m500/icon2.png" alt=""></div>
+                <h4 class="video__icon-title">Oblique Photography</h4>
+                <div class="video__icon-description">3D map</div>
+              </div>
+              <div class="video__icon-block">
+                <div class="video__icon"><img src="img/m500/icon3.png" alt=""></div>
+                <h4 class="video__icon-title">POI Cruising</h4>
+                <div class="video__icon-description">Target areas scouting</div>
+              </div>
+              <div class="video__icon-block">
+                <div class="video__icon"><img src="img/m500/icon4.png" alt=""></div>
+                <h4 class="video__icon-title">Strip Mapping</h4>
+                <div class="video__icon-description">River & roadway inspection</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="block-with-img-text linear-gradient-bg">
+        <div class="wrapper">
+          <div class="block-with-img-text__inner">
+            <h2 class="block-with-img-text__title">
+              Mapping Your Farm into Precision Agriculture
+            </h2>
+            <div class="block-with-img-text__item">
+              <div class="block-with-img-text__left">
+                <img src="img/m500/block-with-img-1.png" alt="">
+              </div>
+              <div class="block-with-img-text__right">
+                <h3 class="block-with-img-text__item-title">Weeds Control Practices</h3>
+                <div class="block-with-img-text__item-description">
+                  The XAG M500 can be used for weed
+                  detection on crops, with the weed zone
+                  identified and located via the third-party
+                  AI software. Then a prescription map will
+                  be sent to the XAG agricultural drones for
+                  variable-rate spraying that can remove
+                  weeds with less pesticide use.
+                </div>
+              </div>
+            </div>
+            <div class="block-with-img-text__item">
+              <div class="block-with-img-text__left">
+                <img src="img/m500/block-with-img-2.png" alt="">
+              </div>
+              <div class="block-with-img-text__right">
+                <h3 class="block-with-img-text__item-title">Fertilization Management</h3>
+                <div class="block-with-img-text__item-description">
+                  The XAG M500 can collect crop growth
+                  data and produce digital field maps to be
+                  analysed by the AI software. The AI
+                  prescription map will be generated and
+                  guide the XAG agricultural drone to spread
+                  fertilizers on where necessary. Improve
+                  yields with reduced fertilizers.
+                </div>
+              </div>
+            </div>
+            <div class="block-with-img-text__item">
+              <div class="block-with-img-text__left">
+                <img src="img/m500/block-with-img-3.png" alt="">
+              </div>
+              <div class="block-with-img-text__right">
+                <h3 class="block-with-img-text__item-title">Cotton Boll Opening Control</h3>
+                <div class="block-with-img-text__item-description">
+                  The XAG M500 can create an HD cotton
+                  field map where the immature boll opening
+                  can be discovered and tagged. When
+                  receiving the labeled map, the XAG
+                  agricultural drones will conduct defoliation
+                  on target zones to facilitate large-scale
+                  mechanical harvesting.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="block-with-note">
+        <div class="wrapper">
+          <div class="block-with-note__inner">
+            <div class="block-with-note__text">
+              <h5 class="block-with-note__title"><b>Note:</b></h5>
+              1. 2. 3. 4. Four cameras all featured: mechanical shutter max out at 1/2000s, 3-Axis gimbal, auto distortion correction, maximum 512 GB sd card supported.
+              2.Equipped with this camera, the M500 can capture 5 images at different angles rapidly before next vertical shoot, which is almost 5 times faster than traditional oblique photography when
+              other parameters are the same.
+              5. xml file is supported for different applications.
+              6. The specific performance may vary depending on the working environment, temperature, user habits, etc. Please use strictly in accordance with the official product guidelines.
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="cta-form">
+        <div class="wrapper">
+          <h2 class="cta-form__title">Ready to buy?</h2>
+          <div class="cta-form__body">
+            <form action="">
+              <div class="input-wrap">
+                <label>Please fill in the fields required below.</label>
+                <input type="text" placeholder="*Компания">
+              </div>
+              <div class="input-wrap">
+                <input type="text" placeholder="*ФИО">
+              </div>
+              <div class="input-wrap">
+                <input type="text" placeholder="*Phone">
+              </div>
+              <div class="input-wrap">
+                <input type="text" placeholder="*Email">
+              </div>
+              <div class="cta-form__bottom">Please also write a message to overseas@xa.com, we will reply to it in the order it was received.</div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="wrapper">
+    <div class="footer__inner">
+      <div class="footer__inner-left">
+        <div class="footer__menus">
+          <div class="footer__menu">
+            <h5 class="footer__menu-title">About</h5>
+            <ul>
+              <li class="footer__menu-item"><a href="#">About XAG</a></li>
+              <li class="footer__menu-item"><a href="#">About XAG</a></li>
+              <li class="footer__menu-item"><a href="#">About XAG</a></li>
+              <li class="footer__menu-item"><a href="#">About XAG</a></li>
+              <li class="footer__menu-item"><a href="#">About XAG</a></li>
+            </ul>
+          </div>
+          <div class="footer__menu">
+            <h5 class="footer__menu-title">Services</h5>
+            <ul>
+              <li class="footer__menu-item"><a href="#">Agricultural UAS</a></li>
+              <li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+              <li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+              <li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+            </ul>
+          </div>
+          <div class="footer__menu">
+            <h5 class="footer__menu-title">Events</h5>
+            <ul>
+              <li class="footer__menu-item"><a href="#">XAAC 2021</a></li>
+              <li class="footer__menu-item"><a href="#">XAAC 2019</a></li>
+              <li class="footer__menu-item"><a href="#">XAAC 2018</a></li>
+              <li class="footer__menu-item"><a href="#">XAAC 2017</a></li>
+            </ul>
+          </div>
+          <div class="footer__menu">
+            <h5 class="footer__menu-title">News</h5>
+            <ul>
+              <li class="footer__menu-item"><a href="#">Agricultural UAS</a></li>
+              <li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+              <li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+              <li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__inner-right">
+        <div class="footer__socials">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copy">
+      <img src="img/XAG-logo-web.png" alt="xag.md logo">
+      Contactează © 2022 XAG Moldova All Rights Reserved + 373 79 131317
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/scripts.min.js"></script>
+<script src="libs/jquery.arcticmodal-0.3/jquery.arcticmodal-0.3.min.js"></script>
+<script src="js/common.js"></script>
+
+
+</body>
+</html>

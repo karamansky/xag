@@ -1,8 +1,8 @@
 <?php
-	/**
-	 * require custom controllers
-	 */
-//	require_once(get_stylesheet_directory() . '/controllers/main.php');
+/**
+ * require custom controllers
+ */
+require_once(get_stylesheet_directory() . '/controllers/main.php');
 
 	if (!function_exists('xag_setup')) {
 		function xag_setup()
@@ -105,7 +105,8 @@
 				'taxonomies' => array('solution_category'),
 				'has_archive' => true,
 				'capability_type' => 'post',
-				'supports' => array('title', 'excerpt', 'editor', 'thumbnail')
+				'show_in_rest' => true,
+				'supports' => array('title', 'editor', 'thumbnail'),
 			)
 		);
 

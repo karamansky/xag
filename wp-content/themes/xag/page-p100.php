@@ -52,8 +52,12 @@ get_header();
 				</div>
 				<?php if(!empty($header_video_bg_webm) || !empty($header_video_bg_mp4)) : ?>
 				<video autoplay="true" preload="auto" playsinline muted loop="true" id="main-video">
-					<source src="<?php echo $header_video_bg_webm; ?>" type="video/webm">
-					<source src="<?php echo $header_video_bg_mp4; ?>" type="video/mp4">
+					<?php if(!empty($header_video_bg_webm)) { ?>
+						<source src="<?php echo $header_video_bg_webm; ?>" type="video/webm">
+					<?php } ?>
+					<?php if(!empty($header_video_bg_mp4)) { ?>
+						<source src="<?php echo $header_video_bg_mp4; ?>" type="video/mp4">
+					<?php } ?>
 				</video>
 				<script> document.getElementById('main-video').play();</script>
 				<?php endif; ?>
@@ -110,9 +114,13 @@ get_header();
 								<?php } ?>
 								<?php if(!empty($video1_webm) || !empty($video1_mp4)) : ?>
 									<div class="video__block">
-										<video class="vLazy" autoplay="true" playsinline muted loop="true" id="video1">
-											<source data-src="<?php echo $video1_webm; ?>" type="video/webm">
-											<source data-src="<?php echo $video1_mp4; ?>" type="video/mp4">
+										<video class="" autoplay="true" playsinline muted loop="true" id="video1">
+											<?php if(!empty($video1_webm)) { ?>
+												<source src="<?php echo $video1_webm; ?>" type="video/webm">
+											<?php } ?>
+											<?php if(!empty($video1_mp4)) { ?>
+												<source src="<?php echo $video1_mp4; ?>" type="video/mp4">
+											<?php } ?>
 										</video>
 									</div>
 									<script> document.getElementById('video1').play();</script>
@@ -184,9 +192,13 @@ get_header();
 							<?php } ?>
 							<?php if(!empty($video2_webm) || !empty($video2_mp4)) : ?>
 								<div class="video__block">
-									<video class="vLazy" autoplay="true" playsinline muted loop="true" id="video2">
-										<source data-src="<?php echo $video2_webm; ?>" type="video/webm">
-										<source data-src="<?php echo $video2_mp4; ?>" type="video/mp4">
+									<video class="" autoplay="true" playsinline muted loop="true" id="video2">
+										<?php if(!empty($video2_webm)) { ?>
+											<source src="<?php echo $video2_webm; ?>" type="video/webm">
+										<?php } ?>
+										<?php if(!empty($video2_mp4)) { ?>
+											<source src="<?php echo $video2_mp4; ?>" type="video/mp4">
+										<?php } ?>
 									</video>
 								</div>
 								<script> document.getElementById('video2').play();</script>
@@ -235,9 +247,13 @@ get_header();
 							<?php } ?>
 							<?php if(!empty($video3_webm) || !empty($video3_mp4)) : ?>
 								<div class="video__block">
-									<video class="vLazy" autoplay="true" playsinline muted loop="true" id="video3">
-										<source data-src="<?php echo $video3_webm; ?>" type="video/webm">
-										<source data-src="<?php echo $video3_mp4; ?>" type="video/mp4">
+									<video class="" autoplay="true" playsinline muted loop="true" id="video3">
+										<?php if(!empty($video3_webm)) { ?>
+											<source src="<?php echo $video3_webm; ?>" type="video/webm">
+										<?php } ?>
+										<?php if(!empty($video3_mp4)) { ?>
+											<source src="<?php echo $video3_mp4; ?>" type="video/mp4">
+										<?php } ?>
 									</video>
 								</div>
 								<script> document.getElementById('video3').play();</script>
@@ -329,9 +345,13 @@ get_header();
 								<?php } ?>
 								<?php if(!empty($video4_webm) || !empty($video4_mp4)) : ?>
 									<div class="video__block">
-										<video class="vLazy" autoplay="true" playsinline muted loop="true" id="video4">
-											<source data-src="<?php echo $video4_webm; ?>" type="video/webm">
-											<source data-src="<?php echo $video4_mp4; ?>" type="video/mp4">
+										<video class="" autoplay="true" playsinline muted loop="true" id="video4">
+											<?php if(!empty($video4_webm)) { ?>
+												<source src="<?php echo $video4_webm; ?>" type="video/webm">
+											<?php } ?>
+											<?php if(!empty($video4_mp4)) { ?>
+												<source src="<?php echo $video4_mp4; ?>" type="video/mp4">
+											<?php } ?>
 										</video>
 									</div>
 									<script> document.getElementById('video4').play();</script>
@@ -380,9 +400,13 @@ get_header();
 							<?php } ?>
 							<?php if(!empty($video5_webm) || !empty($video5_mp4)) : ?>
 								<div class="video__block">
-									<video class="vLazy" autoplay="true" playsinline muted loop="true" id="video5">
-										<source data-src="<?php echo $video5_webm; ?>" type="video/webm">
-										<source data-src="<?php echo $video5_mp4; ?>" type="video/mp4">
+									<video class="" autoplay="true" playsinline muted loop="true" id="video5">
+										<?php if(!empty($video5_webm)) { ?>
+											<source src="<?php echo $video5_webm; ?>" type="video/webm">
+										<?php } ?>
+										<?php if(!empty($video5_mp4)) { ?>
+											<source src="<?php echo $video5_mp4; ?>" type="video/mp4">
+										<?php } ?>
 									</video>
 								</div>
 								<script> document.getElementById('video5').play();</script>

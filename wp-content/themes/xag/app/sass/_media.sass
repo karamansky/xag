@@ -157,6 +157,8 @@
 
 	.tech__sizes img
 		max-width: 100%
+		margin-left: auto
+		margin-right: auto
 
 	.single__box
 		max-width: 100%
@@ -245,9 +247,22 @@
 		padding-right: 75px
 
 	.three-items__img
-		height: 250px
+		height: 190px
+		margin-bottom: 20px
 
+	.three-items__blocks
+		gap: 15px
 
+	.three-items__block-subtitle,
+	.features__description
+		font-size: 16px
+		line-height: 20px
+
+	.three-items__block-subtitle
+		max-width: 95%
+
+	.block-with-img-text__left
+		max-width: 50%
 
 
 
@@ -295,6 +310,9 @@
 	.features__title
 		font-size: 20px
 		line-height: 30px
+
+	.features__text
+		padding: 50px 0
 
 	.features__description
 		font-size: 16px
@@ -394,8 +412,51 @@
 		padding-left: 15px
 		padding-right: 15px
 
-	.three-items__img
-		height: 200px
+	.features__main-title
+		margin-bottom: 15px
+
+	.block-with-2x2__item-title
+		font-size: 24px
+		line-height: 30px
+
+	.block-with-2x2__item-description
+		max-width: 100%
+
+	.video__icon-title
+		font-size: 18px
+		line-height: 24px
+
+	.block-with-img__features
+		margin-top: 50px
+
+	.mission,
+	.block-scroll,
+	.slider,
+	.video,
+	.full-width-bg,
+	.three-items,
+	.block-with-img,
+	.block-with-img-text,
+	.slider,
+	.slider--info,
+	.slider-full,
+	.img-left-with-icons,
+	.block-with-2x2,
+	.block-with-note,
+	.features2
+		padding: 50px 0
+
+	.features
+		padding-bottom: 50px
+
+
+
+
+
+
+
+
+
 
 
 
@@ -411,6 +472,9 @@
 	.wrapper
 		width: 768px
 
+	.block-with-2x2__title,
+	.features__main-title,
+	.block-with-img-text__title,
 	.features2__title,
 	.features2__section-title,
 	.video__title,
@@ -423,7 +487,8 @@
 		line-height: 45px
 		font-weight: 500
 
-	.features2__description, .features2__section-subtitle
+	.features2__description,
+	.features2__section-subtitle
 		font-size: 20px
 		line-height: 28px
 
@@ -537,6 +602,34 @@
 		font-size: 30px
 		line-height: 36px
 
+	.features2__title,
+	.features2__section-title,
+	.video__title,
+	.full-width-bg__title,
+	.three-items__title,
+	.slider-full__title,
+	.img-left-with-icons__title,
+	.block-with-img__title,
+	.block-with-2x2__title,
+	.features__main-title,
+	.block-with-img-text__title
+		font-size: 28px
+		line-height: 35px
+
+	.features__text,
+	.three-items__description,
+	.features2__description,
+	.features2__section-subtitle,
+	.video__description,
+	.full-width-bg__description,
+	.block-with-img__subtitle,
+	.img-left-with-icons__subtitle,
+	.slider-full__description,
+	.block-with-2x2__description,
+	.block-with-img-text__item-description
+		font-size: 16px
+		line-height: 22px
+
 	.nav-pc-wrap
 		position: fixed
 		top: 0
@@ -616,18 +709,11 @@
 	.contacts__item
 		width: 50%
 
-	//.features__left
-	//	width: 100%
-	//	padding-right: 0
-	//
-	//.features__right
-	//	width: 100%
-	//	padding-left: 0
-
 	.features__item
 		width: 100%
 		text-align: center
 		padding-right: 0
+		margin-bottom: 15px
 		&:nth-child(2n)
 			padding-left: 0
 
@@ -776,9 +862,9 @@
 		height: 250px
 
 	.landing__header video
-		margin-top: 100px
+		margin-top: 45px
 		width: 100%
-		height: 50%
+		height: 100%
 
 	.full-width-bg__inner,
 	.slider-full .wrapper-fluid
@@ -806,39 +892,7 @@
 		padding: 30px
 
 	.landing__header
-		height: calc(100vh - 350px)
-
-	.three-items,
-	.block-with-img,
-	.features2,
-	.slider,
-	.slider-full,
-	.video,
-	.full-width-bg,
-	.img-left-with-icons
-		padding: 50px 0
-
-	.features2__title,
-	.features2__section-title,
-	.video__title,
-	.full-width-bg__title,
-	.three-items__title,
-	.slider-full__title,
-	.img-left-with-icons__title,
-	.block-with-img__title
-		font-size: 28px
-		line-height: 35px
-
-	.features__text,
-	.features2__description,
-	.features2__section-subtitle,
-	.video__description,
-	.full-width-bg__description,
-	.block-with-img__subtitle,
-	.img-left-with-icons__subtitle,
-	.slider-full__description
-		font-size: 16px
-		line-height: 22px
+		height: calc(100vh - 45px)
 
 	.slider--info .slider__item
 		flex-wrap: wrap
@@ -888,6 +942,37 @@
 
 	.full-width-bg--x4
 		display: none
+
+	.block-with-img-text__item
+		display: block
+
+	.block-with-img-text__item-title
+		font-size: 24px
+		line-height: 30px
+
+	.block-with-img-text__item:not(:last-child)
+		margin-bottom: 50px
+
+	.block-with-img-text__left
+		max-width: 100%
+		width: 100%
+		img
+			margin-bottom: 20px
+			width: 100%
+
+	.block-with-img-text__right
+		max-width: 100%
+		width: 100%
+		img
+			margin-bottom: 20px
+			width: 100%
+
+	.block-with-2x2__item
+		padding: 25px
+
+	.three-items__block
+		width: 100%
+		margin-bottom: 15px
 
 
 
@@ -1054,6 +1139,20 @@
 
 	.slider__item-img
 		height: 250px
+
+	.video__icon-block
+		width: 50%
+		padding: 0 10px
+		margin-bottom: 15px
+
+	.block-with-2x2__item
+		border-right: 0!important
+		border-bottom: 1px solid #363434
+		width: 100%
+
+
+
+
 
 
 
