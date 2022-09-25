@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>XAG</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="libs/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="libs/slick-carousel/slick/slick-theme.css">
+  <link rel="stylesheet" href="libs/jquery.form-styler/dist/jquery.formstyler.css">
+  <link rel="stylesheet" href="libs/jquery.arcticmodal-0.3/jquery.arcticmodal-0.3.css">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+<div class="nav-pc-wrap">
+  <div class="wrapper">
+    <div class="nav-pc">
+      <div class="logo"><h1 class="nav-icon"><a href="https://www.xa.com/en"></a></h1></div>
+      <div class="navigation">
+        <ul>
+          <li class="menu-item current-menu-item"><a href="#">Home</a></li>
+          <li class="menu-item menu-item-product">
+            <a href="#">Products</a>
+            <div class="navigation__popup">
+              <ul class="navigation__products">
+                <li class="navigation__products-item">
+                  <a href="#" class="navigation__products-link">
+                    <div class="nav-product-show">
+                      <img src="img/prod1.jpg" alt="">
+                    </div>
+                    <div class="nav-product-name">Agricultural Drone</div>
+                    <div class="nav-product-explain">Agrifuture, Here and Now</div>
+                  </a>
+                </li>
+                <li class="navigation__products-item">
+                  <a href="#" class="navigation__products-link">
+                    <div class="nav-product-show">
+                      <img src="img/prod2.jpg" alt="">
+                    </div>
+                    <div class="nav-product-name">Remote Sensing Drone</div>
+                    <div class="nav-product-explain">The Key to “Sky City”</div>
+                  </a>
+                </li>
+                <li class="navigation__products-item">
+                  <a href="#" class="navigation__products-link">
+                    <div class="nav-product-show">
+                      <img src="img/prod3.jpg" alt="">
+                    </div>
+                    <div class="nav-product-name">Unmanned Ground Vehicle</div>
+                    <div class="nav-product-explain">Customised for Every Mission</div>
+                  </a>
+                </li>
+                <li class="navigation__products-item">
+                  <a href="#" class="navigation__products-link">
+                    <div class="nav-product-show">
+                      <img src="img/prod4.jpg" alt="">
+                    </div>
+                    <div class="nav-product-name">Agriculture IoT System</div>
+                    <div class="nav-product-explain">Connect Land, Crop and People</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu-item has-sub">
+            <a href="#">Services</a>
+            <div class="sub-menu">
+              <ul>
+                <li class="menu-item"><a href="#">Service 1</a></li>
+                <li class="menu-item"><a href="#">Service 2</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu-item"><a href="#">Service</a></li>
+          <li class="menu-item"><a href="#">About XAG</a></li>
+        </ul>
+      </div>
+      <div class="language">
+        <ul class="language__items">
+          <li class="language__item has-sub">
+            <span class="menu-item">Rom</span>
+            <div class="sub-menu">
+              <ul>
+                <li class="menu-item sub-language__item"><a href="#">Rom</a></li>
+                <li class="menu-item sub-language__item"><a href="#">Eng</a></li>
+                <li class="menu-item sub-language__item"><a href="#">Рус</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="tech-wrap">
+  <div class="tech">
+
+    <div class="tech__content landing">
+
+
+      <div style="display: none;">
+        <div id="m2000-video-popup" class="main-video-popup box-modal">
+          <div class="box-modal_close arcticmodal-close popup-close">&times;</div>
+          <?php if(!empty($main_popup_video)) echo $main_popup_video; ?>
+        </div>
+      </div>
+
+
+      <section class="landing__header">
+        <div class="wrapper">
+          <div class="landing__header-content">
+            <h2 class="landing__header-subtitle">XAG m2000 Remote Sensing Drone</h2>
+            <h2 class="landing__header-title">SEEING THE BIG PICTURE<br>
+                                              IN EVERY DETAIL</h2>
+            <a href="#m2000-video-popup" class="header__videoplay" data-video="youtube video link here"><i class="play"></i></a>
+          </div>
+        </div>
+        <video src="img/m2000/m2000-header.mp4" autoplay muted loop="true" id="main-video"></video>
+      </section>
+
+
+      <section class="features">
+        <div class="wrapper">
+          <div class="features__text">
+            With the fixed-wing VTOL design, XAG M2000 Remote Sensing Drone is developed for high frequency and high
+            demand aerial survey tasks of multiple scenarios, which allows one person to map fields of 533 hectares in an hour¹.
+            Equipped with XAG SuperX 4 Pro Intelligent Control System, the XAG M2000 is capable of accessing quality
+            geographic data, which helps build up digital field maps stably and rapidly to facilitate production decisions.
+          </div>
+          <div class="features__items">
+            <div class="features__item features__item--2">
+              <h3 class="features__title">Accurate & Autonomous Flight</h3>
+              <div class="features__description">RTK Centimetre-Level Positioning
+                                                 Automated Flight Planning</div>
+            </div>
+            <div class="features__item features__item--2">
+              <h3 class="features__title">Flexible Take-off and Landing</h3>
+              <div class="features__description">Fixed-Wing VTOL Design
+                                                 Quick Release Body</div>
+            </div>
+            <div class="features__item features__item--2">
+              <h3 class="features__title">Sophisticated & Stable Imaging</h3>
+              <div class="features__description">XCam 20MP Pro Gimbal Camera
+                                                 XCam 26MP APS-C Gimbal Camera
+                                                 XCam 20H Hybrid Gimbal Camera
+                                                 XCam 20M Multispectral Gimbal Camera</div>
+            </div>
+            <div class="features__item features__item--2">
+              <h3 class="features__title">Safe & Efficient Images Stitching</h3>
+              <div class="features__description">Cluster Cloud Computing with Encryption
+                                                 Post Processed Kinematic</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="video">
+        <div class="wrapper">
+          <div class="video__inner">
+            <h2 class="video__title" style="margin-bottom: 35px;">VTOL For Flexible and Efficient Flight</h2>
+            <div class="video__description">
+              The quick assembly XAG M2000 can be immediately deployed for
+              operations. The combination structure of multiple rotors and fixed
+              wings allows flexible take-off and landing. 3 kg EPP fuselage plus the
+              high-energy-density battery provide up to 90 minutes flight time and a
+              range of 86 kilometers in a single flight.
+            </div>
+            <div class="video__block">
+              <video src="img/m2000/m2000-vertical-takeoff.mp4" autoplay muted loop="true"></video>
+            </div>
+            <div class="video__icons">
+              <div class="video__icon-block">
+                <div class="video__icon"><img src="img/m2000/icon1.png" alt="" style="max-width: 100px;"></div>
+                <h4 class="video__icon-title"></h4>
+                <div class="video__icon-description">Maximum Battery Life²</div>
+              </div>
+              <div class="video__icon-block">
+                <div class="video__icon"><img src="img/m2000/icon2.png" alt="" style="max-width: 100px;"></div>
+                <h4 class="video__icon-title"></h4>
+                <div class="video__icon-description">Maximum Flight Distance³</div>
+              </div>
+              <div class="video__icon-block">
+                <div class="video__icon"><img src="img/m2000/icon3.png" alt="" style="max-width: 100px;"></div>
+                <h4 class="video__icon-title"></h4>
+                <div class="video__icon-description">Quick Assembly⁴</div>
+              </div>
+              <div class="video__icon-block">
+                <div class="video__icon"><img src="img/m2000/icon4.png" alt="" style="max-width: 100px;"></div>
+                <h4 class="video__icon-title"></h4>
+                <div class="video__icon-description">Overall Weight⁵</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="block-with-img" style="background: #2d2d2d;">
+        <div class="wrapper">
+          <div class="block-with-img__inner">
+            <div class="block-with-img__logo"><img src="img/m500/m500-header-superX.png" alt=""></div>
+            <h2 class="block-with-img__title">
+              Outsmart, Outperform, Outsprint
+            </h2>
+            <div class="block-with-img__subtitle">
+              The SuperX 4 Pro Intelligent Control System endows XAG M2000 the
+              power of fully autonomous flight at cm-level accuracy while capturing
+              high-resolution images. With a built-in emergency response
+              mechanism, it monitors the drone’s flight status in real time, and
+              supports quick swapping between multi-rotor and fixed-wing flight
+              modes, ensuring flight safety and survey efficiency.
+            </div>
+            <div class="block-with-img__picture">
+              <img src="img/m2000/three-product-img.png" alt="super x4">
+            </div>
+          </div>
+          <div class="block-with-img__features">
+            <div class="features__items features__items--2">
+              <div class="features__item features__item--2">
+                <h3 class="features__title">Centimetre-Level Positioning</h3>
+                <div class="features__description">Dual-Antenna RTK + Cloud Base Stations⁶</div>
+              </div>
+              <div class="features__item features__item--2">
+                <h3 class="features__title">Safe Flight</h3>
+                <div class="features__description">3 x IMU + Emergency Response Mechanism⁷</div>
+              </div>
+              <div class="features__item features__item--2">
+                <h3 class="features__title">Stable Data Connection</h3>
+                <div class="features__description">4G Network Transmission</div>
+              </div>
+              <div class="features__item features__item--2">
+                <h3 class="features__title">Seamless Trajectories</h3>
+                <div class="features__description">Break-Point Continuous Flight</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="block-with-img" >
+        <div class="wrapper">
+          <div class="block-with-img__inner">
+            <h2 class="block-with-img__title">
+              Longer Battery Life, Higher Efficiency
+            </h2>
+            <div class="block-with-img__picture">
+              <img src="img/m2000/four-header-img.png" alt="Longer Battery Life">
+            </div>
+          </div>
+          <div class="block-with-img__features" style="margin-top: 0;">
+            <div class="features__items features__items--without-red">
+              <div class="features__item features__item--2 features__item--centered">
+                <h3 class="features__title">B6180 Smart Battery</h3>
+                <div class="features__description">
+                  · 8000mAh Large Capacity
+                  · 90 mins Battery Life⁸
+                  · Smart Battery Management System
+                </div>
+              </div>
+              <div class="features__item features__item--2 features__item--centered">
+                <h3 class="features__title">Fast Charger</h3>
+                <div class="features__description">
+                  · 300W Fast Charging
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="block-with-2x2">
+        <div class="wrapper">
+          <div class="block-with-2x2__inner">
+            <h2 class="block-with-2x2__title">
+              Cameras To Multi-application, Fast Switch
+            </h2>
+            <div class="block-with-2x2__description">
+              Featured with 3-axis mechanical stabilized gimbal and mechanical
+              shutter max out at 1/2000 sec., all cameras can take photos at high-
+              speed without rolling shutter effect. Anti-distortion and autofocus lens
+              contributes to high-resolution imaging.
+            </div>
+            <div class="block-with-2x2__description-img">
+              <img src="img/m2000/m2000-five-product-img.png" alt="m2000">
+            </div>
+            <div class="block-with-2x2__items linear-gradient-bg">
+              <div class="block-with-2x2__item">
+                <div class="block-with-2x2__img"><img src="img/m500/cam1.png" alt="camera"></div>
+                <h3 class="block-with-2x2__item-title">
+                  XCam 20MP Pro Gimbal Camera¹
+                </h3>
+                <div class="block-with-2x2__item-description">
+                  <ul>
+                    <li>20 MP 1" CMOS Sensor</li>
+                    <li>Robust ISP</li>
+                    <li>Ground Control Point-Free</li>
+                  </ul>
+                  <p>Used for Orthophoto & Oblique Photography</p>
+                </div>
+              </div>
+              <div class="block-with-2x2__item">
+                <div class="block-with-2x2__img"><img src="img/m500/cam2.png" alt="camera"></div>
+                <h3 class="block-with-2x2__item-title">
+                  XCam 26MP APS-C Gimbal Camera²
+                </h3>
+                <div class="block-with-2x2__item-description">
+                  <ul>
+                    <li>26 MP APS-C CMOS Sensor</li>
+                    <li>0.4s Shooting Interval</li>
+                    <li>Photos in Five Directions</li>
+                  </ul>
+                  <p>Used for Orthophoto & Oblique Photography</p>
+                </div>
+              </div>
+              <div class="block-with-2x2__item">
+                <div class="block-with-2x2__img"><img src="img/m500/cam3.png" alt="camera"></div>
+                <h3 class="block-with-2x2__item-title">
+                  XCam 20H Hybrid Gimbal Camera³
+                </h3>
+                <div class="block-with-2x2__item-description">
+                  <ul>
+                    <li>Infrared & 20 MP 1" CMOS Sensor</li>
+                    <li>Temperature Measurement at ±3℃ accuracy</li>
+                  </ul>
+                  <p>Used for HD Map & Thermal Map</p>
+                </div>
+              </div>
+              <div class="block-with-2x2__item">
+                <div class="block-with-2x2__img"><img src="img/m500/cam4.png" alt="camera"></div>
+                <h3 class="block-with-2x2__item-title">
+                  XCam 20M Multispectral Gimbal Camera⁴
+                </h3>
+                <div class="block-with-2x2__item-description">
+                  <ul>
+                    <li>20 MP 1" CMOS Sensor & 4-Channel
+                        Multispectral Sensor</li>
+                    <li>Automatic Sunlight Compensation</li>
+                  </ul>
+                  <p>Real-time NDVI Video</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="video">
+        <div class="wrapper">
+          <div class="video__inner">
+            <h2 class="video__title" style="margin-bottom: 35px;">Easy Flight Planning, Easy Mapping</h2>
+            <div class="video__description">
+              XAG SRC1 Smart Remote Controller, with its built-in touchscreen and
+              XPilot APP, allows freely switch between autonomous flight and manual
+              control. Multiple flight planning modes are available to meet your needs
+              of various application scenarios. The 4G and Wi-Fi dual communication
+              system support stable and long-range internet connection.
+            </div>
+            <div class="video__features">
+              <div class="features__items">
+                <div class="features__item features__item--2">
+                  <h3 class="features__title">XPilot APP¹²</h3>
+                  <div class="features__description">Designed for aerial mapping, easy to use</div>
+                </div>
+                <div class="features__item features__item--2">
+                  <h3 class="features__title">4G + Wi-Fi Dual Link</h3>
+                  <div class="features__description">TReal-time data transmission, stabler control</div>
+                </div>
+                <div class="features__item features__item--2">
+                  <h3 class="features__title">5.5" 800 Lumens HD Touchscreen</h3>
+                  <div class="features__description">Clear visual under strong light</div>
+                </div>
+                <div class="features__item features__item--2">
+                  <h3 class="features__title">4.5h Duration¹³</h3>
+                  <div class="features__description">Suitable for longer task</div>
+                </div>
+              </div>
+            </div>
+            <div class="video__block">
+              <video src="img/m500/m500-field-mapping.mp4" autoplay muted loop="true"></video>
+            </div>
+            <div class="video__icons">
+              <div class="video__icon-block">
+                <div class="video__icon"><img src="img/m500/icon1.png" alt=""></div>
+                <h4 class="video__icon-title">Field Mapping</h4>
+                <div class="video__icon-description">HD map</div>
+              </div>
+              <div class="video__icon-block">
+                <div class="video__icon"><img src="img/m500/icon2.png" alt=""></div>
+                <h4 class="video__icon-title">Oblique Photography</h4>
+                <div class="video__icon-description">3D map</div>
+              </div>
+              <div class="video__icon-block">
+                <div class="video__icon"><img src="img/m500/icon3.png" alt=""></div>
+                <h4 class="video__icon-title">POI Cruising</h4>
+                <div class="video__icon-description">Target areas scouting</div>
+              </div>
+              <div class="video__icon-block">
+                <div class="video__icon"><img src="img/m500/icon4.png" alt=""></div>
+                <h4 class="video__icon-title">Strip Mapping</h4>
+                <div class="video__icon-description">River & roadway inspection</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="block-with-img-full-text">
+        <div class="wrapper">
+          <div class="block-with-img-full-text__inner">
+            <h2 class="block-with-img-full-text__title">
+              Diverse Application Scenarios, Infinite Possibilities
+            </h2>
+            <div class="block-with-img-full-text__item" style="background-image: url('img/m2000/seven-picture-img1.png');">
+              <div class="block-with-img-full-text__content">
+                <h3 class="block-with-img-full-text__item-title">Agricultural Production</h3>
+                <div class="block-with-img-full-text__item-description">
+                  The XAG m2000 can create digital field map to assist production decision through efficient scouting on large-scale farmland.
+                </div>
+              </div>
+            </div>
+            <div class="block-with-img-full-text__item" style="background-image: url('img/m2000/seven-picture-img2.png');">
+              <div class="block-with-img-full-text__content">
+                <h3 class="block-with-img-full-text__item-title">Rural Governance</h3>
+                <div class="block-with-img-full-text__item-description">
+                  It bring quick insights into the use of arable land and growth of crops to provide information support for rural governance and efforts to build a beautiful countryside.
+                </div>
+              </div>
+            </div>
+            <div class="block-with-img-full-text__item" style="background-image: url('img/m2000/seven-picture-img3.png');">
+              <div class="block-with-img-full-text__content">
+                <h3 class="block-with-img-full-text__item-title">Agricultural Resource Survey</h3>
+                <div class="block-with-img-full-text__item-description">
+                  Assist in prospecting large-scale agricultural resource without arduous journey, which is time-saving, efficient and safe.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="block-with-note">
+        <div class="wrapper">
+          <div class="block-with-note__inner">
+            <div class="block-with-note__text">
+              <h5 class="block-with-note__title"><b>Note:</b></h5>
+              All parameters and data related to this product are results of standard laboratory tests. Specific performance may vary depending on the working environment, temperature, user habits,etc.
+              The data mentioned in 1. 2. 3. 4. 8. is for your reference only. Actual efficiency is subject to operating conditions and the environment of the farmland. Also, please use the product strictly
+              in accordance with the official user manual and product guidelines.
+              5. Overall weight refers to the weight of both the aircraft and the battery (excluding payload), whose measured value is approximately 3.1 kg.
+              6. Base stations include fixed base station, portable station and third-party CORS.
+              7. Emergency response mechanism includes: fast switching between flight modes with flight errors detected; hovering at a certain height in fixed-wing mode in case of GPS error, and
+              automatically returning to and landing safely at the takeoff spot in the event of no signal detected for a long time; real-time monitoring of battery level, and returning automatically in case of
+              low battery.
+              9. 10. 11. are optional products.
+              12. xml file is supported for different applications.
+              13. The controller with an official powerbank has a maximum endurance of 8 hours. Actual efficiency is subject to operating conditions and the environment of the farmland. Also, please use
+              the product strictly in accordance with the official user manual and product guidelines.
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="cta-form">
+        <div class="wrapper">
+          <h2 class="cta-form__title">Ready to buy?</h2>
+          <div class="cta-form__body">
+            <form action="">
+              <div class="input-wrap">
+                <label>Please fill in the fields required below.</label>
+                <input type="text" placeholder="*Компания">
+              </div>
+              <div class="input-wrap">
+                <input type="text" placeholder="*ФИО">
+              </div>
+              <div class="input-wrap">
+                <input type="text" placeholder="*Phone">
+              </div>
+              <div class="input-wrap">
+                <input type="text" placeholder="*Email">
+              </div>
+              <div class="cta-form__bottom">Please also write a message to overseas@xa.com, we will reply to it in the order it was received.</div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="wrapper">
+    <div class="footer__inner">
+      <div class="footer__inner-left">
+        <div class="footer__menus">
+          <div class="footer__menu">
+            <h5 class="footer__menu-title">About</h5>
+            <ul>
+              <li class="footer__menu-item"><a href="#">About XAG</a></li>
+              <li class="footer__menu-item"><a href="#">About XAG</a></li>
+              <li class="footer__menu-item"><a href="#">About XAG</a></li>
+              <li class="footer__menu-item"><a href="#">About XAG</a></li>
+              <li class="footer__menu-item"><a href="#">About XAG</a></li>
+            </ul>
+          </div>
+          <div class="footer__menu">
+            <h5 class="footer__menu-title">Services</h5>
+            <ul>
+              <li class="footer__menu-item"><a href="#">Agricultural UAS</a></li>
+              <li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+              <li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+              <li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+            </ul>
+          </div>
+          <div class="footer__menu">
+            <h5 class="footer__menu-title">Events</h5>
+            <ul>
+              <li class="footer__menu-item"><a href="#">XAAC 2021</a></li>
+              <li class="footer__menu-item"><a href="#">XAAC 2019</a></li>
+              <li class="footer__menu-item"><a href="#">XAAC 2018</a></li>
+              <li class="footer__menu-item"><a href="#">XAAC 2017</a></li>
+            </ul>
+          </div>
+          <div class="footer__menu">
+            <h5 class="footer__menu-title">News</h5>
+            <ul>
+              <li class="footer__menu-item"><a href="#">Agricultural UAS</a></li>
+              <li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+              <li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+              <li class="footer__menu-item"><a href="#">Agriculture IoT System</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__inner-right">
+        <div class="footer__socials">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copy">
+      <img src="img/XAG-logo-web.png" alt="xag.md logo">
+      Contactează © 2022 XAG Moldova All Rights Reserved + 373 79 131317
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/scripts.min.js"></script>
+<script src="libs/jquery.arcticmodal-0.3/jquery.arcticmodal-0.3.min.js"></script>
+<script src="js/common.js"></script>
+
+
+</body>
+</html>
