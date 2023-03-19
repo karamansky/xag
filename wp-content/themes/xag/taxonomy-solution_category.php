@@ -22,10 +22,12 @@
 <?php
 	$tax_post_args = array(
 		'post_type' => 'solutions',
+		'post_status' => 'publish',
 		'posts_per_page' => -1,
 		'order' => 'ASC',
 		'tax_query' => array(
 			array(
+				'post_status' => 'publish',
 				'taxonomy' => 'solution_category',
 				'field' => 'slug',
 				'terms' => $term_slug,
@@ -39,7 +41,6 @@
 	<div class="products-wrap">
 		<div class="wrapper">
 			<div class="products">
-
 				<?php
 					while ($tax_post_qry->have_posts()) : $tax_post_qry->the_post(); ?>
 

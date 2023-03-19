@@ -14,7 +14,7 @@ $(function() {
 		});
 
 		//добавляем кнопку НАЗАД во второй уровень мобильного меню
-		$('.nav-mob .sub-menu').prepend('<a href="#" class="sub-menu__back">&larr;&nbsp;'+ translate.back +'</a>');
+		// $('.nav-mob .sub-menu').prepend('<a href="#" class="sub-menu__back">&larr;&nbsp;'+ translate.back +'</a>');
 
 		$('.nav-mob .menu-item-has-children > a').on('click', function(e){
 			e.preventDefault();
@@ -55,6 +55,92 @@ $(function() {
 				$(".tab_item").hide().eq($(this).index()).fadeIn()
 			}).eq(0).addClass("active");
 		}
+
+		//autopilot demo tractor
+		if( $('.autopilot-demo').length ){
+
+			let windowHeigth = $(window).height();
+			let autopilotBlock = $('.autopilot-demo');
+			let autopilotHeight = $('.autopilot-demo__inner').outerHeight();
+
+			autopilotBlock.height(3 * autopilotHeight);
+			let autopilotNewHeight = autopilotBlock.outerHeight();
+
+			$(document).scroll(function(){
+
+				if (screen.width > 768){
+
+					let scrollTop = $(document).scrollTop();
+					let autopilotTop = autopilotBlock.offset().top;
+					let autopilotBottom = autopilotTop + autopilotNewHeight;
+					let topOffset = autopilotTop - scrollTop;
+					let bottomOffset = autopilotBottom - scrollTop;
+
+					// console.log('windowHeigth = ' + windowHeigth)
+					// console.log('scrollTop = ' + scrollTop)
+					// console.log('autopilotTop = ' + autopilotTop)
+					// console.log('autopilotBottom = ' + autopilotBottom)
+					// console.log('topOffset = ' + topOffset)
+					// console.log('bottomOffset = ' + bottomOffset)
+					// console.log('===')
+
+					let breakPoints = {
+						toPlane: autopilotTop,
+						toWheel: autopilotTop + autopilotHeight,
+						toTablet: autopilotTop + autopilotHeight * 2,
+						end: autopilotBottom
+					}
+
+					if (scrollTop >= autopilotTop && scrollTop < autopilotBottom) {
+						autopilotBlock.addClass('demo-scrolling').removeClass('demo-fixed-end');
+					} else {
+						autopilotBlock.addClass('demo-fixed-end').removeClass('demo-scrolling');
+					}
+
+					if( bottomOffset <= windowHeigth ){
+						autopilotBlock.addClass('demo-fixed-end');
+					}else{
+						autopilotBlock.removeClass('demo-fixed-end');
+					}
+
+					if( scrollTop > breakPoints.toPlane && scrollTop < breakPoints.toWheel ){
+						$('.autopilot-demo__item').css('opacity','0');
+						$('.autopilot-demo__tractor-plane').css('opacity','1');
+						$('.autopilot-demo__plane').css('opacity','1');
+					}else{
+						$('.autopilot-demo__tractor-plane').css('opacity','0');
+					}
+
+					if( scrollTop > breakPoints.toWheel && scrollTop < breakPoints.toTablet){
+						$('.autopilot-demo__item').css('opacity','0');
+						$('.autopilot-demo__tractor-wheel').css('opacity','1');
+						$('.autopilot-demo__wheel').css('opacity','1');
+					}else{
+						$('.autopilot-demo__tractor-wheel').css('opacity','0');
+					}
+
+					if( scrollTop > breakPoints.toTablet ){
+						$('.autopilot-demo__item').css('opacity','0');
+						$('.autopilot-demo__tractor-tablet').css('opacity','1');
+						$('.autopilot-demo__tablet').css('opacity','1');
+					}else{
+						$('.autopilot-demo__tractor-tablet').css('opacity','0');
+					}
+
+				}
+			});
+		}
+
+
+		if( $('.left-tabs-with-img__tabs').length ){
+			$(".tab_item").not(":first").hide();
+			$(".left-tabs-wrapper .tab").click(function() {
+				$(".left-tabs-wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+				$(".tab_item").hide().eq($(this).index()).fadeIn()
+			}).eq(0).addClass("active");
+		}
+
+
 
 	});
 

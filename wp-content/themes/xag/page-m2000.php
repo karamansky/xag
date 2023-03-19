@@ -191,9 +191,9 @@
 
 
 			<?php
-				$block_with_img2_title = get_field('block_with_img_title');
-				$block_with_img2 = get_field('block_with_img');
-				$block_with_img2_features = get_field('block_with_img_features');
+				$block_with_img2_title = get_field('block_with_img2_title');
+				$block_with_img2 = get_field('block_with_img2');
+				$block_with_img2_features = get_field('block_with_img2_features');
 			?>
 			<section class="block-with-img">
 				<div class="wrapper">
@@ -211,11 +211,11 @@
 					</div>
 					<?php if( !empty($block_with_img2_features) ) { ?>
 						<div class="block-with-img__features">
-							<div class="features__items">
-								<?php foreach( $block_with_img2_features as $feature ) { ?>
-									<div class="features__item features__item--2">
-										<h3 class="features__title"><?php echo $feature['title'] ?></h3>
-										<div class="features__description"><?php echo $feature['description'] ?></div>
+							<div class="features__items features__items--without-red">
+								<?php foreach( $block_with_img2_features as $feature2 ) { ?>
+									<div class="features__item features__item--2 features__item--centered">
+										<h3 class="features__title"><?php echo $feature2['title'] ?></h3>
+										<div class="features__description"><?php echo $feature2['description'] ?></div>
 									</div>
 								<?php } ?>
 							</div>
@@ -281,7 +281,7 @@
 				$features_description = get_field('features_description');
 				$features_items = get_field('features_items');
 			?>
-			<section class="features">
+			<section class="features" style="background: #0c0c0c;">
 				<div class="wrapper">
 					<?php if( !empty($features_title) ) { ?>
 						<h2 class="features__main-title"><?php echo strip_tags($features_title); ?></h2>
@@ -309,18 +309,17 @@
 
 
 			<?php
-				$video2_title = get_field('video_title');
-				$video2_description = get_field('video_description');
-				$video2_webm = get_field('video_webm');
-				$video2_mp4 = get_field('video_mp4');
-				$video2_icons = get_field('video_icons');
-
+				$video2_title = get_field('video2_title');
+				$video2_description = get_field('video2_description');
+				$video2_webm = get_field('video2_webm');
+				$video2_mp4 = get_field('video2_mp4');
+				$video2_icons = get_field('video2_icons');
 			?>
-			<section class="video video1 video--centered">
+			<section class="video video2" style="background: #0c0c0c;">
 				<div class="wrapper">
 					<div class="video__inner">
 						<div class="video__block">
-							<video class="" autoplay="true" playsinline muted loop="true" id="video1">
+							<video class="" autoplay="true" playsinline muted loop="true" id="video2">
 								<?php if(!empty($video2_webm)) { ?>
 									<source src="<?php echo $video2_webm; ?>" type="video/webm">
 								<?php } ?>
@@ -328,15 +327,15 @@
 									<source src="<?php echo $video2_mp4; ?>" type="video/mp4">
 								<?php } ?>
 							</video>
-							<script> document.getElementById('video1').play();</script>
+							<script> document.getElementById('video2').play();</script>
 						</div>
 						<?php if( !empty($video2_icons) ) { ?>
 							<div class="video__icons">
-								<?php foreach ($video2_icons as $video_icon) { ?>
+								<?php foreach ($video2_icons as $video_icon2) { ?>
 									<div class="video__icon-block">
-										<div class="video__icon"><img src="<?php echo $video_icon['icon']['url'] ?>" alt="<?php echo strip_tags($video_icon['title']) ?>"></div>
-										<h4 class="video__icon-title"><?php echo $video_icon['title'] ?></h4>
-										<div class="video__icon-description"><?php echo $video_icon['description'] ?></div>
+										<div class="video__icon"><img src="<?php echo $video_icon2['icon']['url'] ?>" alt="<?php echo strip_tags($video_icon['title']) ?>"></div>
+										<h4 class="video__icon-title"><?php echo $video_icon2['title'] ?></h4>
+										<div class="video__icon-description"><?php echo $video_icon2['description'] ?></div>
 									</div>
 								<?php } ?>
 							</div>
@@ -354,22 +353,19 @@
 				$block_with_img_text_content = get_field('block_with_img_text_content');
 				if( !empty($block_with_img_text_content) ) {
 			?>
-				<section class="block-with-img-text linear-gradient-bg">
+				<section class="block-with-img-full-text">
 					<div class="wrapper">
-						<div class="block-with-img-text__inner">
+						<div class="block-with-img-full-text__inner">
 							<?php if(!empty($block_with_img_text_title)) { ?>
-								<h2 class="block-with-img-text__title">
+								<h2 class="block-with-img-full-text__title">
 									<?php echo strip_tags($block_with_img_text_title); ?>
 								</h2>
 							<?php } ?>
 							<?php foreach ($block_with_img_text_content as $content) { ?>
-								<div class="block-with-img-text__item">
-									<div class="block-with-img-text__left">
-										<img src="<?php echo $content['image']['url'] ?>" alt="<?php echo strip_tags($content['title']) ?>">
-									</div>
-									<div class="block-with-img-text__right">
-										<h3 class="block-with-img-text__item-title"><?php echo $content['title'] ?></h3>
-										<div class="block-with-img-text__item-description">
+								<div class="block-with-img-full-text__item" style="background-image: url('<?php echo $content['image']['url'] ?>');">
+									<div class="block-with-img-full-text__content">
+										<h3 class="block-with-img-full-text__item-title"><?php echo $content['title'] ?></h3>
+										<div class="block-with-img-full-text__item-description">
 											<?php echo $content['description'] ?>
 										</div>
 									</div>
