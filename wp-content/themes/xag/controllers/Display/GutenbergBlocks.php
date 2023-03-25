@@ -72,22 +72,38 @@ class GutenbergBlocks {
 //                'icon'     => [ 'background' => '#B60000', 'src' => 'minus' ],
 //                'keywords' => [ 'header', 'main block', 'top', 'menu', 'hamburger' ],
 //            ],
-            [
-                'name'        => 'block_with_landing_hero',
-                'title'       => 'Block with header (hero-block)',
-                'category'    => 'xag-landing-blocks',
-                'description' => '',
-                'icon'        => [ 'background' => '#B60000', 'src' => 'admin-home' ],
-                'keywords'    => [ 'hero', 'video', 'header', 'block' ],
-                'example'     => [
-                    'attributes' => [
-                        'mode' => 'preview',
-                        'data' => [
-	                        'image' => '<img src="'.get_template_directory_uri().'/app/img/modules/block-with-landing-hero-module.png" style="display: block; margin: 0 auto; width: 100%; object-fit: contain;">',
-                        ]
-                    ]
-                ]
-            ],
+//            [
+//                'name'        => 'block_with_landing_hero',
+//                'title'       => 'Block with header (hero-block)',
+//                'category'    => 'xag-landing-blocks',
+//                'description' => '',
+//                'icon'        => [ 'background' => '#B60000', 'src' => 'admin-home' ],
+//                'keywords'    => [ 'hero', 'video', 'header', 'block' ],
+//                'example'     => [
+//                    'attributes' => [
+//                        'mode' => 'preview',
+//                        'data' => [
+//	                        'image' => '<img src="'.get_template_directory_uri().'/app/img/modules/block-with-landing-hero-module.png" style="display: block; margin: 0 auto; width: 100%; object-fit: contain;">',
+//                        ]
+//                    ]
+//                ]
+//            ],
+//			[
+//				'name'        => 'block_with_landing_hero2',
+//				'title'       => 'Block with header2 (hero2-block)',
+//				'category'    => 'xag-landing-blocks',
+//				'description' => '',
+//				'icon'        => [ 'background' => '#B60000', 'src' => 'admin-home' ],
+//				'keywords'    => [ 'hero2', 'header', 'block' ],
+//				'example'     => [
+//					'attributes' => [
+//						'mode' => 'preview',
+//						'data' => [
+//							'image' => '<img src="'.get_template_directory_uri().'/app/img/modules/block-with-landing-hero2-module.png" style="display: block; margin: 0 auto; width: 100%; object-fit: contain;">',
+//						]
+//					]
+//				]
+//			],
         ];
     }
 

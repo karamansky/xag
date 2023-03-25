@@ -2,11 +2,11 @@
 /*
 * Block with landing hero
 */
-if( !defined( 'ABSPATH' ) ) exit;
-if( is_admin() ){
-	if( empty($block) ) exit;
-	if( GutenbergBlocks::checkForPreview($block) ) return;
-}
+	if( !defined( 'ABSPATH' ) ) exit;
+	if( is_admin() ){
+		if( empty($block) ) exit;
+		if( GutenbergBlocks::checkForPreview($block) ) return;
+	}
 
 	$smalltitle = get_field('_block_smalltitle');
 	$title = get_field('_block_title');
