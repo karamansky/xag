@@ -184,38 +184,55 @@ $(function() {
 		]
 	});
 
+	if( $('.slider__items').length ) {
+		$('.slider__items').slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			adaptiveHeight: true,
+			dots: true,
+			autoplay: false,
+		});
+	}
 
-	$('.slider__items').slick({
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		adaptiveHeight: true,
-		dots: true,
-		autoplay: false,
-	});
+	if( $('.slider-full__inner').length ) {
+		$('.slider-full__inner').slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			speed: 2000,
+			dots: true,
+			autoplay: false,
+		});
+	}
+
+	if( $('.img-left-with-icons__img-slider').length ) {
+		$('.img-left-with-icons__img-slider').slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			speed: 150,
+			dots: false,
+			autoplay: true,
+			autoplaySpeed: 2000,
+		});
+	}
 
 
-	$('.slider-full__inner').slick({
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		speed: 2000,
-		dots: true,
-		autoplay: false,
-	});
+	if( $('.r150-full-slider__items').length ){
+		$('.r150-full-slider__items').slick({
+			infinite: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: true,
+			dots: true,
+			autoplay: false,
+			adaptiveHeight: true
+		});
+	}
 
-
-	$('.img-left-with-icons__img-slider').slick({
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		speed: 150,
-		dots: false,
-		autoplay: true,
-		autoplaySpeed: 2000,
-	});
 
 
 	//drone page tabs 1
