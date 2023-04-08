@@ -2058,10 +2058,10 @@
 	position: relative
 
 .block-scroll__item-left
-	width: 50%
+	width: calc(50% - 25px)
 
 .block-scroll__item-right
-	width: 50%
+	width: calc(50% - 25px)
 
 .block-scroll__img-item
 	display: block
@@ -2073,6 +2073,7 @@
 	justify-content: space-between
 	align-items: center
 	position: relative
+	gap: 50px
 
 .block-scroll__item + .block-scroll__item
 	margin-top: 0
@@ -2084,6 +2085,8 @@
 	line-height: 60px
 	img
 		display: block
+		max-height: 48px
+		margin-bottom: 10px
 
 	&:before
 		content: " "
@@ -2101,6 +2104,34 @@
 	color: #b3b3b3
 	font-size: 22px
 	line-height: 36px
+
+.block-scroll__description__items
+	display: flex
+	flex-wrap: wrap
+	column-gap: 30px
+	row-gap: 60px
+	padding-top: 32px
+
+.block-scroll__description__item
+	width: calc(50% - 15px)
+
+.block-scroll__description__title
+	font-size: 36px
+	line-height: 1.2
+	color: #fff
+	margin-bottom: 20px
+	padding-top: 20px
+	position: relative
+	&:before
+		content: ''
+		display: block
+		width: 60px
+		height: 4px
+		background: $red
+		border-radius: 4px
+		position: absolute
+		top: 0
+		left: 0
 
 .block-scroll__item.active
 	opacity: 1
@@ -2223,6 +2254,24 @@
 .cta-form__body
 	padding-top: 115px
 	color: #000
+
+	[type=submit]
+		cursor: pointer
+		width: 200px
+		display: flex
+		text-align: center
+		align-items: center
+		justify-content: center
+		color: #fff
+		background: $red
+		height: 48px
+		border-radius: 4px
+		border: 1px solid $red
+		text-transform: uppercase
+		transition: all .3s
+		&:hover
+			background: transparent
+			color: $red
 
 .cta-form__bottom
 	font-size: 16px
@@ -3543,11 +3592,11 @@
 	margin-right: auto
 
 
-.r150-full-slider
+.r150-slider
 	background: #000
 	padding: 120px 0
 
-.r150-full-slider__item
+.r150-slider__item
 	position: relative
 
 	img
@@ -3555,17 +3604,17 @@
 		height: 100%
 		object-fit: contain
 
-	.r150-full-slider__item-content
+	.r150-slider__item-content
 		max-width: 800px
 		margin-left: auto
 		margin-right: auto
 
-	.r150-full-slider__item-title
+	.r150-slider__item-title
 		font-size: 40px
 		line-height: 1.2
 		text-align: center
 
-	.r150-full-slider__item-description
+	.r150-slider__item-description
 		max-width: 1024px
 		color: #b3b3b3
 		font-size: 22px
@@ -3573,7 +3622,7 @@
 		text-align: center
 		margin-bottom: 30px
 
-	.r150-full-slider__item-caption
+	.r150-slider__item-caption
 		position: absolute
 		color: #fff
 		font-family: $os
@@ -3590,11 +3639,11 @@
 		color: #B3B3B3
 
 
-	.r150-full-slider__item--caption1
+	.r150-slider__item--caption1
 		left: 200px
 		top: 280px
 
-	.r150-full-slider__item--caption2
+	.r150-slider__item--caption2
 		right: 120px
 		top: 280px
 
@@ -3701,6 +3750,153 @@
 	font-size: 20px
 	line-height: 1.2
 	color: #fff
+
+
+
+
+.r150-full-slider
+	padding: 120px 0 0
+
+	.slick-prev
+		left: 50px
+
+	.slick-next
+		right: 50px
+
+.r150-full-slider__inner
+	background: url("../img/r150/r150-slider-bg.png") center center no-repeat
+	background-size: cover
+
+.r150-full-slider__item
+	overflow: hidden
+	padding: 50px 100px 0
+	img
+		max-width: 100%
+		max-height: 700px
+
+	&:first-child
+		.r150-full-slider__block
+			position: relative
+			img
+				margin-left: auto
+				margin-right: auto
+
+	&:last-child
+		.r150-full-slider__block
+			width: 1000px
+			position: relative
+
+
+		.r150-full-slider__block--1
+			margin-top: 180px
+
+			.r150-full-slider__block-content
+				position: absolute
+				top: -183px
+				padding-left: 60px
+
+		.battery-title
+			font-family: $os
+			font-size: 30px
+			line-height: 1.2
+			color: #fff
+			margin-bottom: 20px
+
+		.desc
+			font-size: 16px
+			line-height: 1.2
+			color: #b3b3b3
+			padding-left: 18px
+			li
+				list-style: disc
+				list-style-position: outside
+				margin-bottom: 10px
+
+		.r150-full-slider__block--2
+			display: flex
+			flex-direction: row-reverse
+			gap: 30px
+			align-items: center
+			position: absolute
+			right: 100px
+			top: 120px
+
+			img
+				width: 300px
+				height: auto
+
+			.r150-full-slider__block-content
+				max-width: 400px
+
+		.r150-full-slider__block--3
+			display: flex
+			justify-content: flex-end
+			gap: 30px
+			align-items: center
+			position: absolute
+			right: 100px
+			top: 550px
+
+			img
+				width: 250px
+				height: auto
+
+			.r150-full-slider__block-content
+				max-width: 400px
+
+
+
+.r150-full-slider__title
+	font-family: $os
+	font-size: 50px
+	line-height: 1.2
+	color: #fff
+	font-weight: 500
+	text-align: center
+	margin-bottom: 32px
+
+.r150-full-slider__item-title
+	position: relative
+	font-family: $os
+	font-size: 60px
+	line-height: 1.2
+	color: #fff
+	max-width: 450px
+	padding-top: 32px
+	margin-bottom: 20px
+	&:before
+		content: ''
+		display: block
+		width: 60px
+		height: 4px
+		border-radius: 4px
+		background: $red
+		position: absolute
+		left: 0
+		top: 0
+
+.r150-full-slider__item-description
+	font-family: $os
+	color: #fff
+	font-size: 18px
+	line-height: 1.2
+	margin-bottom: 20px
+
+
+
+
+.simple-full-slider
+	/**/
+
+.simple-full-slider__item
+	width: 100%
+	height: 100%
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		object-position: center
+
 
 
 /************************************ end R 150 **********************************************/

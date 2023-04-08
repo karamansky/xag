@@ -221,13 +221,39 @@ $(function() {
 	}
 
 
+	if( $('.r150-slider__items').length ){
+		$('.r150-slider__items').slick({
+			infinite: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: true,
+			dots: true,
+			autoplay: false,
+			adaptiveHeight: true
+		});
+	}
+
+
 	if( $('.r150-full-slider__items').length ){
 		$('.r150-full-slider__items').slick({
 			infinite: false,
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			arrows: true,
-			dots: true,
+			dots: false,
+			autoplay: false,
+			adaptiveHeight: false
+		});
+	}
+
+
+	if( $('.simple-full-slider__items').length ){
+		$('.simple-full-slider__items').slick({
+			infinite: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: true,
+			dots: false,
 			autoplay: false,
 			adaptiveHeight: true
 		});
