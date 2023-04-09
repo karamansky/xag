@@ -242,7 +242,15 @@ $(function() {
 			arrows: true,
 			dots: false,
 			autoplay: false,
-			adaptiveHeight: false
+			adaptiveHeight: false,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						adaptiveHeight: true,
+					}
+				},
+			]
 		});
 	}
 
