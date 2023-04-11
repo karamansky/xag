@@ -60,28 +60,27 @@ require_once(get_stylesheet_directory() . '/controllers/main.php');
 
 
 	function xag_register_post_types(){
-
-		$args = array(
-			'labels' => array(
-				'menu_name' => 'Категории',
-				'name'              => 'Категории',
-				'singular_name'     => 'Категория',
-				'search_items'      => 'Поиск категории',
-				'all_items'         => 'Все категории',
-				'view_item '        => 'Показать',
-				'edit_item'         => 'Изменить',
-				'update_item'       => 'Обновить',
-				'add_new_item'      => 'Добавиь',
-				'back_to_items'     => '← Назад',
-			),
-			'public' => true,
-			'hierarchical'               => true,
-			'show_ui'                    => true,
-			'show_admin_column'          => true,
-			'show_in_nav_menus'          => true,
-			'show_tagcloud'              => false,
+		register_taxonomy( 'solution_category', 'solutions', array(
+				'labels' => array(
+					'menu_name' => 'Категории',
+					'name'              => 'Категории',
+					'singular_name'     => 'Категория',
+					'search_items'      => 'Поиск категории',
+					'all_items'         => 'Все категории',
+					'view_item '        => 'Показать',
+					'edit_item'         => 'Изменить',
+					'update_item'       => 'Обновить',
+					'add_new_item'      => 'Добавиь',
+					'back_to_items'     => '← Назад',
+				),
+				'public' => true,
+				'hierarchical'               => true,
+				'show_ui'                    => true,
+				'show_admin_column'          => true,
+				'show_in_nav_menus'          => true,
+				'show_tagcloud'              => false,
+			)
 		);
-		register_taxonomy( 'solution_category', 'solutions', $args );
 
 		register_post_type('solutions', array(
 				'labels' => array(
@@ -109,9 +108,6 @@ require_once(get_stylesheet_directory() . '/controllers/main.php');
 				'supports' => array('title', 'editor', 'thumbnail'),
 			)
 		);
-
-
-
 	}
 	add_action( 'init', 'xag_register_post_types' );
 
@@ -178,9 +174,8 @@ require_once(get_stylesheet_directory() . '/controllers/main.php');
 	add_action( 'customize_register', 'xag_customize_register', 1 );
 
 
-	/* Admin includes
-	==================================================================================================== */
-
+/* Admin includes
+==================================================================================================== */
 if ( is_admin() ) {
 
 

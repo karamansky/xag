@@ -1,9 +1,8 @@
-<?php nm_blog_get_ajax_content(); // AJAX: Get blog content only, then exit ?>
 <?php get_header(); ?>
 
 <div class="nm-blog-wrap">
     <div class="nm-blog-heading">
-    	<div class="nm-row">	
+    	<div class="nm-row">
         	<div class="col-xs-12">
                 <h1>
                     <?php
@@ -21,7 +20,7 @@
             </div>
 		</div>
     </div>
-				
+
 	<?php get_template_part( 'template-parts/blog/content' ); ?>
 </div>
 
