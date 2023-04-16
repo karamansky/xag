@@ -305,270 +305,245 @@
 			<?php } ?>
 
 
-			<section class="r150-2img-with-caption gradient-ltr-bg">
-				<div class="wrapper">
-					<div class="r150-2img-with-caption__inner">
-						<div class="r150-2img-with-caption__items">
-							<div class="r150-2img-with-caption__item">
-								<div class="r150-2img-with-caption__img"><img src="img/r150/r150-p91.png" alt=""></div>
-								<div class="r150-2img-with-caption__content">
-									<h3 class="r150-2img-with-caption__content-title">Route Mode</h3>
-									<div class="r150-2img-with-caption__content-desc">Multiple routes, execute autonomously</div>
-								</div>
-							</div>
-							<div class="r150-2img-with-caption__item">
-								<div class="r150-2img-with-caption__img"><img src="img/r150/r150-p94.png" alt=""></div>
-								<div class="r150-2img-with-caption__content">
-									<h3 class="r150-2img-with-caption__content-title">Remote Control Mode</h3>
-									<div class="r150-2img-with-caption__content-desc">Quick start, easy to use</div>
-								</div>
+			<?php
+				$half_images = get_field('half_images');
+
+				if( !empty($half_images) ) {
+			?>
+				<section class="r150-2img-with-caption gradient-ltr-bg">
+					<div class="wrapper">
+						<div class="r150-2img-with-caption__inner">
+							<div class="r150-2img-with-caption__items">
+								<?php foreach ($half_images as $image) { ?>
+									<div class="r150-2img-with-caption__item">
+										<?php if( !empty($image['image']) ) { ?>
+											<div class="r150-2img-with-caption__img"><img src="<?php echo $image['image']['url'] ?>" alt="<?php echo sanitize_text_field($image['title']) ?>"></div>
+										<?php } ?>
+										<div class="r150-2img-with-caption__content">
+											<?php if( !empty($image['title']) ){ ?>
+												<h3 class="r150-2img-with-caption__content-title"><?php echo sanitize_text_field($image['title']) ?></h3>
+											<?php } ?>
+											<?php if( !empty($image['description']) ) { ?>
+												<div class="r150-2img-with-caption__content-desc"><?php echo $image['description'] ?></div>
+											<?php } ?>
+										</div>
+									</div>
+								<?php } ?>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			<?php } ?>
 
 
-			<section class="r150-full-slider gradient-ltr-bg">
-				<div class="wrapper-fluid">
-					<div class="r150-full-slider__inner">
-						<div class="r150-full-slider__items">
-							<div class="r150-full-slider__item">
-								<h2 class="r150-full-slider__title">I am energetic and full of power</h2>
-								<div class="r150-full-slider__block">
-									<h3 class="r150-full-slider__item-title">Electric Version</h3>
-									<img class="r150-full-slider__main-img" src="img/r150/r150-p10-swiper-img1.png" alt="r150 xag">
-								</div>
-							</div>
-							<div class="r150-full-slider__item">
-								<div class="r150-full-slider__block r150-full-slider__block--1">
-									<div class="r150-full-slider__block-content">
-										<h3 class="r150-full-slider__item-title">Electric Version</h3>
-										<div class="r150-full-slider__item-description">
-											Pure electric drive, equipped with 2 smart batteries Powerful, cost-saving, effortless
+			<?php
+				$custom_slider = get_field('custom_slider');
+				if( !empty($custom_slider) ) {
+			?>
+				<section class="r150-full-slider gradient-ltr-bg">
+					<div class="wrapper-fluid">
+						<div class="r150-full-slider__inner">
+							<div class="r150-full-slider__items">
+								<?php foreach ($custom_slider as $slide) { ?>
+									<?php if( !$slide['customize_slide'] ) { ?>
+										<div class="r150-full-slider__item">
+											<?php if( !empty($slide['main_title']) ) { ?>
+												<h2 class="r150-full-slider__title"><?php echo sanitize_text_field($slide['main_title']); ?></h2>
+											<?php } ?>
+											<?php if( !empty($slide['description']) ) { ?>
+												<div class="r150-full-slider__item-description"><?php echo $slide['description']; ?></div>
+											<?php } ?>
+											<div class="r150-full-slider__block">
+												<?php if( !empty($slide['left_title']) ) { ?>
+													<h3 class="r150-full-slider__item-title"><?php echo sanitize_text_field($slide['left_title']) ?></h3>
+												<?php } ?>
+												<?php if( !empty($slide['main_slide_image']) ) { ?>
+													<img class="r150-full-slider__main-img" src="<?php echo $slide['main_slide_image']['url'] ?>" alt="r150 xag">
+												<?php } ?>
+											</div>
 										</div>
-										<div class="battery-13960s">
-											<div class="battery-title">B13960S Intelligent SuperCharge Battery</div>
-											<ul class="battery-tips desc">
-												<li>962 Wh large capacity</li>
-												<li>11 min fully charged in water cooling tank¹</li>
-											</ul>
-										</div>
-									</div>
-									<img class="r150-full-slider__main-img" src="img/r150/r150-p10-swiper-img2.png" alt="r150 xag">
-								</div>
-
-								<div class="r150-full-slider__block r150-full-slider__block--2">
-									<div class="r150-full-slider__block-content">
-										<div class="battery-13960s">
-											<div class="battery-title">GC4000+ Auto SuperCharge Station</div>
-											<ul class="battery-tips desc">
-												<li>Variable frequency generator with ultra-low fuel consumption of 0.6 L/KWh</li>
-												<li>Max. 25 batteries can be fully charged with a 15 L full tank of petrol</li>
-											</ul>
-										</div>
-									</div>
-									<img class="r150-full-slider__main-img" src="img/r150/r150-p10-gc9000.png" alt="r150 xag">
-								</div>
-
-								<div class="r150-full-slider__block r150-full-slider__block--3">
-									<div class="r150-full-slider__block-content">
-										<div class="battery-cm27000">
-											<div class="battery-title">CM12500P Intelligent<br> SuperCharger</div>
-											<ul class="battery-tips desc">
-												<li>Economical and highly efficient</li>
-												<li>2500 W rated power, 15 min SuperCharge </li>
-											</ul>
-										</div>
-									</div>
-									<img class="r150-full-slider__main-img" src="img/r150/r150-p10-cm27000.png" alt="r150 xag">
-								</div>
+									<?php }else{ ?>
+										<?php if( !empty($slide['items']) ) { ?>
+											<div class="r150-full-slider__item">
+												<?php $i=1; foreach ( $slide['items'] as $item ) { ?>
+													<div class="r150-full-slider__block r150-full-slider__block--<?php echo $i; ?>">
+														<div class="r150-full-slider__block-content">
+															<?php if( $i==1 && !empty($slide['left_title']) ) { ?>
+																<h3 class="r150-full-slider__item-title"><?php echo sanitize_text_field($slide['left_title']) ?></h3>
+															<?php } ?>
+															<?php if( $i==1 && !empty($slide['description']) ) { ?>
+																<div class="r150-full-slider__item-description"><?php echo $slide['description']; ?></div>
+															<?php } ?>
+															<div class="battery-13960s">
+																<div class="battery-title"><?php echo $item['title'] ?></div>
+																<?php if( !empty($item['features']) ) { ?>
+																	<ul class="battery-tips desc">
+																		<?php foreach ($item['features'] as $feature){ ?>
+																			<?php if( !empty($feature['text']) ){ ?>
+																				<li><?php echo $feature['text'] ?></li>
+																			<?php } ?>
+																		<?php } ?>
+																	</ul>
+																<?php } ?>
+															</div>
+														</div>
+														<?php if( !empty($item['image']) ) { ?>
+															<img class="r150-full-slider__main-img" src="<?php echo $item['image']['url'] ?>" alt="r150 xag">
+														<?php } ?>
+													</div>
+												<?php $i++; } ?>
+											</div>
+										<?php } ?>
+									<?php } ?>
+								<?php } ?>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			<?php } ?>
 
 
-			<section class="block-scroll">
-				<div class="wrapper-fluid">
-					<ul class="block-scroll__items">
-						<li class="block-scroll__item">
-							<div class="block-scroll__item-left">
-								<h2 class="block-scroll__title">
-									<img src="img/r150/revospray2.png" alt="">
-									<!--									<span>title text</span>-->
-								</h2>
-								<div class="block-scroll__description">
-									360° atomization spray with adjusted droplet size works perfectly for
-									forestry, orchard, disinfection and more.
-									<div class="block-scroll__description__items">
-										<div class="block-scroll__description__item">
-											<h3 class="block-scroll__description__title">Smart Airflow Atomization</h3>
-											<div class="block-scroll__description__desc">
-												60-200 μm adjustable droplet size
+			<?php
+				$lr_items = get_field('lr_items');
+
+				if( !empty($lr_items) ){
+			?>
+				<section class="block-scroll">
+					<div class="wrapper-fluid">
+						<ul class="block-scroll__items">
+							<?php $i=1; foreach ( $lr_items as $item ) { ?>
+								<?php if( !empty($item) ){ ?>
+									<?php if( !empty($i % 2 != 0) ){ ?>
+										<li class="block-scroll__item">
+											<div class="block-scroll__item-left">
+												<?php if( !empty($item['title']) || !empty($item['title_image']) ){ ?>
+													<h2 class="block-scroll__title">
+														<?php if( !empty($item['title_image']) ){ ?>
+															<img src="<?php echo $item['title_image']['url'] ?>" alt="<?php echo sanitize_text_field($item['title']) ?>">
+														<?php } ?>
+														<?php if( !empty($item['title']) ){ ?>
+															<span><?php echo $item['title'] ?></span>
+														<?php } ?>
+													</h2>
+												<?php } ?>
+												<div class="block-scroll__description">
+													<?php if( !empty($item['text']) ) echo $item['text'] ?>
+													<?php if( !empty($item['features']) ){ ?>
+														<div class="block-scroll__description__items">
+															<?php foreach( $item['features'] as $feature ){ ?>
+																<div class="block-scroll__description__item">
+																	<?php if( !empty($feature['title']) ){ ?>
+																		<h3 class="block-scroll__description__title"><?php echo sanitize_text_field($feature['title']) ?></h3>
+																	<?php } ?>
+																	<?php if(!empty($feature['description'])){ ?>
+																		<div class="block-scroll__description__desc">
+																			<?php echo $feature['description'] ?>
+																		</div>
+																	<?php } ?>
+																</div>
+															<?php } ?>
+														</div>
+													<?php } ?>
+												</div>
 											</div>
-										</div>
-										<div class="block-scroll__description__item">
-											<h3 class="block-scroll__description__title">Dual Gimbal Design</h3>
-											<div class="block-scroll__description__desc">
-												Omni-directional spraying
+											<div class="block-scroll__item-right">
+												<?php if( !empty($item['image']) ) { ?>
+													<img class="block-scroll__img-item block-scroll__img-item--1" src="<?php echo $item['image']['url'] ?>" alt="<?php echo sanitize_text_field($item['title']) ?>">
+												<?php } ?>
 											</div>
-										</div>
-										<div class="block-scroll__description__item">
-											<h3 class="block-scroll__description__title">150 L</h3>
-											<div class="block-scroll__description__desc">
-												Rated capacity liquid tank
+										</li>
+									<?php }else{ ?>
+										<li class="block-scroll__item">
+											<div class="block-scroll__item-left">
+												<?php if( !empty($item['image']) ) { ?>
+													<img class="block-scroll__img-item block-scroll__img-item--1" src="<?php echo $item['image']['url'] ?>" alt="<?php echo sanitize_text_field($item['title']) ?>">
+												<?php } ?>
 											</div>
-										</div>
-										<div class="block-scroll__description__item">
-											<h3 class="block-scroll__description__title">12 m</h3>
-											<div class="block-scroll__description__desc">
-												Max. Spray Width3
+											<div class="block-scroll__item-right">
+												<?php if( !empty($item['title']) || !empty($item['title_image']) ){ ?>
+													<h2 class="block-scroll__title">
+														<?php if( !empty($item['title_image']) ){ ?>
+															<img src="<?php echo $item['title_image']['url'] ?>" alt="<?php echo sanitize_text_field($item['title']) ?>">
+														<?php } ?>
+														<?php if( !empty($item['title']) ){ ?>
+															<span><?php echo $item['title'] ?></span>
+														<?php } ?>
+													</h2>
+												<?php } ?>
+												<div class="block-scroll__description">
+													<?php if( !empty($item['text']) ) echo $item['text'] ?>
+													<?php if( !empty($item['features']) ){ ?>
+														<div class="block-scroll__description__items">
+															<?php foreach( $item['features'] as $feature ){ ?>
+																<div class="block-scroll__description__item">
+																	<?php if( !empty($feature['title']) ){ ?>
+																		<h3 class="block-scroll__description__title"><?php echo sanitize_text_field($feature['title']) ?></h3>
+																	<?php } ?>
+																	<?php if(!empty($feature['description'])){ ?>
+																		<div class="block-scroll__description__desc">
+																			<?php echo $feature['description'] ?>
+																		</div>
+																	<?php } ?>
+																</div>
+															<?php } ?>
+														</div>
+													<?php } ?>
+												</div>
 											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="block-scroll__item-right">
-								<img class="block-scroll__img-item block-scroll__img-item--1" src="img/r150/r150-p122-new.png" alt="">
-							</div>
-						</li>
-						<li class="block-scroll__item">
-							<div class="block-scroll__item-left">
-								<img class="block-scroll__img-item block-scroll__img-item--2" src="img/r150/r150-p121-new.png" alt="">
-							</div>
-							<div class="block-scroll__item-right">
-								<h2 class="block-scroll__title">
-									<img src="img/r150/revomower2.png" alt="">
-									<!--									<span>title text</span>-->
-								</h2>
-								<div class="block-scroll__description">
-									Adjust power and travel speed based on the thicknesses of weeds to easily cut
-									shrubs, reeds and many others. The optimum solution for land reclamation and
-									orchard weeding.
-									<div class="block-scroll__description__items">
-										<div class="block-scroll__description__item">
-											<h3 class="block-scroll__description__title">Smart Variable-speed Mowing</h3>
-											<div class="block-scroll__description__desc">
-												Maximize working efficiency
-											</div>
-										</div>
-										<div class="block-scroll__description__item">
-											<h3 class="block-scroll__description__title">Alloy Steel
-																						 Dual Blades</h3>
-											<div class="block-scroll__description__desc">
-												Adjustable height
-												between 2-17 cm
-											</div>
-										</div>
-										<div class="block-scroll__description__item">
-											<h3 class="block-scroll__description__title">Digital Operation</h3>
-											<div class="block-scroll__description__desc">
-												Traceable operation data
-											</div>
-										</div>
-										<div class="block-scroll__description__item">
-											<h3 class="block-scroll__description__title">90 cm</h3>
-											<div class="block-scroll__description__desc">
-												Maximum cutting width
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="block-scroll__item">
-							<div class="block-scroll__item-left">
-								<h2 class="block-scroll__title">
-									<img src="img/r150/cargorack2.png" alt="">
-									<!--									<span>title text</span>-->
-								</h2>
-								<div class="block-scroll__description">
-									Smart round-trip routing delivers your materials
-									to the destination in a worry-free way.
-									<div class="block-scroll__description__items">
-										<div class="block-scroll__description__item">
-											<h3 class="block-scroll__description__title">200 kg</h3>
-											<div class="block-scroll__description__desc">
-												Maximum payload
-											</div>
-										</div>
-										<div class="block-scroll__description__item">
-											<h3 class="block-scroll__description__title">1080*1080 mm</h3>
-											<div class="block-scroll__description__desc">
-												Sturdy rack
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="block-scroll__item-right">
-								<img class="block-scroll__img-item block-scroll__img-item--3" src="img/r150/r150-p124-new.png" alt="">
-							</div>
-						</li>
-					</ul>
-				</div>
-			</section>
+										</li>
+									<?php } ?>
+								<?php } ?>
+							<?php $i++; } ?>
+						</ul>
+					</div>
+				</section>
+			<?php } ?>
 
 
-			<section class="simple-full-slider">
-				<div class="wrapper-fluid">
-					<div class="simple-full-slider__inner">
-						<div class="simple-full-slider__items">
-							<div class="simple-full-slider__item">
-								<img src="img/r150/r150-slide1.png" alt="xag r150 2022">
-							</div>
-							<div class="simple-full-slider__item">
-								<img src="img/r150/r150-slide2.png" alt="xag r150 2022">
-							</div>
-							<div class="simple-full-slider__item">
-								<img src="img/r150/r150-slide3.png" alt="xag r150 2022">
-							</div>
-							<div class="simple-full-slider__item">
-								<img src="img/r150/r150-slide4.png" alt="xag r150 2022">
+			<?php
+				$bfp_slider = get_field('bfp_slider');
+
+				if( !empty($bfp_slider) ){
+			?>
+				<section class="simple-full-slider">
+					<div class="wrapper-fluid">
+						<div class="simple-full-slider__inner">
+							<div class="simple-full-slider__items">
+								<?php foreach ($bfp_slider as $slide){ ?>
+									<?php if( !empty($slide['image']) ){ ?>
+										<div class="simple-full-slider__item">
+											<img src="<?php echo $slide['image']['url'] ?>" alt="<?php echo $slide['image']['alt'] ?>">
+										</div>
+									<?php } ?>
+								<?php } ?>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			<?php } ?>
 
 
-			<section class="block-with-note">
-				<div class="wrapper">
-					<div class="block-with-note__inner">
-						<div class="block-with-note__text">
-							<h5 class="block-with-note__title"><b>Note:</b></h5>
-							1. Laboratory research shows that, under general operating conditions, the GC4000+ Auto SuperCharge Station can fully charge a B13960S Battery within 11 minutes from 30% to 95%. The specific performance may vary depending on the working environment, temperature, user habits, etc. Please use strictly according to the official product guidelines.
-							2. The App for iOS is not available now.
-							3. The data of practical operations depends on actual situations. All parameters and data related to this product are results of standard laboratory tests. The specific performance may vary depending on the working environment, temperature, user habits, etc. Please use the product in strict accordance with the official user manual and product guidelines.
+			<?php
+				$note = get_field('note');
+				if( !empty($note) ){
+			?>
+				<section class="block-with-note">
+					<div class="wrapper">
+						<div class="block-with-note__inner">
+							<div class="block-with-note__text">
+								<?php echo $note; ?>
+							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			<?php } ?>
 
 
 			<section class="cta-form">
 				<div class="wrapper">
-					<h2 class="cta-form__title">Ready to buy?</h2>
+					<h2 class="cta-form__title"><?php _e('[:ru]Есть вопросы? Готовы купить?[:ro]Ai întrebări? Ești gata să cumperi?[:]'); ?></h2>
 					<div class="cta-form__body">
-						<form action="">
-							<div class="input-wrap">
-								<label>Please fill in the fields required below.</label>
-								<input type="text" placeholder="*Компания">
-							</div>
-							<div class="input-wrap">
-								<input type="text" placeholder="*ФИО">
-							</div>
-							<div class="input-wrap">
-								<input type="text" placeholder="*Phone">
-							</div>
-							<div class="input-wrap">
-								<input type="text" placeholder="*Email">
-							</div>
-							<div class="cta-form__bottom">Please also write a message to overseas@xa.com, we will reply to it in the order it was received.</div>
-							<button type="submit">Submit</button>
-						</form>
+						<?php echo do_shortcode('[contact-form-7 id="4392" title=":roФорма на лендинге:ruФорма на лендинге:"]'); ?>
 					</div>
 				</div>
 			</section>
