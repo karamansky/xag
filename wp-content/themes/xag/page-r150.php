@@ -247,8 +247,8 @@
 
 
 			<?php
-				$controller_title = get_field('controller_title');
-				$controller_description = get_field('controller_description');
+				$controller_title = get_field('controllers_title');
+				$controller_description = get_field('controllers_description');
 				$controllers = get_field('controllers_items');
 
 				if( !empty($controllers) ) {
