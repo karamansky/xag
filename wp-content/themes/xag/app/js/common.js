@@ -30,6 +30,24 @@ $(function () {
 		}
 
 
+		if( $('.p100pro .s2').length ){
+			$(window).scroll(function(){
+				let windowHeight = $(window).height();
+				let scrollTop = $(window).scrollTop();
+				let elementTop = $('.s2__info-items').offset().top;
+				let elementHeight = $('.s2__info-items').height();
+
+				setTimeout(function(){
+					if (elementTop + elementHeight > scrollTop && elementTop < scrollTop + windowHeight) {
+						$('.s2').addClass('inview');
+					} else {
+						$('.s2').removeClass('inview');
+					}
+				}, 500)
+			})
+		}
+
+
 
 
 		$('.header__videoplay').on('click', function (e) {
