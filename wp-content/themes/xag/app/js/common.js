@@ -1,14 +1,45 @@
-$(function() {
-	$(document).ready(function(){
+$(function () {
+	$(document).ready(function () {
 
-		$('.header__videoplay').on('click', function(e){
+
+		if( $('.p100pro .s1').length ){
+			let section = $('.p100pro .s1');
+			let innerHeight = $('.s1__inner').outerHeight(true);
+			let item = $('.s1__item');
+			let itemCount = item.length;
+			let sectionHeightPart = innerHeight / itemCount;
+
+			$(window).scroll(function(){
+				let scrollTop = $(this).scrollTop();
+				let sectionOffset = section.offset().top;
+
+				if (scrollTop >= sectionOffset) {
+					$(item).removeClass('s1__item--active');
+					$(item[0]).addClass('s1__item--active');
+
+					for( let i=1; i<itemCount; i++ ){
+						if( (scrollTop - sectionOffset) >= i*sectionHeightPart ){
+							$(item).removeClass('s1__item--active');
+							$(item[i]).addClass('s1__item--active');
+						}
+					}
+				} else {
+					$(item).removeClass('s1__item--active');
+				}
+			})
+		}
+
+
+
+
+		$('.header__videoplay').on('click', function (e) {
 			e.preventDefault();
 			let video_frame = $(this).data('video');
 			let popup = $(this).attr('href');
 			$(popup).arcticmodal();
 		});
 
-		$('.nav-hamburger').on('click', function(e){
+		$('.nav-hamburger').on('click', function (e) {
 			e.preventDefault();
 			$('.nav-mob').toggleClass('open');
 		});
@@ -16,17 +47,17 @@ $(function() {
 		//добавляем кнопку НАЗАД во второй уровень мобильного меню
 		// $('.nav-mob .sub-menu').prepend('<a href="#" class="sub-menu__back">&larr;&nbsp;'+ translate.back +'</a>');
 
-		$('.nav-mob .menu-item-has-children > a').on('click', function(e){
+		$('.nav-mob .menu-item-has-children > a').on('click', function (e) {
 			e.preventDefault();
 			$(this).parent().find('.sub-menu').addClass('open');
 		});
 
-		$('.nav-mob .sub-menu__back').on('click', function(e){
+		$('.nav-mob .sub-menu__back').on('click', function (e) {
 			e.preventDefault();
 			$(this).parents('.sub-menu').removeClass('open');
 		});
 
-		if( $('.timeline').length ){
+		if ($('.timeline').length) {
 			$('.timeline').slick({
 				slidesToShow: 4,
 				slidesToScroll: 2,
@@ -37,27 +68,27 @@ $(function() {
 		}
 
 		//клик по ссылке открывает попап. В href ссылки должен быть ID нужного попапа
-		$('.open-popup').on('click', function(e){
+		$('.open-popup').on('click', function (e) {
 			e.preventDefault();
 			var id = $(this).attr('href');
-			if(id != '' && id != '#'){
+			if (id != '' && id != '#') {
 				$(id).arcticmodal();
-			}else{
+			} else {
 				console.log('Укажите в ссылке идентифкатор попап окна');
 			}
 		});
 
 
-		if( $(".download .tab").length ){
+		if ($(".download .tab").length) {
 			$(".tab_item").not(":first").hide();
-			$(".download .tab").click(function() {
+			$(".download .tab").click(function () {
 				$(".download .tab").removeClass("active").eq($(this).index()).addClass("active");
 				$(".tab_item").hide().eq($(this).index()).fadeIn()
 			}).eq(0).addClass("active");
 		}
 
 		//autopilot demo tractor
-		if( $('.autopilot-demo').length ){
+		if ($('.autopilot-demo').length) {
 
 			let windowHeigth = $(window).height();
 			let autopilotBlock = $('.autopilot-demo');
@@ -66,9 +97,9 @@ $(function() {
 			autopilotBlock.height(3 * autopilotHeight);
 			let autopilotNewHeight = autopilotBlock.outerHeight();
 
-			$(document).scroll(function(){
+			$(document).scroll(function () {
 
-				if (screen.width > 768){
+				if (screen.width > 768) {
 
 					let scrollTop = $(document).scrollTop();
 					let autopilotTop = autopilotBlock.offset().top;
@@ -97,34 +128,34 @@ $(function() {
 						autopilotBlock.addClass('demo-fixed-end').removeClass('demo-scrolling');
 					}
 
-					if( bottomOffset <= windowHeigth ){
+					if (bottomOffset <= windowHeigth) {
 						autopilotBlock.addClass('demo-fixed-end');
-					}else{
+					} else {
 						autopilotBlock.removeClass('demo-fixed-end');
 					}
 
-					if( scrollTop > breakPoints.toPlane && scrollTop < breakPoints.toWheel ){
-						$('.autopilot-demo__item').css('opacity','0');
-						$('.autopilot-demo__tractor-plane').css('opacity','1');
-						$('.autopilot-demo__plane').css('opacity','1');
-					}else{
-						$('.autopilot-demo__tractor-plane').css('opacity','0');
+					if (scrollTop > breakPoints.toPlane && scrollTop < breakPoints.toWheel) {
+						$('.autopilot-demo__item').css('opacity', '0');
+						$('.autopilot-demo__tractor-plane').css('opacity', '1');
+						$('.autopilot-demo__plane').css('opacity', '1');
+					} else {
+						$('.autopilot-demo__tractor-plane').css('opacity', '0');
 					}
 
-					if( scrollTop > breakPoints.toWheel && scrollTop < breakPoints.toTablet){
-						$('.autopilot-demo__item').css('opacity','0');
-						$('.autopilot-demo__tractor-wheel').css('opacity','1');
-						$('.autopilot-demo__wheel').css('opacity','1');
-					}else{
-						$('.autopilot-demo__tractor-wheel').css('opacity','0');
+					if (scrollTop > breakPoints.toWheel && scrollTop < breakPoints.toTablet) {
+						$('.autopilot-demo__item').css('opacity', '0');
+						$('.autopilot-demo__tractor-wheel').css('opacity', '1');
+						$('.autopilot-demo__wheel').css('opacity', '1');
+					} else {
+						$('.autopilot-demo__tractor-wheel').css('opacity', '0');
 					}
 
-					if( scrollTop > breakPoints.toTablet ){
-						$('.autopilot-demo__item').css('opacity','0');
-						$('.autopilot-demo__tractor-tablet').css('opacity','1');
-						$('.autopilot-demo__tablet').css('opacity','1');
-					}else{
-						$('.autopilot-demo__tractor-tablet').css('opacity','0');
+					if (scrollTop > breakPoints.toTablet) {
+						$('.autopilot-demo__item').css('opacity', '0');
+						$('.autopilot-demo__tractor-tablet').css('opacity', '1');
+						$('.autopilot-demo__tablet').css('opacity', '1');
+					} else {
+						$('.autopilot-demo__tractor-tablet').css('opacity', '0');
 					}
 
 				}
@@ -132,24 +163,21 @@ $(function() {
 		}
 
 
-		if( $('.left-tabs-with-img__tabs').length ){
+		if ($('.left-tabs-with-img__tabs').length) {
 			$(".tab_item").not(":first").hide();
-			$(".left-tabs-wrapper .tab").click(function() {
+			$(".left-tabs-wrapper .tab").click(function () {
 				$(".left-tabs-wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
 				$(".tab_item").hide().eq($(this).index()).fadeIn()
 			}).eq(0).addClass("active");
 		}
 
 
-
 	});
 
 
-	if (screen.width <= 768){
+	if (screen.width <= 768) {
 
 	}
-
-
 
 
 	// слайдер карточек товара на странице товара
@@ -184,7 +212,7 @@ $(function() {
 		]
 	});
 
-	if( $('.slider__items').length ) {
+	if ($('.slider__items').length) {
 		$('.slider__items').slick({
 			infinite: true,
 			slidesToShow: 1,
@@ -195,7 +223,7 @@ $(function() {
 		});
 	}
 
-	if( $('.slider-full__inner').length ) {
+	if ($('.slider-full__inner').length) {
 		$('.slider-full__inner').slick({
 			infinite: true,
 			slidesToShow: 1,
@@ -207,7 +235,7 @@ $(function() {
 		});
 	}
 
-	if( $('.img-left-with-icons__img-slider').length ) {
+	if ($('.img-left-with-icons__img-slider').length) {
 		$('.img-left-with-icons__img-slider').slick({
 			infinite: true,
 			slidesToShow: 1,
@@ -221,7 +249,7 @@ $(function() {
 	}
 
 
-	if( $('.r150-slider__items').length ){
+	if ($('.r150-slider__items').length) {
 		$('.r150-slider__items').slick({
 			infinite: false,
 			slidesToShow: 1,
@@ -234,7 +262,7 @@ $(function() {
 	}
 
 
-	if( $('.r150-full-slider__items').length ){
+	if ($('.r150-full-slider__items').length) {
 		$('.r150-full-slider__items').slick({
 			infinite: false,
 			slidesToShow: 1,
@@ -255,7 +283,7 @@ $(function() {
 	}
 
 
-	if( $('.simple-full-slider__items').length ){
+	if ($('.simple-full-slider__items').length) {
 		$('.simple-full-slider__items').slick({
 			infinite: false,
 			slidesToShow: 1,
@@ -268,24 +296,23 @@ $(function() {
 	}
 
 
-
 	//drone page tabs 1
 	$(".propellers__tabs .tab_item").not(":first").hide();
-	$(".propellers__tabs .tab").click(function() {
+	$(".propellers__tabs .tab").click(function () {
 		$(".propellers__tabs .tab").removeClass("active").eq($(this).index()).addClass("active");
 		$(".propellers__tabs .tab_item").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("active");
 
 	//tabs 2
 	$(".radar__tabs .tab_item").not(":first").hide();
-	$(".radar__tabs .tab").click(function() {
+	$(".radar__tabs .tab").click(function () {
 		$(".radar__tabs .tab").removeClass("active").eq($(this).index()).addClass("active");
 		$(".radar__tabs .tab_item").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("active");
 
 	//tabs 3
 	$(".control__tabs .tab_item").not(":first").hide();
-	$(".control__tabs .tab").click(function() {
+	$(".control__tabs .tab").click(function () {
 		$(".control__tabs .tab").removeClass("active").eq($(this).index()).addClass("active");
 		$(".control__tabs .tab_item").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("active");
@@ -295,12 +322,12 @@ $(function() {
 
 
 //video lazy load
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 	var lazyVideos = [].slice.call(document.querySelectorAll("video.vLazy"));
 
 	if ("IntersectionObserver" in window) {
-		var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
-			entries.forEach(function(video) {
+		var lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
+			entries.forEach(function (video) {
 				if (video.isIntersecting) {
 					for (var source in video.target.children) {
 						var videoSource = video.target.children[source];
@@ -316,7 +343,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 		});
 
-		lazyVideos.forEach(function(lazyVideo) {
+		lazyVideos.forEach(function (lazyVideo) {
 			lazyVideoObserver.observe(lazyVideo);
 		});
 	}

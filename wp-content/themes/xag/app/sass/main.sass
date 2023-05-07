@@ -2228,9 +2228,6 @@
 		outline: none
 
 	input[type=submit]
-		display: block
-		width: 178px
-		height: 38px
 		font-size: 16px
 		line-height: 1.15
 		background: #2d2d2d
@@ -2240,7 +2237,18 @@
 		cursor: pointer
 		text-align: center
 		margin: 80px auto 0
-		border: 0
+		width: 200px
+		display: flex
+		align-items: center
+		justify-content: center
+		background: $red
+		height: 48px
+		border: 1px solid $red
+		text-transform: uppercase
+		transition: all .3s
+		&:hover
+			background: transparent
+			color: $red
 
 .cta-form__title
 	text-align: center
@@ -2254,24 +2262,6 @@
 .cta-form__body
 	padding-top: 115px
 	color: #000
-
-	[type=submit]
-		cursor: pointer
-		width: 200px
-		display: flex
-		text-align: center
-		align-items: center
-		justify-content: center
-		color: #fff
-		background: $red
-		height: 48px
-		border-radius: 4px
-		border: 1px solid $red
-		text-transform: uppercase
-		transition: all .3s
-		&:hover
-			background: transparent
-			color: $red
 
 .cta-form__bottom
 	font-size: 16px
@@ -3904,6 +3894,85 @@
 
 
 /************************************ end R 150 **********************************************/
+
+
+
+/************************************ P100 PRO **********************************************/
+.p100pro
+	padding-top: 0
+
+	.landing__header
+		padding-top: 100px
+		color: $dark-grey
+		background-position: center right
+		background-repeat: no-repeat
+		background-size: cover
+		background-attachment: fixed
+
+
+	.landing__header-content
+		align-items: flex-start
+
+	.landing__header-title
+		color: $dark-grey
+		font-weight: 800
+		text-align: left
+
+	.s1
+		box-shadow: 0 -30px 50px rgba(0, 0, 0, 0.2)
+		position: relative
+		height: 200vh
+
+		video
+			position: absolute
+			top: 0
+			right: 0
+			width: 100%
+			height: 100%
+			max-height: 100%
+			z-index: 1
+
+		.s1__inner
+			padding: 120px 0
+			position: sticky
+			top: 0
+			min-height: 100vh
+			&:before
+				content: ""
+				display: block
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				margin: auto
+				position: absolute
+				background-color: rgba(0,0,0,.4)
+				z-index: 3
+
+		.s1__items
+			width: 100%
+			transform: translateY(50%)
+			position: relative
+			z-index: 5
+
+		.s1__item
+			color: #b3b3b3
+			font-size: 24px
+			letter-spacing: 1px
+			line-height: 1.2
+			font-weight: 600
+			text-transform: uppercase
+			margin: 45px auto
+			text-align: center
+			transition: all .5s
+
+			&.s1__item--active
+				font-weight: 800
+				color: #fff
+				transform: scale(120%)
+
+
+/************************************ end P100 PRO **********************************************/
 
 
 
