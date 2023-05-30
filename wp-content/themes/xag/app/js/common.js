@@ -30,6 +30,7 @@ $(function () {
 		}
 
 
+
 		if( $('.p100pro .s2').length ){
 			$(window).scroll(function(){
 				let windowHeight = $(window).height();
@@ -44,6 +45,96 @@ $(function () {
 						$('.s2').removeClass('inview');
 					}
 				}, 500)
+			});
+		}
+
+
+
+		if( $('.p100pro .s3').length ){
+			//s3 item scrolling
+			let windowHeigth = $(window).height();
+			let s3ContentBlock = $('.s3');
+			let contentHeight = s3ContentBlock.outerHeight();
+			s3ContentBlock.height(2 * contentHeight);
+			let contentNewHeight = s3ContentBlock.outerHeight();
+			let desc1Height = $('.s3__img--desc1').outerHeight();
+
+			$(document).scroll(function () {
+				if (screen.width > 768) {
+					let scrollTop = $(document).scrollTop();
+					let contentTop = s3ContentBlock.offset().top;
+					let contentBottom = contentTop + contentNewHeight - 200;
+					let breakPoints = {
+						start: contentTop,
+						middle: contentTop + contentHeight,
+						end: contentBottom
+					}
+
+					if (scrollTop >= contentTop && scrollTop < contentBottom) {
+						s3ContentBlock.addClass('s3-scrolling').removeClass('s3-fixed-end');
+					} else {
+						s3ContentBlock.addClass('s3-fixed-end').removeClass('s3-scrolling');
+					}
+
+					if (scrollTop > breakPoints.start && scrollTop < breakPoints.middle) {
+						$('.s3__img--img1, .s3__img--desc1').addClass('active');
+						$('.s3__img--img2, .s3__img--desc2').removeClass('active');
+						$('.s3__img--desc2').removeAttr('style');
+					} else if (scrollTop > breakPoints.middle) {
+						$('.s3__img--img1, .s3__img--desc1').removeClass('active');
+						$('.s3__img--img2, .s3__img--desc2').addClass('active');
+						$('.s3__img--desc2').css({
+							"transform": "translateY(-" + desc1Height + "px)"
+						});
+					} else {
+						$('.s3__img--img1, .s3__img--desc1').removeClass('active');
+						$('.s3__img--img2, .s3__img--desc2').removeClass('active');
+						$('.s3__img--desc2').removeAttr('style');
+					}
+				}
+			});
+
+
+
+			//horizontall scroll in side-window
+			$(".side-content").niceScroll();
+
+
+
+			 $(window).scroll(function(){
+			 	let el = $('.s5');
+	            let wt = $(window).scrollTop();
+		        let wh = $(window).height();
+		        let et = el.offset().top;
+		        let eh = el.outerHeight();
+		        let dh = $(document).height();
+		        if (wt + wh >= et + wh/1.3 || wh + wt == dh || eh + et < wh){
+		            el.addClass('in-view');
+	            }else{
+			        el.removeClass('in-view');
+		        }
+            });
+
+		}
+
+
+
+		if( $('.side-close').length ){
+			$(document).on('click', '.side-close', function(e){
+				e.preventDefault();
+				$(this).parents('.side-window').removeClass('open');
+			})
+		}
+
+
+
+		if( $('.open-side-window').length ){
+			$(document).on('click', '.open-side-window', function(e){
+				e.preventDefault();
+				let id = $(this).attr('href');
+				if( $(id).length ){
+					$(id).addClass('open');
+				}
 			})
 		}
 
@@ -124,14 +215,6 @@ $(function () {
 					let autopilotBottom = autopilotTop + autopilotNewHeight;
 					let topOffset = autopilotTop - scrollTop;
 					let bottomOffset = autopilotBottom - scrollTop;
-
-					// console.log('windowHeigth = ' + windowHeigth)
-					// console.log('scrollTop = ' + scrollTop)
-					// console.log('autopilotTop = ' + autopilotTop)
-					// console.log('autopilotBottom = ' + autopilotBottom)
-					// console.log('topOffset = ' + topOffset)
-					// console.log('bottomOffset = ' + bottomOffset)
-					// console.log('===')
 
 					let breakPoints = {
 						toPlane: autopilotTop,

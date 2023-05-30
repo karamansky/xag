@@ -4024,7 +4024,7 @@
 	.s2__list-item-title
 		font-family: $os
 		font-size: 24px
-		line-height: 1
+		line-height: 1.1
 		margin-bottom: 7px
 		font-weight: 600
 		letter-spacing: -1.5px
@@ -4086,6 +4086,368 @@
 
 	.inview .s2__list-item-range
 		width: 100%
+
+
+
+
+
+
+	.s3
+		padding: 100px 0
+		background: #000
+
+	.s3__title
+		color: #fff
+		font-size: 50px
+		line-height: 1.3
+		font-family: $os
+		span
+			display: block
+
+	.s3__content
+		display: flex
+		justify-content: space-between
+		position: relative
+		padding-top: 200px
+
+	.s3__img
+		position: absolute
+		width: 100%
+		left: 0
+		top: 0
+
+		.s3__img-item
+			opacity: 0
+			transition: all 0.5s
+			&.active
+				opacity: 1
+
+	.s3__img-description
+		margin-left: 60%
+		max-width: 400px
+		position: relative
+
+		.s3__img-description-item
+			opacity: 0
+			&.active
+				opacity: 1
+
+	.s3__img-description-item
+		font-family: $os
+		font-size: 28px
+		line-height: 1.3
+		color: #fff
+		transition: all 0.5s
+		span
+			display: block
+
+	.s3-scrolling
+		position: relative
+		width: 100%
+		min-height: 100vh
+
+		.s3__inner
+			position: sticky
+			left: 0
+			top: 50px
+			z-index: 3
+
+	.button-more,
+	.s3__button-more
+		margin-top: 100px
+		color: #fff
+		display: flex
+		align-items: center
+		text-align: right
+		line-height: 1.1
+		margin-right: 0
+		margin-left: auto
+
+		.icon-btn
+			flex-shrink: 0
+			display: block
+			width: 50px
+			height: 50px
+			margin-left: 10px
+			border-radius: 50%
+			background: url(../img/icon/icon-dive-btn.png) center center no-repeat
+			background-size: 100%
+
+	.s3__side-cols
+		margin: 0 150px
+		width: 100%
+		display: flex
+		align-items: center
+
+		.s3__side-col
+			width: 400px
+			height: 550px
+			background: url('../img/p100/structural-design-imgs4.png') center center no-repeat
+			background-size: cover
+			position: relative
+			flex-shrink: 0
+			margin: 0 15px
+
+		.s3__side-col__title
+			font-family: $os
+			text-align: center
+			color: #fff
+			font-weight: 600
+			font-size: 26px
+			line-height: 1.15
+			padding: 30px 50px
+			position: absolute
+			width: 100%
+			left: 0
+			bottom: 0
+
+	.side-window
+		position: fixed
+		left: 0
+		top: 0
+		width: 100vw
+		height: 100vh
+		z-index: 999
+		background: #000
+		transition: all 0.5s
+		transform: translateX(101%)
+
+		&.open
+			transform: translateX(0)
+
+	.side-close
+		display: block
+		width: 70px
+		height: 70px
+		background: url('../img/icon/close-icon.png') center center no-repeat
+		background-size: 100%
+		position: absolute
+		top: 80px
+		right: 10%
+		z-index: 1000
+
+	.side-content
+		display: flex
+		align-items: center
+		width: 100vw
+		height: 100%
+		overflow-x: auto
+
+
+
+	.s4
+		background-color: #606060
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
+
+	.s4__inner
+		padding: 120px 0
+		min-height: 100vh
+		display: flex
+		flex-wrap: wrap
+		flex-direction: column
+		justify-content: center
+
+	.s4__description,
+	.s4__smalltitle
+		font-family: $os
+		font-size: 24px
+		line-height: 1.5
+		color: #fff
+		p
+			font-family: $os
+			font-size: 24px
+			line-height: 1.5
+			color: #fff
+
+	.s4__title
+		font-family: $os
+		font-size: 34px
+		line-height: 1.2
+		color: #fff
+		margin: 20px 0
+		font-weight: 600
+
+
+	.s5
+		background: #000
+
+	.s5__video-box
+		width: 100vw
+		height: 100vh
+		position: relative
+
+		video
+			object-fit: cover
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			right: 0
+			z-index: 2;
+
+	.s5__video-cover
+		background: #000
+		position: absolute
+		transition: all .5s
+		z-index: 3
+
+	.s5__video-cover-top
+		width: 100%
+		height: 125px
+		top: 0
+		left: 0
+		right: 0
+		bottom: auto
+
+	.s5__video-cover-right
+		width: 250px
+		height: 100%
+		right: 0
+		top: 0
+		bottom: 0
+		left: auto
+
+	.s5__video-cover-bottom
+		width: 100%
+		height: 125px
+		top: auto
+		left: 0
+		right: 0
+		bottom: 0
+
+	.s5__video-cover-left
+		width: 250px
+		height: 100%
+		right: auto
+		top: 0
+		bottom: 0
+		left: 0
+
+	.in-view
+		.s5__video-cover-top
+			height: 0
+
+		.s5__video-cover-right
+			width: 0
+
+		.s5__video-cover-bottom
+			height: 0
+
+		.s5__video-cover-left
+			width: 0
+
+	.s5__video-content
+		position: relative
+		height: 100vh
+		display: flex
+		align-items: center
+		z-index: 6
+
+	.s5__items
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		gap: 10px
+
+	.s5__item
+		width: calc(25% - 8px)
+
+	.s5__title
+		font-family: $os
+		font-size: 20px
+		line-height: 1.2
+		margin-bottom: 15px
+		color: #fff
+
+	.s5__description
+		font-family: $os
+		font-size: 24px
+		line-height: 1.2
+		color: #fff
+		p
+			font-family: $os
+			font-size: 28px
+			line-height: 1.2
+			color: #fff
+		span
+			font-family: $os
+			font-size: 40px
+			line-height: 1
+			font-weight: 600
+			color: #fff
+			margin-right: 5px
+
+
+
+	.s6
+		padding: 60px 0
+		background: #fff
+
+		.button-more
+			color: $dark-grey
+			max-width: 300px
+
+	.s6__items
+		display: flex
+		gap: 16px
+		flex-wrap: wrap
+
+	.s6__item
+		width: calc(50% - 8px)
+		min-height: 300px
+		padding: 40px
+		text-align: center
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
+
+	.s6__title
+		font-family: $os
+		color: $dark-grey
+		font-size: 34px
+		line-height: 1.2
+		font-weight: 600
+		margin-bottom: 10px
+		text-align: center
+
+	.s6__description
+		font-family: $os
+		color: $dark-grey
+		font-size: 14px
+		line-height: 1.2
+		text-align: center
+		p
+			font-family: $os
+			color: $dark-grey
+			font-size: 14px
+			line-height: 1.2
+
+	.s6__side-cols
+		margin: 0 150px
+		display: flex
+		align-items: center
+
+	.s6__side-col
+		width: 400px
+		position: relative
+		flex-shrink: 0
+		margin: 0 30px
+
+	.s6__side-video
+		width: 100%
+		margin-bottom: 20px
+
+	.s6__side-col__title
+		font-family: $os
+		text-align: left
+		color: #fff
+		font-size: 20px
+		line-height: 1.15
+
 
 
 
