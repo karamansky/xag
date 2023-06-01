@@ -98,23 +98,62 @@ $(function () {
 
 			//horizontall scroll in side-window
 			$(".side-content").niceScroll();
+		}
 
 
 
-			 $(window).scroll(function(){
-			 	let el = $('.s5');
-	            let wt = $(window).scrollTop();
-		        let wh = $(window).height();
-		        let et = el.offset().top;
-		        let eh = el.outerHeight();
-		        let dh = $(document).height();
-		        if (wt + wh >= et + wh/1.3 || wh + wt == dh || eh + et < wh){
-		            el.addClass('in-view');
-	            }else{
-			        el.removeClass('in-view');
-		        }
-            });
+		if( $('.s5').length ){
+			$(window).scroll(function(){
+				let el = $('.s5');
+				let wt = $(window).scrollTop();
+				let wh = $(window).height();
+				let et = el.offset().top;
+				let eh = el.outerHeight();
+				let dh = $(document).height();
+				if (wt + wh >= et + wh/1.15 || wh + wt == dh || eh + et < wh){
+					el.addClass('in-view');
+				}else{
+					el.removeClass('in-view');
+				}
+			});
+		}
 
+
+
+		if( $('.s8').length ){
+			$(window).scroll(function(){
+				let el = $('.s8');
+				let wt = $(window).scrollTop();
+				let wh = $(window).height();
+				let et = el.offset().top;
+				let eh = el.outerHeight();
+				let dh = $(document).height();
+				if (wt + wh >= et + wh/1.15 || wh + wt == dh || eh + et < wh){
+					el.addClass('in-view');
+				}else{
+					el.removeClass('in-view');
+				}
+			});
+		}
+
+
+
+		if( $('.s11').length ){
+			$(".s11 .tab_item").not(":first").hide();
+			$(".s11__tabs-wrap .tab").click(function() {
+				$(".s11__tabs-wrap .tab").removeClass("active").eq($(this).index()).addClass("active");
+				$(".s11 .tab_item").hide().eq($(this).index()).fadeIn()
+			}).eq(0).addClass("active");
+		}
+
+
+
+		if( $('.s12').length ){
+			$(".s12 .tab_item").not(":first").hide();
+			$(".s12__tabs-wrap .tab").click(function() {
+				$(".s12__tabs-wrap .tab").removeClass("active").eq($(this).index()).addClass("active");
+				$(".s12 .tab_item").hide().eq($(this).index()).fadeIn()
+			}).eq(0).addClass("active");
 		}
 
 

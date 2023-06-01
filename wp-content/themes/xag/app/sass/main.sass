@@ -4052,7 +4052,7 @@
 		transition: width .5s cubic-bezier(.47,.01,.4,.99)
 
 	.s2__list-item:last-child
-		color: #909090
+		color: $grey
 		margin-top: 40px
 		.s2__list-item-range
 			background: #d8d8d8
@@ -4094,7 +4094,7 @@
 
 	.s3
 		padding: 100px 0
-		background: #000
+		background: $black
 
 	.s3__title
 		color: #fff
@@ -4208,7 +4208,7 @@
 		width: 100vw
 		height: 100vh
 		z-index: 999
-		background: #000
+		background: $black
 		transition: all 0.5s
 		transform: translateX(101%)
 
@@ -4271,7 +4271,7 @@
 
 
 	.s5
-		background: #000
+		background: $black
 
 	.s5__video-box
 		width: 100vw
@@ -4290,7 +4290,7 @@
 			z-index: 2;
 
 	.s5__video-cover
-		background: #000
+		background: $black
 		position: absolute
 		transition: all .5s
 		z-index: 3
@@ -4340,6 +4340,9 @@
 		.s5__video-cover-left
 			width: 0
 
+		.s5__items
+			opacity: 1
+
 	.s5__video-content
 		position: relative
 		height: 100vh
@@ -4352,6 +4355,8 @@
 		flex-wrap: wrap
 		justify-content: center
 		gap: 10px
+		transition: all 2s
+		opacity: 0
 
 	.s5__item
 		width: calc(25% - 8px)
@@ -4449,6 +4454,401 @@
 		line-height: 1.15
 
 
+
+	.s7
+		background: $black
+
+	.s7__inner
+		min-height: 100vh
+		display: flex
+		align-items: center
+		gap: 20%
+
+	.s7__left
+		width: 30%
+
+	.s7__right
+		width: 50%
+
+	.s7__littletitle
+		font-family: $os
+		font-size: 18px
+		line-height: 1.2
+		color: #fff
+		margin-bottom: 30px
+
+	.s7__title
+		font-family: $os
+		font-size: 80px
+		font-weight: 800
+		line-height: 1.2
+		color: #fff
+
+	.s7__description
+		font-family: $os
+		font-size: 20px
+		line-height: 1.2
+		color: #fff
+		margin-bottom: 50px
+
+	.s7__description-bottom
+		font-family: $os
+		font-size: 16px
+		line-height: 1.2
+		color: #fff
+
+
+	.s8
+		background: $black
+
+	.s8__video-box
+		width: 100vw
+		min-height: 100vh
+		position: relative
+
+		video
+			object-fit: cover
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			right: 0
+			z-index: 2;
+
+	.s8__video-cover
+		background: $black
+		position: absolute
+		transition: all .5s
+		z-index: 3
+
+	.s8__video-cover-top
+		width: 100%
+		height: 125px
+		top: 0
+		left: 0
+		right: 0
+		bottom: auto
+
+	.s8__video-cover-right
+		width: 250px
+		height: 100%
+		right: 0
+		top: 0
+		bottom: 0
+		left: auto
+
+	.s8__video-cover-bottom
+		width: 100%
+		height: 125px
+		top: auto
+		left: 0
+		right: 0
+		bottom: 0
+
+	.s8__video-cover-left
+		width: 250px
+		height: 100%
+		right: auto
+		top: 0
+		bottom: 0
+		left: 0
+
+	.in-view
+		.s8__video-cover-top
+			height: 0
+
+		.s8__video-cover-right
+			width: 0
+
+		.s8__video-cover-bottom
+			height: 0
+
+		.s8__video-cover-left
+			width: 0
+
+		.s8__items
+			opacity: 1
+
+	.s8__video-content
+		position: relative
+		height: 100vh
+		display: flex
+		align-items: center
+		z-index: 6
+
+	.s8__items
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		gap: 10px
+		transition: all 2s
+		opacity: 0
+
+	.s8__item
+		width: calc(25% - 8px)
+
+	.s8__title
+		font-family: $os
+		font-size: 20px
+		line-height: 1.2
+		margin-bottom: 15px
+		color: #fff
+
+	.s8__description
+		font-family: $os
+		font-size: 24px
+		line-height: 1.2
+		color: #fff
+		p
+			font-family: $os
+			font-size: 28px
+			line-height: 1.2
+			color: #fff
+		span
+			font-family: $os
+			font-size: 40px
+			line-height: 1
+			font-weight: 600
+			color: #fff
+			margin-right: 5px
+
+
+
+	.s9
+		background: $black
+
+	.s9__inner
+		min-height: 100vh
+		padding: 120px 0
+		display: flex
+		align-items: center
+		justify-content: center
+
+	.s9__title
+		font-family: $os
+		font-weight: 600
+		font-size: 44px
+		line-height: 50px
+		color: #fff
+		text-align: center
+
+
+
+	.s10
+		background: $black
+
+	.s10__inner
+		min-height: 100vh
+		display: flex
+		align-items: center
+		gap: 40px
+
+	.s10__description
+		max-width: 25%
+		font-family: $os
+		font-size: 18px
+		line-height: 1.2
+		color: #fff
+		flex-shrink: 0
+
+	.s10__items
+		display: flex
+		flex-wrap: wrap
+		gap: 10px
+
+	.s10__item
+		width: calc(50% - 5px)
+
+	.s10__item-img
+		width: 100%
+		min-height: 350px
+		height: 100%
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	.s10__item-title
+		margin-top: 24px
+		text-align: center
+		color: $grey
+		font-size: 16px
+		line-height: 1.2
+		text-transform: uppercase
+		font-weight: 600
+
+
+
+
+	.s11
+		background: $black
+		padding: 120px 0
+
+		.tab
+			cursor: pointer
+			transition: all .5s
+			&.active
+				position: relative
+				&:before
+					content: ''
+					display: block
+					width: 3px
+					height: 100%
+					position: absolute
+					left: -26px
+					top: 0
+					background: #fff
+
+				.tab__title
+					color: #fff
+
+				.tab__description
+					transform: translateY(0)
+					height: 100px
+					opacity: 1
+
+		.tab_content
+			width: 100%
+
+		.tabs
+			width: 320px
+			flex-shrink: 0
+			display: flex
+			flex-direction: column
+			gap: 30px
+			padding: 5px 0 5px 24px
+			border-left: 2px solid $grey
+
+		.tab_item
+			width: 100%
+			height: 350px
+			video
+				width: 100%
+				height: 100%
+				object-fit: cover
+
+		.tab__title
+			font-family: $os
+			font-size: 25px
+			line-height: 1.2
+			font-weight: 600
+			color: $grey
+
+		.tab__description
+			margin-top: 11px
+			font-family: $os
+			font-size: 18px
+			line-height: 1.25
+			font-weight: 500
+			color: $grey
+			height: 10px
+			opacity: 0
+			transform: translateY(-50%)
+			transition: all 0.5s
+
+
+	.s11__title
+		font-family: $os
+		font-size: 40px
+		line-height: 1.2
+		color: #fff
+		margin-bottom: 80px
+
+	.s11__tabs-wrap
+		display: flex
+		gap: 40px
+
+	.s11__bottom
+		margin-top: 50px
+
+	.s11__bottom-items
+		display: flex
+		gap: 10px
+		flex-wrap: wrap
+
+	.s11__bottom-img
+		width: calc(25% - 8px)
+		height: 280px
+		img
+			border-radius: 8px
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	.s11__bottom-description
+		margin-top: 50px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 50px
+
+		.button-more
+			margin-top: 0
+
+	.s11__bottom-text
+		font-family: $os
+		font-size: 25px
+		line-height: 1.2
+		font-weight: 500
+		color: $grey
+
+
+	.s11__side-cols
+		margin: 0 150px
+		display: flex
+		align-items: center
+
+		.s11__side-col
+			width: 600px
+			position: relative
+			flex-shrink: 0
+			margin: 0 40px
+
+		.s11__side-img
+			width: 100%
+			height: 330px
+
+			img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: cover
+
+		.s11__side-col__title
+			font-family: $os
+			color: #fff
+			font-size: 26px
+			line-height: 1.2
+			font-weight: 400
+			width: 100%
+			margin-top: 30px
+
+
+
+	.s12
+		background: #fff
+		color: $dark-grey
+
+	.s12__top-camera
+		width: 100%
+		height: auto
+		img
+			width: 100%
+			height: auto
+
+	.s12__title
+		font-family: $os
+		font-size: 80px
+		line-height: 1.5
+		font-weight: 600
+		margin-top: 100px
+		margin-bottom: 100px
+		color: $dark-grey
+
+	
 
 
 /************************************ end P100 PRO **********************************************/
