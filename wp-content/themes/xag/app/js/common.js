@@ -149,10 +149,20 @@ $(function () {
 
 
 		if( $('.s12').length ){
-			$(".s12 .tab_item").not(":first").hide();
+			$(".s12 .tab_item:first-child").addClass('active');
 			$(".s12__tabs-wrap .tab").click(function() {
 				$(".s12__tabs-wrap .tab").removeClass("active").eq($(this).index()).addClass("active");
-				$(".s12 .tab_item").hide().eq($(this).index()).fadeIn()
+				$(".s12 .tab_item").removeClass('active').eq($(this).index()).addClass('active');
+			}).eq(0).addClass("active");
+		}
+
+
+
+		if( $('.s14').length ){
+			$(".s14 .tab_item").not(":first").hide();
+			$(".s14__tabs-wrap .tab").click(function() {
+				$(".s14__tabs-wrap .tab").removeClass("active").eq($(this).index()).addClass("active");
+				$(".s14 .tab_item").hide().eq($(this).index()).fadeIn()
 			}).eq(0).addClass("active");
 		}
 
