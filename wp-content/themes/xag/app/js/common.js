@@ -168,6 +168,16 @@ $(function () {
 
 
 
+		if( $('.s20').length ){
+			$(".s20 .tab_item").not(":first").hide();
+			$(".s20__tabs-wrap .tab").click(function() {
+				$(".s20__tabs-wrap .tab").removeClass("active").eq($(this).index()).addClass("active");
+				$(".s20 .tab_item").hide().eq($(this).index()).fadeIn()
+			}).eq(0).addClass("active");
+		}
+
+
+
 		if( $('.side-close').length ){
 			$(document).on('click', '.side-close', function(e){
 				e.preventDefault();
