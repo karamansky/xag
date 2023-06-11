@@ -6754,9 +6754,11 @@ strong {
   .p100pro .s4__inner {
     padding: 50px 0; }
   .p100pro .s5__title {
-    font-size: 18px; }
+    font-size: 18px;
+    text-align: center; }
   .p100pro .s5__description {
-    font-size: 20px; }
+    font-size: 20px;
+    text-align: center; }
   .p100pro .s5__description span {
     font-size: 24px; }
   .p100pro .s6 {
@@ -6779,11 +6781,15 @@ strong {
   .p100pro .s7__description {
     margin-bottom: 20px; }
   .p100pro .s8__title {
-    font-size: 18px; }
+    font-size: 18px;
+    text-align: center; }
   .p100pro .s8__description {
-    font-size: 20px; }
+    font-size: 20px;
+    text-align: center; }
   .p100pro .s8__description span {
     font-size: 24px; }
+  .p100pro .s9__inner {
+    padding: 50px 0; }
   .p100pro .s9__title {
     font-size: 34px;
     line-height: 1.5; }
@@ -6796,11 +6802,17 @@ strong {
   .p100pro .s10__item-img {
     min-height: 220px;
     height: 220px; }
+  .p100pro .s11 {
+    padding: 50px 0; }
   .p100pro .s11__title {
     font-size: 34px;
     margin-bottom: 50px; }
   .p100pro .s11__bottom-img {
     height: 150px; }
+  .p100pro .s11__tabs-wrap {
+    gap: 30px; }
+  .p100pro .s11 .tabs {
+    width: 250px; }
   .p100pro .s11 .tab__title {
     font-size: 18px; }
   .p100pro .s11 .tab__description {
